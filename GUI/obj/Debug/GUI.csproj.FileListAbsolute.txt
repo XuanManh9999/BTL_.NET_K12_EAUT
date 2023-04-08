@@ -14,3 +14,23 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.exe.config
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.exe
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.exe
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\Guna.UI2.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.exe.config
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form1.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmQLKH.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.exe
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\DAL.exe
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\DAL.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\DAL.exe.config

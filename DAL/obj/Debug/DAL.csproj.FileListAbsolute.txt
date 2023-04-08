@@ -1,0 +1,10 @@
+D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.exe.config
+D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.exe
+D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.pdb
+D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.csproj.SuggestedBindingRedirects.cache
+D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.Properties.Resources.resources
+D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.exe
+D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.pdb

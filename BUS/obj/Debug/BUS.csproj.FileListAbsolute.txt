@@ -8,3 +8,17 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.pdb
+D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\BUS.exe.config
+D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\BUS.exe
+D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\BUS.pdb
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.csproj.SuggestedBindingRedirects.cache
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.exe
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.pdb
+D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\DAL.exe
+D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\DAL.pdb
+D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\DAL.exe.config
+D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.csproj.CopyComplete
