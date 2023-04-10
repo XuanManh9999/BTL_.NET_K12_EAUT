@@ -16,5 +16,22 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            frmDangNhap frmDangNhap = new frmDangNhap();
+            frmDangNhap.ShowDialog();
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            frmDangKy frmDangKy = new frmDangKy();
+            frmDangKy.ShowDialog();
+        }
     }
 }

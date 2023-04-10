@@ -55,12 +55,13 @@
     </Compile>
     <Compile Include="GIAO_DICH.cs" />
     <Compile Include="KHACH_HANG.cs" />
+    <Compile Include="Modify.cs" />
     <Compile Include="PERSON.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUAN_LY.cs" />
     <Compile Include="QUAN_LY_KHACH_HANG.cs" />
-    <Compile Include="TAI_KHOAN_DANG_NHAP.cs" />
+    <Compile Include="TaiKhoan.cs" />
     <Compile Include="THONG_TIN_TAI_KHOAN.cs" />
     <Compile Include="TIET_KIEM.cs" />
     <Compile Include="TIET_KIEM_VA_GIAO_DICH.cs" />

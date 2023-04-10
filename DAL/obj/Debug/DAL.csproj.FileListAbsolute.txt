@@ -1,0 +1,14 @@
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\bin\Debug\DAL.exe.config
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\bin\Debug\DAL.exe
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\bin\Debug\DAL.pdb
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\bin\Debug\BUS.exe
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\bin\Debug\BUS.pdb
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\bin\Debug\BUS.exe.config
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.csproj.SuggestedBindingRedirects.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.Properties.Resources.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.exe
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\DAL\obj\Debug\DAL.pdb
