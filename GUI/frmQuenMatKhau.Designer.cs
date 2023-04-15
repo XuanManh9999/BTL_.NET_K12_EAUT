@@ -32,10 +32,10 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.txtEmail = new Guna.UI.WinForms.GunaTextBox();
             this.gunaGroupBox1 = new Guna.UI.WinForms.GunaGroupBox();
-            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
-            this.btnLayLaiMatKhau = new Guna.UI.WinForms.GunaGradientButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.gunaGradientButton1 = new Guna.UI.WinForms.GunaGradientButton();
+            this.btnLayLaiMatKhau = new Guna.UI.WinForms.GunaGradientButton();
             this.gunaGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -82,8 +82,8 @@
             // gunaGroupBox1
             // 
             this.gunaGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGroupBox1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.gunaGroupBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.gunaGroupBox1.BaseColor = System.Drawing.Color.Green;
+            this.gunaGroupBox1.BorderColor = System.Drawing.Color.Lime;
             this.gunaGroupBox1.BorderSize = 3;
             this.gunaGroupBox1.Controls.Add(this.gunaGradientButton1);
             this.gunaGroupBox1.Controls.Add(this.gunaLabel2);
@@ -92,7 +92,7 @@
             this.gunaGroupBox1.Controls.Add(this.txtEmail);
             this.gunaGroupBox1.Font = new System.Drawing.Font("Times New Roman", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaGroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaGroupBox1.LineColor = System.Drawing.Color.Tomato;
+            this.gunaGroupBox1.LineColor = System.Drawing.Color.DarkGreen;
             this.gunaGroupBox1.Location = new System.Drawing.Point(973, 145);
             this.gunaGroupBox1.Name = "gunaGroupBox1";
             this.gunaGroupBox1.Radius = 20;
@@ -100,6 +100,31 @@
             this.gunaGroupBox1.TabIndex = 10;
             this.gunaGroupBox1.Text = "QUÊN MẬT KHẨU";
             this.gunaGroupBox1.TextLocation = new System.Drawing.Point(120, 6);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.Ảnh_chụp_màn_hình_2023_04_07_015931;
+            this.pictureBox1.Location = new System.Drawing.Point(1188, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(314, 148);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2PictureBox1.BorderRadius = 3;
+            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2PictureBox1.Image = global::GUI.Properties.Resources.Anh_gif_dep_binh_yen;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(967, 796);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.guna2PictureBox1.TabIndex = 11;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // gunaGradientButton1
             // 
@@ -164,31 +189,6 @@
             this.btnLayLaiMatKhau.Text = "Lấy lại mật khẩu";
             this.btnLayLaiMatKhau.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnLayLaiMatKhau.Click += new System.EventHandler(this.btnDangKy_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.Ảnh_chụp_màn_hình_2023_04_07_015931;
-            this.pictureBox1.Location = new System.Drawing.Point(1188, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(314, 148);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.guna2PictureBox1.BorderRadius = 3;
-            this.guna2PictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2PictureBox1.Image = global::GUI.Properties.Resources._28057221_2091513821088804_4483023968063717376_n_520x520;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(967, 796);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 11;
-            this.guna2PictureBox1.TabStop = false;
             // 
             // frmQuenMatKhau
             // 

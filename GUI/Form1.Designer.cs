@@ -38,7 +38,7 @@
             // guna2GradientButton1
             // 
             this.guna2GradientButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2GradientButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.guna2GradientButton1.BorderRadius = 5;
             this.guna2GradientButton1.BorderThickness = 2;
             this.guna2GradientButton1.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -47,7 +47,7 @@
             this.guna2GradientButton1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton1.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton1.FillColor = System.Drawing.Color.Gray;
+            this.guna2GradientButton1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2GradientButton1.FillColor2 = System.Drawing.Color.Gray;
             this.guna2GradientButton1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton1.ForeColor = System.Drawing.Color.Black;
@@ -55,7 +55,7 @@
             this.guna2GradientButton1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientButton1.HoverState.FillColor2 = System.Drawing.Color.Yellow;
             this.guna2GradientButton1.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton1.Location = new System.Drawing.Point(1148, 0);
+            this.guna2GradientButton1.Location = new System.Drawing.Point(803, 599);
             this.guna2GradientButton1.Name = "guna2GradientButton1";
             this.guna2GradientButton1.Size = new System.Drawing.Size(173, 68);
             this.guna2GradientButton1.TabIndex = 3;
@@ -65,7 +65,7 @@
             // guna2GradientButton2
             // 
             this.guna2GradientButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.guna2GradientButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.guna2GradientButton2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.guna2GradientButton2.BorderRadius = 5;
             this.guna2GradientButton2.BorderThickness = 2;
             this.guna2GradientButton2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -74,7 +74,7 @@
             this.guna2GradientButton2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton2.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.guna2GradientButton2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.Gray;
+            this.guna2GradientButton2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Gray;
             this.guna2GradientButton2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GradientButton2.ForeColor = System.Drawing.Color.Black;
@@ -82,7 +82,7 @@
             this.guna2GradientButton2.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2GradientButton2.HoverState.FillColor2 = System.Drawing.Color.Yellow;
             this.guna2GradientButton2.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(1327, 0);
+            this.guna2GradientButton2.Location = new System.Drawing.Point(993, 599);
             this.guna2GradientButton2.Name = "guna2GradientButton2";
             this.guna2GradientButton2.Size = new System.Drawing.Size(173, 68);
             this.guna2GradientButton2.TabIndex = 5;
@@ -93,10 +93,10 @@
             // 
             this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
             this.gunaPictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaPictureBox1.Image = global::GUI.Properties.Resources.Untitled_Project__1_;
+            this.gunaPictureBox1.Image = global::GUI.Properties.Resources.photo1640593039583_1640593039659704439468;
             this.gunaPictureBox1.Location = new System.Drawing.Point(0, 0);
             this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(1500, 796);
+            this.gunaPictureBox1.Size = new System.Drawing.Size(1187, 689);
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.gunaPictureBox1.TabIndex = 4;
             this.gunaPictureBox1.TabStop = false;
@@ -106,7 +106,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1500, 796);
+            this.ClientSize = new System.Drawing.Size(1187, 689);
             this.Controls.Add(this.guna2GradientButton2);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.gunaPictureBox1);

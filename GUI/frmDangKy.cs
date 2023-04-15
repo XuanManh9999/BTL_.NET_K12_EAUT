@@ -23,7 +23,9 @@ namespace GUI
 
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
-            Close();
+            this.Hide();
+            Form1 form1 = new Form1();
+            form1.ShowDialog();
         }
 
 
@@ -41,16 +43,19 @@ namespace GUI
         Modify modify = new Modify();
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            string matk = txtMaTaiKhoan.Text;
+            Random random = new Random();
+            int matk = random.Next(0, 10);
+
+
             string tentk = txtTenTaiKhoan.Text;
             string matkhau = txtMatKhau.Text;
             string xnmatkhau = txtXacNhanMatKhau.Text;
             string email = txtEmail.Text;
             string makhachhang = txtMaKhachHang.Text;
 
-            if (modify.taiKhoans("Select * from TAIKHOANDANGNHAP where MaTK = '" + matk + "'").Count != 0)
+            if (modify.taiKhoans("Select * from TAIKHOANDANGNHAP where TenTK = '" + tentk + "'").Count != 0)
             {
-                MessageBox.Show("Tài khoản này đã được đăng kí, vui lòng nhập Tài khoản khác!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tên tài khoản này đã được đăng kí, vui lòng nhập Tên tài khoản khác!!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             if (!CheckAccount(tentk))

@@ -93,6 +93,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap anh_dong_chuc_tet_2021_08 {
+            get {
+                object obj = ResourceManager.GetObject("anh-dong-chuc-tet-2021-08", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Anh_gif_dep_binh_yen {
+            get {
+                object obj = ResourceManager.GetObject("Anh-gif-dep-binh-yen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap anh9 {
             get {
                 object obj = ResourceManager.GetObject("anh9", resourceCulture);
@@ -173,6 +193,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap photo1640593039583_1640593039659704439468 {
+            get {
+                object obj = ResourceManager.GetObject("photo1640593039583-1640593039659704439468", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Picol_Picol_Login_48 {
             get {
                 object obj = ResourceManager.GetObject("Picol-Picol-Login.48", resourceCulture);
@@ -216,6 +246,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap Untitled_Project__1_ {
             get {
                 object obj = ResourceManager.GetObject("Untitled-Project (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vay_tien_ngan_hang_2 {
+            get {
+                object obj = ResourceManager.GetObject("vay_tien_ngan_hang_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

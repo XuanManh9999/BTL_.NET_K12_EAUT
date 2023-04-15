@@ -41,6 +41,7 @@ namespace GUI
                 if (modify.taiKhoans(query).Count != 0)
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
                     Form1 form1 = new Form1();
                     form1.ShowDialog();
                 }
@@ -56,12 +57,14 @@ namespace GUI
 
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmDangKy frm = new frmDangKy();
             frm.ShowDialog();
         }
 
         private void btnQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             frmQuenMatKhau frm = new frmQuenMatKhau();
             frm.ShowDialog();
         }

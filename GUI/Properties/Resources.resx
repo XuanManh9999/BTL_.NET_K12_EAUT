@@ -127,6 +127,9 @@
   <data name="Icons8-Windows-8-Security-Key-Security.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Icons8-Windows-8-Security-Key-Security.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Anh-gif-dep-binh-yen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Anh-gif-dep-binh-yen.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Ảnh chụp màn hình 2023-04-07 015931" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ảnh chụp màn hình 2023-04-07 015931.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -139,8 +142,8 @@
   <data name="anh9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\anh9.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="28057221_2091513821088804_4483023968063717376_n_520x520" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\28057221_2091513821088804_4483023968063717376_n_520x520.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_VCB_828891" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_VCB_828891.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Picol-Picol-Login.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Picol-Picol-Login.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,16 +157,25 @@
   <data name="Steve-Zondicons-Menu.64 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Steve-Zondicons-Menu.64 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="anh-dong-chuc-tet-2021-08" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\anh-dong-chuc-tet-2021-08.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="test-15" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\test-15.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="28057221_2091513821088804_4483023968063717376_n_520x520" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\28057221_2091513821088804_4483023968063717376_n_520x520.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Hopstarter-Sleek-Xp-Software-Windows-Messenger.64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hopstarter-Sleek-Xp-Software-Windows-Messenger.64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="vay_tien_ngan_hang_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vay_tien_ngan_hang_2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pictogrammers-Material-Account-circle.48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Pictogrammers-Material-Account-circle.48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_VCB_828891" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_VCB_828891.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="photo1640593039583-1640593039659704439468" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\photo1640593039583-1640593039659704439468.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

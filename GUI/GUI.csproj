@@ -176,5 +176,17 @@
   <ItemGroup>
     <None Include="Resources\logo_VCB_828891.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anh-gif-dep-binh-yen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-dong-chuc-tet-2021-08.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vay_tien_ngan_hang_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo1640593039583-1640593039659704439468.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
