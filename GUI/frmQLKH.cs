@@ -59,8 +59,21 @@ namespace GUI
         private void Load_DataGrid(DataTable data)
         {
             dtGridQLKH.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dtGridQLKH.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            dtGridQLKH.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dtGridQLKH.RowsDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Regular);
+
             dtGridQLKH.DataSource = null;
+            dtGridQLKH.Refresh();
             dtGridQLKH.DataSource = data;
+
+            dtGridQLKH.Columns[0].HeaderText = "Mã KH";
+            dtGridQLKH.Columns[1].HeaderText = "Tên KH";
+            dtGridQLKH.Columns[2].HeaderText = "Số CMND";
+            dtGridQLKH.Columns[3].HeaderText = "Ngày sinh";
+            dtGridQLKH.Columns[4].HeaderText = "Giới tính";
+            dtGridQLKH.Columns[5].HeaderText = "Địa chỉ";
+            dtGridQLKH.Columns[6].HeaderText = "SDT";
         }
         // Hàm kiểm tra text box
         private bool Check_TextBox()
@@ -158,16 +171,21 @@ namespace GUI
         private void btnSua_Click(object sender, EventArgs e)
         {
             KHACH_HANG KH = Create_kH();
-            if(Check_TextBox())
+            DialogResult result = MessageBox.Show("Bạn có muốn sửa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (result == DialogResult.OK)
             {
-                if(BUS_QLKH.SuaKhachHang(KH))
+                if (Check_TextBox())
                 {
-                    MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Load_DataGrid(BUS_QLKH.getData());
-                    Clear_TextBox();
-                } else
-                {
-                    MessageBox.Show("Sửa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (BUS_QLKH.SuaKhachHang(KH))
+                    {
+                        MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Load_DataGrid(BUS_QLKH.getData());
+                        Clear_TextBox();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sửa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -176,17 +194,21 @@ namespace GUI
         {
             QUAN_LY_KHACH_HANG QLKH = Create_QLKH();
             KHACH_HANG KH = Create_kH();
-            if (Check_TextBox())
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(result == DialogResult.OK)
             {
-                if (BUS_QLKH.XoaKhachHang(KH, QLKH))
+                if (Check_TextBox())
                 {
-                    MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Load_DataGrid(BUS_QLKH.getData());
-                    Clear_TextBox();
-                }
-                else
-                {
-                    MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (BUS_QLKH.XoaKhachHang(KH, QLKH))
+                    {
+                        MessageBox.Show("Xóa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Load_DataGrid(BUS_QLKH.getData());
+                        Clear_TextBox();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa không thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
@@ -212,7 +234,7 @@ namespace GUI
             }
             ++count;
         }
-        // Chức năng đóng thanh tìm kiếm
+        // Sự kiện đóng panel tìm kiếm
         private void btnClose_Click(object sender, EventArgs e)
         {
             panel_TimKiem.Hide();

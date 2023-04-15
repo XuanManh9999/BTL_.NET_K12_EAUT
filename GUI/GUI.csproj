@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
@@ -41,6 +45,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +57,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dsGiaoDichTienRa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGiaoDichTienRa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dsGiaoDichTienVao.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,13 +79,43 @@
     <Compile Include="frmQLKH.Designer.cs">
       <DependentUpon>frmQLKH.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmThongKeTienRa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeTienRa.Designer.cs">
+      <DependentUpon>frmThongKeTienRa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKeTienVao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeTienVao.Designer.cs">
+      <DependentUpon>frmThongKeTienVao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rpGiaoDichTienVao.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpGiaoDichTienVao.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptGiaoDichTienRa.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGiaoDichTienRa.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLKH.resx">
       <DependentUpon>frmQLKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeTienRa.resx">
+      <DependentUpon>frmThongKeTienRa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeTienVao.resx">
+      <DependentUpon>frmThongKeTienVao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +126,36 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="rpGiaoDichTienVao.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpGiaoDichTienVao.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptGiaoDichTienRa.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGiaoDichTienRa.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="dsGiaoDichTienRa.xsc">
+      <DependentUpon>dsGiaoDichTienRa.xsd</DependentUpon>
+    </None>
+    <None Include="dsGiaoDichTienRa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGiaoDichTienRa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsGiaoDichTienRa.xss">
+      <DependentUpon>dsGiaoDichTienRa.xsd</DependentUpon>
+    </None>
+    <None Include="dsGiaoDichTienVao.xsc">
+      <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
+    </None>
+    <None Include="dsGiaoDichTienVao.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGiaoDichTienVao.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsGiaoDichTienVao.xss">
+      <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -104,6 +179,9 @@
       <Project>{bbeaf1ed-32a0-41b8-a090-7ef332d92c1f}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

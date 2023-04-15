@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLKH));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.panel_TimKiem = new Guna.UI2.WinForms.Guna2Panel();
@@ -165,7 +166,7 @@
             this.txtTK_TenKH.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtTK_TenKH.ForeColor = System.Drawing.Color.Black;
             this.txtTK_TenKH.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTK_TenKH.Location = new System.Drawing.Point(32, 286);
+            this.txtTK_TenKH.Location = new System.Drawing.Point(32, 269);
             this.txtTK_TenKH.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.txtTK_TenKH.Name = "txtTK_TenKH";
             this.txtTK_TenKH.PasswordChar = '\0';
@@ -179,7 +180,7 @@
             // 
             this.rdTenKH.AutoSize = true;
             this.rdTenKH.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdTenKH.Location = new System.Drawing.Point(32, 245);
+            this.rdTenKH.Location = new System.Drawing.Point(32, 228);
             this.rdTenKH.Name = "rdTenKH";
             this.rdTenKH.Size = new System.Drawing.Size(206, 32);
             this.rdTenKH.TabIndex = 5;
@@ -244,6 +245,9 @@
             this.btnClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnClose.TabIndex = 0;
             this.btnClose.TabStop = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            this.btnClose.MouseHover += new System.EventHandler(this.btnClose_MouseHover);
             // 
             // rdGT_Nu
             // 
@@ -500,6 +504,14 @@
             // 
             this.dtGridQLKH.BackgroundColor = System.Drawing.Color.White;
             this.dtGridQLKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtGridQLKH.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtGridQLKH.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtGridQLKH.Location = new System.Drawing.Point(0, 40);
             this.dtGridQLKH.Name = "dtGridQLKH";
@@ -543,9 +555,9 @@
             this.btnTimKiem.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnTimKiem.Location = new System.Drawing.Point(583, 1);
+            this.btnTimKiem.Location = new System.Drawing.Point(583, 9);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(157, 57);
+            this.btnTimKiem.Size = new System.Drawing.Size(151, 49);
             this.btnTimKiem.TabIndex = 3;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.TextOffset = new System.Drawing.Point(15, 0);
@@ -571,9 +583,9 @@
             this.btnXoa.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnXoa.Location = new System.Drawing.Point(398, 1);
+            this.btnXoa.Location = new System.Drawing.Point(398, 9);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(157, 57);
+            this.btnXoa.Size = new System.Drawing.Size(152, 49);
             this.btnXoa.TabIndex = 2;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.TextOffset = new System.Drawing.Point(15, 0);
@@ -599,9 +611,9 @@
             this.btnSua.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSua.Location = new System.Drawing.Point(212, 1);
+            this.btnSua.Location = new System.Drawing.Point(213, 7);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(157, 57);
+            this.btnSua.Size = new System.Drawing.Size(149, 49);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.TextOffset = new System.Drawing.Point(15, 0);
@@ -627,9 +639,9 @@
             this.btnThem.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnThem.Location = new System.Drawing.Point(25, 1);
+            this.btnThem.Location = new System.Drawing.Point(25, 7);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(157, 57);
+            this.btnThem.Size = new System.Drawing.Size(149, 49);
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.TextOffset = new System.Drawing.Point(15, 0);
@@ -765,10 +777,10 @@
         private Guna.UI2.WinForms.Guna2TextBox txtTK_MaKH;
         private System.Windows.Forms.RadioButton rdMaKH;
         private System.Windows.Forms.Label label8;
-        private Guna.UI2.WinForms.Guna2PictureBox btnClose;
         private System.Windows.Forms.RadioButton rdGT_Nu;
         private System.Windows.Forms.RadioButton rdGT_Nam;
         private System.Windows.Forms.Label lbKetQua_TK;
         private System.Windows.Forms.Label label9;
+        private Guna.UI2.WinForms.Guna2PictureBox btnClose;
     }
 }
