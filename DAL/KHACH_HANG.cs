@@ -13,15 +13,21 @@ namespace DAL
         void dangNhapTK();
         void dangKyTK();
 <<<<<<< HEAD
+<<<<<<< HEAD
         void chuyenTien();
         void tienKiem();
         List<rpGiaoDichTienRa> XemGiaoDichTienRa(string MaKH);
         List<rpGiaoDichTienVao> XemGiaoDichTienVao(string MaKH);
 =======
+=======
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
         bool chuyenTien(GIAO_DICH giaoDich);
         bool tietKiem(TIET_KIEM tietKiem);
         SqlDataReader xemCTGD(string s);
         SqlDataReader tienNhan(string TKNhan);
+<<<<<<< HEAD
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
+=======
 >>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     }
     public class KHACH_HANG : PERSON, IKHACH_HANG
@@ -36,6 +42,7 @@ namespace DAL
             this._maKH = maKH;
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
         public KHACH_HANG()
         {
 
@@ -43,6 +50,8 @@ namespace DAL
 
         CONNECT DBConnect = new CONNECT();
 
+=======
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
 =======
 >>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
         public void dangNhapTK()
@@ -95,6 +104,7 @@ namespace DAL
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             sqlCMD.ExecuteNonQuery();
         }
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         // Lấy thông tin người nhận tiền
@@ -228,6 +238,8 @@ namespace DAL
             conn.Close();
             return listReport;
 =======
+=======
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
         public void TruTienTKGUI(string tienGiaoDich, string soTaiKhoanChuyen)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -291,6 +303,9 @@ namespace DAL
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
+<<<<<<< HEAD
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
+=======
 >>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
         }
     }

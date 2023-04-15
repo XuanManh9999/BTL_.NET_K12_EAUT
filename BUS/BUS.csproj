@@ -47,14 +47,20 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="BUS_GiaoDichTienRa.cs" />
     <Compile Include="BUS_GiaoDichTienVao.cs" />
     <Compile Include="BUS_QLKH.cs" />
 =======
+=======
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     <Compile Include="bus_Giao_Dich.cs" />
     <Compile Include="Bus_Tien_Nhan.cs" />
     <Compile Include="Bus_Tiết_Kiệm.cs" />
     <Compile Include="Bus_Xem_Chi_Tiet_Giao_Dich.cs" />
+<<<<<<< HEAD
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
+=======
 >>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

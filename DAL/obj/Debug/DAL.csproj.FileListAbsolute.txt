@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.exe.config
 D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.exe
 D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.pdb
@@ -10,6 +11,8 @@ D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.exe
 D:\Workspace\C#\BTL_.NET\DAL\obj\Debug\DAL.pdb
 =======
+=======
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\bin\Debug\DAL.exe.config
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\bin\Debug\DAL.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\bin\Debug\DAL.pdb
@@ -20,4 +23,7 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Deb
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.pdb
+<<<<<<< HEAD
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
+=======
 >>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a

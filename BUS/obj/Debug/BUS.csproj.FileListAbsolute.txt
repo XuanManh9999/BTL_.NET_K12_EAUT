@@ -9,6 +9,7 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\BUS.exe.config
 D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\BUS.exe
 D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\BUS.pdb
@@ -24,6 +25,8 @@ D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\DAL.pdb
 D:\Workspace\C#\BTL_.NET\BUS\bin\Debug\DAL.exe.config
 D:\Workspace\C#\BTL_.NET\BUS\obj\Debug\BUS.csproj.CopyComplete
 =======
+=======
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\BUS.exe.config
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\BUS.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\BUS.pdb
@@ -38,4 +41,7 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Deb
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.pdb
+<<<<<<< HEAD
+>>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
+=======
 >>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
