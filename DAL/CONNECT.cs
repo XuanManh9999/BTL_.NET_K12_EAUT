@@ -10,7 +10,7 @@ namespace DAL
     public class CONNECT
     {
         // ====Chuỗi kết nối của mạnh
-        public SqlConnection chuoi_ket_noi_cua_manh()
+        public static SqlConnection chuoi_ket_noi_cua_manh()
         {
             string strCon = @"Data Source=DESKTOP-LNJ99RH\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True";
             SqlConnection SqlCON = new SqlConnection(strCon);

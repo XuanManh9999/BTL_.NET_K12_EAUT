@@ -1,0 +1,10 @@
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\bin\Debug\DAL.exe.config
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\bin\Debug\DAL.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\bin\Debug\DAL.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.csproj.SuggestedBindingRedirects.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.Properties.Resources.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\DAL\obj\Debug\DAL.pdb

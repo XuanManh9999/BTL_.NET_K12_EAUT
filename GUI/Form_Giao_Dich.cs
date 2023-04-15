@@ -1,0 +1,154 @@
+﻿using BUS;
+using DAL;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace GUI
+{
+    public partial class Form_Giao_Dich : Form
+    {
+        public Form_Giao_Dich()
+        {
+            InitializeComponent();
+        }
+
+        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+
+        }
+        public List<string> load_STK()
+        {
+            List<string> stks = new List<string>();
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = CommandType.Text;
+            sqlCMD.CommandText = "SELECT SoTK FROM THONGTINTAIKHOAN ";
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            while(reader.Read())
+            {
+                stks.Add(reader.GetString(0));
+            }
+            reader.Close();
+            return stks;
+        }
+        public string chechkSTK()
+        {
+            List<string> dsTK = load_STK();
+            foreach(string s in dsTK)
+            {
+                if(txtTaiKhoanNhan.Text == s)
+                {
+                    return s;
+                }
+            }
+            txtTenTaiKhoanNhan.Text = "";
+            return "err";
+        }
+        public void load_TT()
+        {
+            cboHinhThucChuyenKhoan.Items.Add("Chuyển Khoản Qua Số Tài Khoản");
+            cboHinhThucChuyenKhoan.SelectedIndex = 0;
+            SqlCommand sqlCommand = new SqlCommand();
+            sqlCommand.CommandType = CommandType.Text;
+            sqlCommand.CommandText = $"select SoTK, SoDu, TenKH from THONGTINTAIKHOAN, KHACHHANG where khachhang.MaKH = THONGTINTAIKHOAN.MaKH and KHACHHANG.MaKH = 'KH0001'";
+            sqlCommand.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            SqlDataReader reader = sqlCommand.ExecuteReader();
+            txtSoTaiKhoanGui.Text = "";
+            txtTenTK.Text = "";
+            txtSoTien.Text = "";
+            if (reader.Read())
+            {
+                txtSoTaiKhoanGui.Text = reader.GetString(0);
+                txtSoTien.Text = reader.GetDouble(1).ToString() + "VNĐ";
+                txtTenTK.Text = reader.GetString(2).ToString();
+            }
+            reader.Close();
+            
+           
+        }
+        private void Form_Giao_Dich_Load(object sender, EventArgs e)
+        {
+            load_TT();
+            
+
+        }
+        public void hienThiTen(List<string> soTaiKhoan)
+        {
+
+        }
+        private void txtSoTien_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnChuyenKhoan_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                GIAO_DICH giaoDich = new GIAO_DICH("", txtSoTienChuyen.Text, txtNoiDungChuyen.Text, "", txtTaiKhoanNhan.Text, txtSoTaiKhoanGui.Text);
+                bus_Giao_Dich giaoDich_bus = new bus_Giao_Dich();
+                if (giaoDich_bus.khachHang_GD_BUS(giaoDich))
+                {
+                    MessageBox.Show("Giao Dịch Thành Công.");
+                    txtNoiDungChuyen.Text = "";
+                    txtSoTienChuyen.Text = "";
+                    txtTaiKhoanNhan.Text = "";
+                    txtTenTaiKhoanNhan.Text = "";
+                    txtTaiKhoanNhan.Focus();
+                    load_TT();
+                }
+                else
+                {
+                    MessageBox.Show("Giao Dịch Không Thành Công.");
+
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin");
+            }
+        }
+
+        private void txtTaiKhoanNhan_TextChanged(object sender, EventArgs e)
+        {
+            if (chechkSTK() != "err")
+            {
+                SqlCommand sqlCMD = new SqlCommand();
+                sqlCMD.CommandType = CommandType.Text;
+                sqlCMD.CommandText = $"SELECT TenKH FROM THONGTINTAIKHOAN, KHACHHANG where THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH and THONGTINTAIKHOAN.SoTK = '{chechkSTK()}'";
+                sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+                SqlDataReader reader1 = sqlCMD.ExecuteReader();
+                if (reader1.Read())
+                {
+                    txtTenTaiKhoanNhan.Text = reader1.GetString(0);
+                }
+                reader1.Close();
+        
+            }
+        }
+
+        private void txtTenTaiKhoanNhan_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}

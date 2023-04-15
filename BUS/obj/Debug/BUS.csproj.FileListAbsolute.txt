@@ -8,3 +8,17 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\BUS\obj\Debug\BUS.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\BUS.exe.config
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\BUS.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\BUS.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\DAL.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\DAL.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\bin\Debug\DAL.exe.config
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.csproj.SuggestedBindingRedirects.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\BUS\obj\Debug\BUS.pdb

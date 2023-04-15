@@ -87,11 +87,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{a61aacf0-4506-4f4e-81de-44161f894e5a}</Project>
-      <Name>BUS</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

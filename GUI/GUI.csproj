@@ -52,16 +52,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="FormLich_Su_Giao_Dich.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="FormLich_Su_Giao_Dich.Designer.cs">
+      <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Giao_Dich.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Giao_Dich.Designer.cs">
+      <DependentUpon>Form_Giao_Dich.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Trang_Chu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Trang_Chu.Designer.cs">
+      <DependentUpon>Form_Trang_Chu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TietKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TietKiem.Designer.cs">
+      <DependentUpon>TietKiem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormLich_Su_Giao_Dich.resx">
+      <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Giao_Dich.resx">
+      <DependentUpon>Form_Giao_Dich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Trang_Chu.resx">
+      <DependentUpon>Form_Trang_Chu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,7 +95,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="TietKiem.resx">
+      <DependentUpon>TietKiem.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -91,6 +119,52 @@
       <Project>{a61aacf0-4506-4f4e-81de-44161f894e5a}</Project>
       <Name>BUS</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{bbeaf1ed-32a0-41b8-a090-7ef332d92c1f}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Background-img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG-Ngan_Hang.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button-img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Graphicloads-Seo-Services-Pay-per-click.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.128.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-11-Cash.512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giao-Dich.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Tiet_Kiem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lich_Su_GD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Oxygen-Icons.org-Oxygen-Apps-preferences-desktop-user-password.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Pretty-Office-2-Personal-information.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lich_SU.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back-2-2-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
