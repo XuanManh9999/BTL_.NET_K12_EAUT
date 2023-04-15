@@ -57,8 +57,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Compile Include="dsGiaoDichTienRa.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,13 +67,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
-=======
     <Compile Include="FormLich_Su_Giao_Dich.cs">
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
-=======
-    <Compile Include="FormLich_Su_Giao_Dich.cs">
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLich_Su_Giao_Dich.Designer.cs">
@@ -92,7 +84,6 @@
     </Compile>
     <Compile Include="Form_Trang_Chu.Designer.cs">
       <DependentUpon>Form_Trang_Chu.cs</DependentUpon>
-<<<<<<< HEAD
     </Compile>
     <Compile Include="frmQLKH.cs">
       <SubType>Form</SubType>
@@ -114,7 +105,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="rpGiaoDichTienVao.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,14 +117,8 @@
       <DependentUpon>rptGiaoDichTienRa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-=======
-=======
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     <Compile Include="TietKiem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,8 +133,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Trang_Chu.resx">
       <DependentUpon>Form_Trang_Chu.cs</DependentUpon>
-<<<<<<< HEAD
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     </EmbeddedResource>
     <EmbeddedResource Include="frmQLKH.resx">
       <DependentUpon>frmQLKH.cs</DependentUpon>
@@ -160,8 +142,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeTienVao.resx">
       <DependentUpon>frmThongKeTienVao.cs</DependentUpon>
-=======
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -173,8 +153,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <EmbeddedResource Include="rpGiaoDichTienVao.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpGiaoDichTienVao.cs</LastGenOutput>
@@ -205,16 +183,12 @@
     <None Include="dsGiaoDichTienVao.xss">
       <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
     </None>
-=======
     <EmbeddedResource Include="TietKiem.resx">
       <DependentUpon>TietKiem.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
-=======
     <EmbeddedResource Include="TietKiem.resx">
       <DependentUpon>TietKiem.cs</DependentUpon>
     </EmbeddedResource>
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -240,12 +214,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
-=======
-=======
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
     <None Include="Resources\Background-img.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -286,10 +255,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back-2-2-icon.png" />
-<<<<<<< HEAD
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
-=======
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
