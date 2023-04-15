@@ -24,12 +24,14 @@ namespace GUI
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmDangNhap frmDangNhap = new frmDangNhap();
             frmDangNhap.ShowDialog();
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             frmDangKy frmDangKy = new frmDangKy();
             frmDangKy.ShowDialog();
         }

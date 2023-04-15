@@ -122,6 +122,7 @@
             this.gunaButton4.BaseColor = System.Drawing.Color.Silver;
             this.gunaButton4.BorderColor = System.Drawing.Color.Black;
             this.gunaButton4.BorderSize = 3;
+            this.gunaButton4.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.gunaButton4.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton4.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -151,6 +152,7 @@
             this.gunaButton3.BaseColor = System.Drawing.Color.Silver;
             this.gunaButton3.BorderColor = System.Drawing.Color.Black;
             this.gunaButton3.BorderSize = 3;
+            this.gunaButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaButton3.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton3.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -180,6 +182,7 @@
             this.gunaButton1.BaseColor = System.Drawing.Color.Silver;
             this.gunaButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaButton1.BorderSize = 3;
+            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
             this.gunaButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -204,6 +207,7 @@
             // btnQuenMatKhau
             // 
             this.btnQuenMatKhau.AutoSize = true;
+            this.btnQuenMatKhau.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuenMatKhau.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuenMatKhau.ForeColor = System.Drawing.Color.Blue;
             this.btnQuenMatKhau.LinkColor = System.Drawing.Color.Blue;

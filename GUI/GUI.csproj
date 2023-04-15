@@ -173,5 +173,8 @@
   <ItemGroup>
     <None Include="Resources\Untitled-Project %281%29.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_VCB_828891.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

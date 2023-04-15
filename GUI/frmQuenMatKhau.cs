@@ -21,6 +21,7 @@ namespace GUI
         Modify modify = new Modify();
         private void btnDangKy_Click(object sender, EventArgs e)
         {
+            this.Hide();
             string email = txtEmail.Text;
             if (email.Trim() == "")
             {

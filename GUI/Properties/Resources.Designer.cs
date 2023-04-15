@@ -153,6 +153,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logo_VCB_828891 {
+            get {
+                object obj = ResourceManager.GetObject("logo_VCB_828891", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Messbook_Outdated_Telephone_64 {
             get {
                 object obj = ResourceManager.GetObject("Messbook-Outdated-Telephone.64", resourceCulture);
