@@ -14,7 +14,6 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.pdb
-<<<<<<< HEAD
 D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.exe.config
 D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.exe
 D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.pdb
@@ -24,7 +23,6 @@ D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.pdb
 D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.exe.config
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
-D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form1.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmQLKH.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Properties.Resources.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
@@ -54,8 +52,6 @@ D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommonCo
 D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\stdole.dll
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmThongKeTienRa.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmThongKeTienVao.resources
-=======
->>>>>>> 892ea11b046fb13789010b5b67abfd1074c3e50a
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\GUI.exe.config
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\GUI.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\GUI.pdb
@@ -78,3 +74,7 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Deb
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.pdb
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.FromTietKiem.resources
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.FormLich_Su_Giao_Dich.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.FormLich_Su_Giao_Dich.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form_Giao_Dich.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form_Trang_Chu.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.FromTietKiem.resources

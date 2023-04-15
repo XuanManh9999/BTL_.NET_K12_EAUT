@@ -117,7 +117,6 @@
       <DependentUpon>rptGiaoDichTienRa.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TietKiem.cs">
       <SubType>Form</SubType>
@@ -183,9 +182,6 @@
     <None Include="dsGiaoDichTienVao.xss">
       <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
     </None>
-    <EmbeddedResource Include="TietKiem.resx">
-      <DependentUpon>TietKiem.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TietKiem.resx">
       <DependentUpon>TietKiem.cs</DependentUpon>
     </EmbeddedResource>
