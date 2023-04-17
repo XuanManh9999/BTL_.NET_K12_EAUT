@@ -333,6 +333,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap photo1640593039583_16405930396597044394681 {
+            get {
+                object obj = ResourceManager.GetObject("photo1640593039583-16405930396597044394681", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Picol_Picol_Login_48 {
             get {
                 object obj = ResourceManager.GetObject("Picol-Picol-Login.48", resourceCulture);

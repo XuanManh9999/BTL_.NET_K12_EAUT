@@ -24,8 +24,8 @@ namespace GUI
         private void gunaGradientButton1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 form1 = new Form1();
-            form1.ShowDialog();
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
         }
 
 

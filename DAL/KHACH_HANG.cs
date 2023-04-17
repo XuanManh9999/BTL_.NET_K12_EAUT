@@ -45,7 +45,7 @@ namespace DAL
             SqlCommand sqlcheck = new SqlCommand();
             sqlcheck.CommandType = System.Data.CommandType.Text;
             sqlcheck.CommandText = "select MaGD from GIAODICH";
-            sqlcheck.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlcheck.Connection = Connection.GetSqlConnection();
             SqlDataReader reader = sqlcheck.ExecuteReader();
             int i = 0;
             List<int> maGD = new List<int> {};
@@ -66,8 +66,8 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"insert into giaodich values('GD00{x}', '{giaoDich.soTienGD}', N'{giaoDich.noiDungGD}', '{DateTime.Now.ToString()}', '{giaoDich.SoTKNhan}', '{giaoDich.SoTKGui}')";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
-            if(sqlCMD.ExecuteNonQuery() > 0)
+            sqlCMD.Connection = Connection.GetSqlConnection();
+            if (sqlCMD.ExecuteNonQuery() > 0)
             {
                 CongTienTKNHAN(giaoDich.soTienGD, giaoDich.SoTKNhan);
                 TruTienTKGUI(giaoDich.soTienGD, giaoDich.SoTKGui);
@@ -79,7 +79,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"update THONGTINTAIKHOAN set SoDu += {double.Parse(tienGiaoDich)} where SoTK = '{soTaiKhoanNhan}'";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Connection = Connection.GetSqlConnection();
             sqlCMD.ExecuteNonQuery();
         }
 
@@ -89,7 +89,7 @@ namespace DAL
             List<rpThongTinNguoiNhan> listTTNN = new List<rpThongTinNguoiNhan>();
             string query = "SELECT T.SoTK, K.TenKH FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE G.SoTKNhan = T.SoTK AND K.MaKH = T.MaKH " 
                 + "AND G.MaGD IN (SELECT G.MaGD FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE K.MaKH = T.MaKH AND G.SoTKGui = T.SoTK AND K.MaKH = @MaKH)";
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = Connection.GetSqlConnection();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);
@@ -117,7 +117,7 @@ namespace DAL
             List<rpGiaoDichTienRa> listReport = new List<rpGiaoDichTienRa>();
             string query = "SELECT K.MaKH, TenKH, MaGD, SoTienGD, NoiDungGD, ThoiGianGD, SoTKNhan FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T " 
                 + "WHERE K.MaKH = T.MaKH AND G.SoTKGui = T.SoTK AND K.MaKH = @MaKH";
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = Connection.GetSqlConnection();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);
@@ -155,7 +155,7 @@ namespace DAL
             List<rpThongTinNguoiGui> listTTNG = new List<rpThongTinNguoiGui>();
             string query = "SELECT T.SoTK, K.TenKH FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE G.SoTKGui = T.SoTK AND K.MaKH = T.MaKH " 
                 + "AND G.MaGD IN (SELECT G.MaGD FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE K.MaKH = T.MaKH AND G.SoTKNhan = T.SoTK AND K.MaKH = @MaKH)";
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = Connection.GetSqlConnection();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);
@@ -182,7 +182,7 @@ namespace DAL
 
             string query = "SELECT K.MaKH, TenKH, MaGD, SoTienGD, NoiDungGD, ThoiGianGD, SoTKGui FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T " 
                 + "WHERE K.MaKH = T.MaKH AND G.SoTKNhan = T.SoTK AND K.MaKH = @MaKH";
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = Connection.GetSqlConnection();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);
@@ -219,7 +219,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"update THONGTINTAIKHOAN set SoDu -= {float.Parse(tienGiaoDich)} where SoTK = '{soTaiKhoanChuyen}'";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Connection = Connection.GetSqlConnection();
             sqlCMD.ExecuteNonQuery();
         }
         // Lấy mã tiết kiệm từ csdl
@@ -229,7 +229,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = "select MaTK from TIETKIEM";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Connection = Connection.GetSqlConnection();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             while(reader.Read())
             {
@@ -253,7 +253,7 @@ namespace DAL
             sqlCMD.CommandType = System.Data.CommandType.Text;
             // Đoạn Này cần thêm mã tài khoản.
             sqlCMD.CommandText = $"insert into TIETKIEM values ('MTK00{x}', {tietKiem.soTienGD}, N'{tietKiem.noiDungGD}', '{DateTime.Now.ToString()}', 'TK001')";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Connection = Connection.GetSqlConnection();
             if (sqlCMD.ExecuteNonQuery() > 0) {
                 return true;
             }
@@ -264,7 +264,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"select DISTINCT GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD,GIAODICH.NoiDungGD, GIAODICH.SoTKNhan,  GIAODICH.ThoiGianGD from GIAODICH, THONGTINTAIKHOAN, KHACHHANG where GIAODICH.SoTKGui = THONGTINTAIKHOAN.SoTK and THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH and KHACHHANG.MaKH = '{s}'";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Connection = Connection.GetSqlConnection();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }
@@ -273,7 +273,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"select DISTINCT  GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD, GIAODICH.NoiDungGD, GIAODICH.SoTKGui, GIAODICH.ThoiGianGD  from GIAODICH, KHACHHANG, THONGTINTAIKHOAN where GIAODICH.SoTKNhan = '{TKNhan}' and KHACHHANG.MaKH = (select KHACHHANG.MaKH from KHACHHANG, THONGTINTAIKHOAN where KHACHHANG.MaKH = THONGTINTAIKHOAN.MaKH and THONGTINTAIKHOAN.SoTK = (select DISTINCT GIAODICH.SoTKGui  from GIAODICH, KHACHHANG, THONGTINTAIKHOAN where GIAODICH.SoTKNhan = '{TKNhan}'))";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Connection = Connection.GetSqlConnection();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }

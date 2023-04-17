@@ -42,8 +42,8 @@ namespace GUI
                 {
                     MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     this.Hide();
-                    Form1 form1 = new Form1();
-                    form1.ShowDialog();
+                    Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu();
+                    form_Trang_Chu.ShowDialog();
                 }
                 else
                 {
@@ -74,8 +74,8 @@ namespace GUI
             if (MessageBox.Show("Bạn có chắc chắn muốn quét QR không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)==DialogResult.OK)
             {
                 this.Hide();
-                Form1 forme = new Form1();
-                forme.ShowDialog();
+                Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu();
+                form_Trang_Chu.ShowDialog();
 
             }
 

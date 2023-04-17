@@ -71,6 +71,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLich_Su_Giao_Dich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     <Compile Include="TietKiem.Designer.cs">
       <DependentUpon>TietKiem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLich_Su_Giao_Dich.resx">
       <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
     </EmbeddedResource>
@@ -346,6 +355,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back-2-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo1640593039583-16405930396597044394681.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
