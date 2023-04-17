@@ -167,6 +167,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(294, 55);
             this.guna2Button4.TabIndex = 3;
             this.guna2Button4.Text = "Quản Lý";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
             // 

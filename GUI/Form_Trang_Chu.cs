@@ -46,5 +46,12 @@ namespace GUI
         {
 
         }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            frmQLKH frmQLKH = new frmQLKH();
+            this.Hide();
+            frmQLKH.ShowDialog();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace DAL
         // ====Chuỗi kết nối của hải
         public SqlConnection Chuoi_conn_Hai()
         {
-            SqlConnection conn = new SqlConnection("Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNganHang;Integrated Security=True");
+            SqlConnection conn = new SqlConnection("Data Source=DESKTOP-LNJ99RH\\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True");
             return conn;
         }
         // ====Chuỗi kết nối của duy
