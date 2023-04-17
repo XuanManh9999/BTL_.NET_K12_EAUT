@@ -10,9 +10,9 @@ namespace BUS
     public class Bus_Tiết_Kiệm
     {
         KHACH_HANG khachHang = new KHACH_HANG();
-        public bool tiet_kiem_bus(TIET_KIEM tietKiem)
+        public bool tiet_kiem_bus(TIET_KIEM tietKiem, string stkChuyen)
         {
-            if (khachHang.tietKiem(tietKiem))
+            if (khachHang.tietKiem(tietKiem, stkChuyen))
             {
                 return true;
             }

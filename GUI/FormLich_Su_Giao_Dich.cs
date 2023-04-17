@@ -88,9 +88,7 @@ namespace GUI
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            Form_Trang_Chu trangChu = new Form_Trang_Chu();
-            this.Hide();
-            trangChu.ShowDialog();
+            this.Close();
         }
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)

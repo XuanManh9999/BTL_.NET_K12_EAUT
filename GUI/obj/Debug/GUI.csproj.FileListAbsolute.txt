@@ -78,6 +78,36 @@ D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.FormLich_Su_Giao_Dich.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form_Giao_Dich.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form_Trang_Chu.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.FromTietKiem.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.FormLich_Su_Giao_Dich.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.Form_Giao_Dich.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.Form_Trang_Chu.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.frmQLKH.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.frmThongKeTienRa.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.frmThongKeTienVao.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.frmDangKy.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.frmDangNhap.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.frmQuenMatKhau.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.FromTietKiem.resources
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\GUI.exe.config
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\GUI.exe
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\GUI.pdb
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\BUS.exe
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\DAL.exe
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\Guna.UI.dll
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\Guna.UI2.dll
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\BUS.pdb
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\BUS.exe.config
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\DAL.pdb
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\DAL.exe.config
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.exe
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.pdb
+D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\obj\Debug\GUI.Form2.resources
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportSource.dll
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.Shared.dll

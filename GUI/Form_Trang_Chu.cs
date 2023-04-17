@@ -38,7 +38,6 @@ namespace GUI
         private void guna2Button3_Click(object sender, EventArgs e)
         {
             FormLich_Su_Giao_Dich formLich_Su_Giao_Dich = new FormLich_Su_Giao_Dich("KH0001", "00999902082003");
-            this.Hide();
             formLich_Su_Giao_Dich.ShowDialog();
         }
 

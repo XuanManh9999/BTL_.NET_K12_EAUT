@@ -98,7 +98,6 @@ namespace GUI
         {
             try
             {
-
                 GIAO_DICH giaoDich = new GIAO_DICH("", txtSoTienChuyen.Text, txtNoiDungChuyen.Text, "", txtTaiKhoanNhan.Text, txtSoTaiKhoanGui.Text);
                 bus_Giao_Dich giaoDich_bus = new bus_Giao_Dich();
                 if (giaoDich_bus.khachHang_GD_BUS(giaoDich))
