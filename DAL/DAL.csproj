@@ -61,6 +61,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QUAN_LY.cs" />
     <Compile Include="QUAN_LY_KHACH_HANG.cs" />
+    <Compile Include="rpGiaoDichTienRa.cs" />
+    <Compile Include="rpGiaoDichTienVao.cs" />
+    <Compile Include="rpThongTinNguoiGui.cs" />
+    <Compile Include="rpThongTinNguoiNhan.cs" />
+    <Compile Include="TAI_KHOAN_DANG_NHAP.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="THONG_TIN_TAI_KHOAN.cs" />
     <Compile Include="TIET_KIEM.cs" />
@@ -87,12 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BUS\BUS.csproj">
-      <Project>{a61aacf0-4506-4f4e-81de-44161f894e5a}</Project>
-      <Name>BUS</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

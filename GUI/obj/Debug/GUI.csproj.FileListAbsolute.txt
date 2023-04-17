@@ -14,6 +14,70 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.csproj.CopyComplete
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.exe
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL.NET\.NET_NHOM_17_EAUT_K42023\BTL.NET_QLNH\GUI\obj\Debug\GUI.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.exe.config
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.exe
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\GUI.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.exe
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\Guna.UI2.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\BUS.exe.config
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmQLKH.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.exe
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\DAL.exe
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\DAL.pdb
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\DAL.exe.config
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.Shared.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Workspace\C#\BTL_.NET\GUI\bin\Debug\stdole.dll
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmThongKeTienRa.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmThongKeTienVao.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\GUI.exe.config
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\GUI.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\GUI.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\BUS.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\DAL.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\Guna.UI2.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\BUS.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\BUS.exe.config
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\DAL.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\DAL.exe.config
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.csproj.SuggestedBindingRedirects.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.Form_Giao_Dich.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.Form_Trang_Chu.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.exe
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.pdb
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.FromTietKiem.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.FormLich_Su_Giao_Dich.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.FormLich_Su_Giao_Dich.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form_Giao_Dich.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form_Trang_Chu.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.FromTietKiem.resources
 D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\GUI.exe.config
 D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\GUI.exe
 D:\BTL QUAN LY NGAN HANG\BTL_.NET_K12_EAUT\GUI\bin\Debug\GUI.pdb
