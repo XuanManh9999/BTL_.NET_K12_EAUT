@@ -12,7 +12,7 @@ namespace DAL
         // ====Chuỗi kết nối của mạnh
         public static SqlConnection chuoi_ket_noi_cua_manh()
         {
-            string strCon = @"Data Source=DESKTOP-LNJ99RH\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True";
+            string strCon = @"Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNganHang;Integrated Security=True";
             SqlConnection SqlCON = new SqlConnection(strCon);
             SqlCON.Open();
             return SqlCON;
