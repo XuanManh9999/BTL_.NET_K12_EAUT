@@ -37,9 +37,13 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Guna.UI">
+      <HintPath>E:\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.4, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.4\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -66,6 +70,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsGiaoDichTienVao.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLich_Su_Giao_Dich.cs">
       <SubType>Form</SubType>
@@ -103,8 +113,31 @@
     <Compile Include="frmThongKeTienVao.Designer.cs">
       <DependentUpon>frmThongKeTienVao.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuenMatKhau.Designer.cs">
+      <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="rpGiaoDichTienVao.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -124,6 +157,9 @@
     <Compile Include="TietKiem.Designer.cs">
       <DependentUpon>TietKiem.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLich_Su_Giao_Dich.resx">
       <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
     </EmbeddedResource>
@@ -142,16 +178,20 @@
     <EmbeddedResource Include="frmThongKeTienVao.resx">
       <DependentUpon>frmThongKeTienVao.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuenMatKhau.resx">
+      <DependentUpon>frmQuenMatKhau.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="rpGiaoDichTienVao.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>rpGiaoDichTienVao.cs</LastGenOutput>
@@ -208,6 +248,70 @@
       <Project>{bbeaf1ed-32a0-41b8-a090-7ef332d92c1f}</Project>
       <Name>DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{BBEAF1ED-32A0-41B8-A090-7EF332D92C1F}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ảnh chụp màn hình 2023-04-07 015931.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pictogrammers-Material-Account-circle.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Security-Key-Security.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picol-Picol-Login.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Custom-Icon-Design-Mini-Login-out.48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons8-Windows-8-Ecommerce-Qr-Code.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Messbook-Outdated-Telephone.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Steve-Zondicons-Menu.64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hopstarter-Sleek-Xp-Software-Windows-Messenger.64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh9.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-dong-cam-on-mau-sac-nhap-nhay.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test-15.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28057221_2091513821088804_4483023968063717376_n_520x520.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled-Project %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_VCB_828891.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anh-gif-dep-binh-yen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anh-dong-chuc-tet-2021-08.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vay_tien_ngan_hang_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo1640593039583-1640593039659704439468.gif" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
@@ -251,6 +355,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Back-2-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\photo1640593039583-16405930396597044394681.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

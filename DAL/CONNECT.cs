@@ -24,5 +24,15 @@ namespace DAL
             return conn;
         }
         // ====Chuỗi kết nối của duy
+        // ====Chuỗi kết nối của hải      
+    }
+    // ====Chuỗi kết nối của duy
+    public class Connection
+    {
+        private static string strConnection = @"Data Source=VANDUY\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True";
+        public static SqlConnection GetSqlConnection()
+        {
+            return new SqlConnection(strConnection);
+        }
     }
 }
