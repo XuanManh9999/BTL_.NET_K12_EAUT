@@ -1,4 +1,4 @@
-﻿<<<<<<< HEAD
+<<<<<<< HEAD
 D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.exe.config
 D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.exe
 D:\Workspace\C#\BTL_.NET\DAL\bin\Debug\DAL.pdb

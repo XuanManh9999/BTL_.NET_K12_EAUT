@@ -65,7 +65,6 @@
     <Compile Include="rpGiaoDichTienVao.cs" />
     <Compile Include="rpThongTinNguoiGui.cs" />
     <Compile Include="rpThongTinNguoiNhan.cs" />
-    <Compile Include="TAI_KHOAN_DANG_NHAP.cs" />
     <Compile Include="TaiKhoan.cs" />
     <Compile Include="THONG_TIN_TAI_KHOAN.cs" />
     <Compile Include="TIET_KIEM.cs" />
