@@ -62,7 +62,7 @@ namespace DAL
                 {
                     goto back;   
                 }
-            } 
+            }
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"insert into giaodich values('GD00{x}', '{giaoDich.soTienGD}', N'{giaoDich.noiDungGD}', '{DateTime.Now.ToString()}', '{giaoDich.SoTKNhan}', '{giaoDich.SoTKGui}')";
@@ -74,13 +74,17 @@ namespace DAL
                 return true;
             }else { return false; }
         }
-        public void CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
+        public bool CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"update THONGTINTAIKHOAN set SoDu += {double.Parse(tienGiaoDich)} where SoTK = '{soTaiKhoanNhan}'";
             sqlCMD.Connection = Connection.GetSqlConnection();
-            sqlCMD.ExecuteNonQuery();
+            if(sqlCMD.ExecuteNonQuery() > 0)
+            {
+                return true;
+            }
+            return false;
         }
 
         // Lấy thông tin người nhận tiền
@@ -89,7 +93,7 @@ namespace DAL
             List<rpThongTinNguoiNhan> listTTNN = new List<rpThongTinNguoiNhan>();
             string query = "SELECT T.SoTK, K.TenKH FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE G.SoTKNhan = T.SoTK AND K.MaKH = T.MaKH " 
                 + "AND G.MaGD IN (SELECT G.MaGD FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE K.MaKH = T.MaKH AND G.SoTKGui = T.SoTK AND K.MaKH = @MaKH)";
-            SqlConnection conn = Connection.GetSqlConnection();
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);
@@ -117,7 +121,7 @@ namespace DAL
             List<rpGiaoDichTienRa> listReport = new List<rpGiaoDichTienRa>();
             string query = "SELECT K.MaKH, TenKH, MaGD, SoTienGD, NoiDungGD, ThoiGianGD, SoTKNhan FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T " 
                 + "WHERE K.MaKH = T.MaKH AND G.SoTKGui = T.SoTK AND K.MaKH = @MaKH";
-            SqlConnection conn = Connection.GetSqlConnection();
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);
@@ -155,7 +159,7 @@ namespace DAL
             List<rpThongTinNguoiGui> listTTNG = new List<rpThongTinNguoiGui>();
             string query = "SELECT T.SoTK, K.TenKH FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE G.SoTKGui = T.SoTK AND K.MaKH = T.MaKH " 
                 + "AND G.MaGD IN (SELECT G.MaGD FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE K.MaKH = T.MaKH AND G.SoTKNhan = T.SoTK AND K.MaKH = @MaKH)";
-            SqlConnection conn = Connection.GetSqlConnection();
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);
@@ -174,15 +178,17 @@ namespace DAL
         // Thống kê giao dịch tiền vào
         public List<rpGiaoDichTienVao> XemGiaoDichTienVao(string MaKH)
         {
+            // List lưu thông tin người nhận để so sánh với số tk người gửi để lấy thông tin
             List<rpThongTinNguoiGui> listTTNG = Get_TTNG(MaKH);
 
+            // List lưu tất cả dữ liệu giao dịch để gán cho Report Soucre
             List<rpGiaoDichTienVao> listReport = new List<rpGiaoDichTienVao>();
 
             double TongTienVao = 0;
 
             string query = "SELECT K.MaKH, TenKH, MaGD, SoTienGD, NoiDungGD, ThoiGianGD, SoTKGui FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T " 
                 + "WHERE K.MaKH = T.MaKH AND G.SoTKNhan = T.SoTK AND K.MaKH = @MaKH";
-            SqlConnection conn = Connection.GetSqlConnection();
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
             SqlCommand cmd = new SqlCommand(query, conn);
             cmd.Parameters.AddWithValue("MaKH", MaKH);

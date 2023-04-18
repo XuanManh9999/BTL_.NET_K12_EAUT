@@ -106,7 +106,6 @@
             this.txtTenTaiKhoanNhan.SelectedText = "";
             this.txtTenTaiKhoanNhan.Size = new System.Drawing.Size(506, 35);
             this.txtTenTaiKhoanNhan.TabIndex = 18;
-            this.txtTenTaiKhoanNhan.TextChanged += new System.EventHandler(this.txtTenTaiKhoanNhan_TextChanged);
             // 
             // guna2HtmlLabel10
             // 
@@ -331,7 +330,6 @@
             this.txtSoTien.Size = new System.Drawing.Size(506, 35);
             this.txtSoTien.TabIndex = 3;
             this.txtSoTien.TabStop = false;
-            this.txtSoTien.TextChanged += new System.EventHandler(this.txtSoTien_TextChanged);
             // 
             // guna2HtmlLabel4
             // 
@@ -358,7 +356,6 @@
             this.cboHinhThucChuyenKhoan.Name = "cboHinhThucChuyenKhoan";
             this.cboHinhThucChuyenKhoan.Size = new System.Drawing.Size(506, 36);
             this.cboHinhThucChuyenKhoan.TabIndex = 1;
-            this.cboHinhThucChuyenKhoan.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
             // guna2HtmlLabel2
             // 
@@ -453,7 +450,6 @@
             this.guna2HtmlLabel3.TabIndex = 1;
             this.guna2HtmlLabel3.Text = null;
             this.guna2HtmlLabel3.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guna2HtmlLabel3.Click += new System.EventHandler(this.guna2HtmlLabel3_Click);
             // 
             // Form_Giao_Dich
             // 

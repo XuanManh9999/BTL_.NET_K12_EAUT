@@ -29,7 +29,7 @@ namespace DAL
     // ====Chuỗi kết nối của duy
     public class Connection
     {
-        private static string strConnection = @"Data Source=VANDUY\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True";
+        private static string strConnection = @"Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNganHang;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(strConnection);

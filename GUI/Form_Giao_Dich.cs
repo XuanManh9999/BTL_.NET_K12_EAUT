@@ -19,22 +19,12 @@ namespace GUI
         {
             InitializeComponent();
         }
-
-        private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
         public List<string> load_STK()
         {
             List<string> stks = new List<string>();
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = CommandType.Text;
-            sqlCMD.CommandText = "SELECT SoTK FROM THONGTINTAIKHOAN ";
+            sqlCMD.CommandText = "SELECT SoTK FROM THONGTINTAIKHOAN";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             while(reader.Read())
@@ -76,29 +66,19 @@ namespace GUI
                 txtTenTK.Text = reader.GetString(2).ToString();
             }
             reader.Close();
-            
-           
         }
         private void Form_Giao_Dich_Load(object sender, EventArgs e)
         {
             load_TT();
-            
-
         }
         public void hienThiTen(List<string> soTaiKhoan)
         {
 
         }
-        private void txtSoTien_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnChuyenKhoan_Click(object sender, EventArgs e)
         {
             try
             {
-
                 GIAO_DICH giaoDich = new GIAO_DICH("", txtSoTienChuyen.Text, txtNoiDungChuyen.Text, "", txtTaiKhoanNhan.Text, txtSoTaiKhoanGui.Text);
                 bus_Giao_Dich giaoDich_bus = new bus_Giao_Dich();
                 if (giaoDich_bus.khachHang_GD_BUS(giaoDich))
@@ -114,7 +94,6 @@ namespace GUI
                 else
                 {
                     MessageBox.Show("Giao Dịch Không Thành Công.");
-
                 }
             }
             catch(Exception ex)
@@ -137,18 +116,13 @@ namespace GUI
                     txtTenTaiKhoanNhan.Text = reader1.GetString(0);
                 }
                 reader1.Close();
-        
             }
         }
-
-        private void txtTenTaiKhoanNhan_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Hide();
+            Form_Trang_Chu frmMain = new Form_Trang_Chu();
+            frmMain.Show();
         }
     }
 }
