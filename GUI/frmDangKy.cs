@@ -103,5 +103,10 @@ namespace GUI
                 MessageBox.Show("Tên tài khoản đã được đăng kí, vui lòng đăng kí tên tài khoản khác!!");
             }
         }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

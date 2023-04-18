@@ -47,7 +47,8 @@ namespace GUI
 
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Đang cập nhật...");
+            FormLich_Su_Giao_Dich formLich_Su_Giao_Dich = new FormLich_Su_Giao_Dich("KH0001", "00999902082003");
+            formLich_Su_Giao_Dich.ShowDialog();
         }
 
         private void btnDangXuat_Click(object sender, EventArgs e)
@@ -63,6 +64,13 @@ namespace GUI
                     }
                 }
             }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            frmQLKH frmQLKH = new frmQLKH();
+            this.Hide();
+            frmQLKH.ShowDialog();
         }
     }
 }

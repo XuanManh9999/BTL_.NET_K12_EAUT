@@ -112,3 +112,27 @@ D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form2.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmDangKy.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmDangNhap.resources
 D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmQuenMatKhau.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.Shared.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.Windows.Forms.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\bin\Debug\stdole.dll
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmQLKH.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmThongKeTienRa.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmThongKeTienVao.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.Form2.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmDangKy.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmDangNhap.resources
+D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmQuenMatKhau.resources

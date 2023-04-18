@@ -15,7 +15,7 @@ namespace DAL
         List<rpGiaoDichTienRa> XemGiaoDichTienRa(string MaKH);
         List<rpGiaoDichTienVao> XemGiaoDichTienVao(string MaKH);
         bool chuyenTien(GIAO_DICH giaoDich);
-        bool tietKiem(TIET_KIEM tietKiem);
+        bool tietKiem(TIET_KIEM tietKiem, string stkChuyen);
         SqlDataReader xemCTGD(string s);
         SqlDataReader tienNhan(string TKNhan);
     }
@@ -45,7 +45,7 @@ namespace DAL
             SqlCommand sqlcheck = new SqlCommand();
             sqlcheck.CommandType = System.Data.CommandType.Text;
             sqlcheck.CommandText = "select MaGD from GIAODICH";
-            sqlcheck.Connection = Connection.GetSqlConnection();
+            sqlcheck.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlcheck.ExecuteReader();
             int i = 0;
             List<int> maGD = new List<int> {};
@@ -66,7 +66,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"insert into giaodich values('GD00{x}', '{giaoDich.soTienGD}', N'{giaoDich.noiDungGD}', '{DateTime.Now.ToString()}', '{giaoDich.SoTKNhan}', '{giaoDich.SoTKGui}')";
-            sqlCMD.Connection = Connection.GetSqlConnection();
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             if (sqlCMD.ExecuteNonQuery() > 0)
             {
                 CongTienTKNHAN(giaoDich.soTienGD, giaoDich.SoTKNhan);
@@ -79,12 +79,8 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"update THONGTINTAIKHOAN set SoDu += {double.Parse(tienGiaoDich)} where SoTK = '{soTaiKhoanNhan}'";
-            sqlCMD.Connection = Connection.GetSqlConnection();
-            if(sqlCMD.ExecuteNonQuery() > 0)
-            {
-                return true;
-            }
-            return false;
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.ExecuteNonQuery();
         }
 
         // Lấy thông tin người nhận tiền
@@ -225,7 +221,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"update THONGTINTAIKHOAN set SoDu -= {float.Parse(tienGiaoDich)} where SoTK = '{soTaiKhoanChuyen}'";
-            sqlCMD.Connection = Connection.GetSqlConnection();
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             sqlCMD.ExecuteNonQuery();
         }
         // Lấy mã tiết kiệm từ csdl
@@ -235,7 +231,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = "select MaTK from TIETKIEM";
-            sqlCMD.Connection = Connection.GetSqlConnection();
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             while(reader.Read())
             {
@@ -243,7 +239,7 @@ namespace DAL
             }
             return list;
         }
-        public bool tietKiem(TIET_KIEM tietKiem)
+        public bool tietKiem(TIET_KIEM tietKiem, string stkChuyen)
         {
             back:
             Random ranDom = new Random();
@@ -259,8 +255,9 @@ namespace DAL
             sqlCMD.CommandType = System.Data.CommandType.Text;
             // Đoạn Này cần thêm mã tài khoản.
             sqlCMD.CommandText = $"insert into TIETKIEM values ('MTK00{x}', {tietKiem.soTienGD}, N'{tietKiem.noiDungGD}', '{DateTime.Now.ToString()}', 'TK001')";
-            sqlCMD.Connection = Connection.GetSqlConnection();
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             if (sqlCMD.ExecuteNonQuery() > 0) {
+                TruTienTKGUI(tietKiem.soTienGD, stkChuyen);
                 return true;
             }
             return false;
@@ -270,7 +267,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             sqlCMD.CommandText = $"select DISTINCT GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD,GIAODICH.NoiDungGD, GIAODICH.SoTKNhan,  GIAODICH.ThoiGianGD from GIAODICH, THONGTINTAIKHOAN, KHACHHANG where GIAODICH.SoTKGui = THONGTINTAIKHOAN.SoTK and THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH and KHACHHANG.MaKH = '{s}'";
-            sqlCMD.Connection = Connection.GetSqlConnection();
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }
@@ -278,8 +275,8 @@ namespace DAL
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"select DISTINCT  GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD, GIAODICH.NoiDungGD, GIAODICH.SoTKGui, GIAODICH.ThoiGianGD  from GIAODICH, KHACHHANG, THONGTINTAIKHOAN where GIAODICH.SoTKNhan = '{TKNhan}' and KHACHHANG.MaKH = (select KHACHHANG.MaKH from KHACHHANG, THONGTINTAIKHOAN where KHACHHANG.MaKH = THONGTINTAIKHOAN.MaKH and THONGTINTAIKHOAN.SoTK = (select DISTINCT GIAODICH.SoTKGui  from GIAODICH, KHACHHANG, THONGTINTAIKHOAN where GIAODICH.SoTKNhan = '{TKNhan}'))";
-            sqlCMD.Connection = Connection.GetSqlConnection();
+            sqlCMD.CommandText = $"SELECT GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD, GIAODICH.NoiDungGD, GIAODICH.SoTKGui, GIAODICH.ThoiGianGD \r\nFROM GIAODICH \r\nINNER JOIN THONGTINTAIKHOAN ON GIAODICH.SoTKGui = THONGTINTAIKHOAN.SoTK \r\nINNER JOIN KHACHHANG ON THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH \r\nWHERE GIAODICH.SoTKNhan = '{TKNhan}'";
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }

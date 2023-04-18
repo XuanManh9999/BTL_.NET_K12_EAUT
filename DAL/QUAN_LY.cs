@@ -41,7 +41,7 @@ namespace DAL
         {
             DataTable dt = new DataTable();
             string query = "Select * from KhachHang";
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
             adapter.Fill(dt);
             return dt;
@@ -49,7 +49,7 @@ namespace DAL
         // Hàm xử lý chung thêm, sửa xóa
         public bool quanLyKhachHang(string query, KHACH_HANG KH)
         {
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = CONNECT.chuoi_ket_noi_cua_manh();
             try
             {
                 conn.Open();
@@ -97,7 +97,7 @@ namespace DAL
         // Tìm kiếm khách hàng
         public DataTable timKiemKhachHang(string query, string txtTimKiem, string variable)
         {
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = CONNECT.chuoi_ket_noi_cua_manh();
             try
             {
                 conn.Open();
@@ -125,7 +125,7 @@ namespace DAL
         // Hàm xử lý bảng qlkh
         public bool XuLyBangQLKH(QUAN_LY_KHACH_HANG QLKH, string query)
         {
-            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            SqlConnection conn = CONNECT.chuoi_ket_noi_cua_manh();
             try
             {
                 conn.Open();
