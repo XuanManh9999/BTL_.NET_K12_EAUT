@@ -273,7 +273,7 @@ namespace DAL
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"select DISTINCT  GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD, GIAODICH.NoiDungGD, GIAODICH.SoTKGui, GIAODICH.ThoiGianGD  from GIAODICH, KHACHHANG, THONGTINTAIKHOAN where GIAODICH.SoTKNhan = '{TKNhan}' and KHACHHANG.MaKH = (select KHACHHANG.MaKH from KHACHHANG, THONGTINTAIKHOAN where KHACHHANG.MaKH = THONGTINTAIKHOAN.MaKH and THONGTINTAIKHOAN.SoTK = (select DISTINCT GIAODICH.SoTKGui  from GIAODICH, KHACHHANG, THONGTINTAIKHOAN where GIAODICH.SoTKNhan = '{TKNhan}'))";
+            sqlCMD.CommandText = $"SELECT GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD, GIAODICH.NoiDungGD, GIAODICH.SoTKGui, GIAODICH.ThoiGianGD \r\nFROM GIAODICH \r\nINNER JOIN THONGTINTAIKHOAN ON GIAODICH.SoTKGui = THONGTINTAIKHOAN.SoTK \r\nINNER JOIN KHACHHANG ON THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH \r\nWHERE GIAODICH.SoTKNhan = '{TKNhan}'";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;

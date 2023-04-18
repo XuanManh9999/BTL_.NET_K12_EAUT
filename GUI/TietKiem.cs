@@ -44,15 +44,15 @@ namespace GUI
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = CommandType.Text;
             // Đoạn này cần thêm mã khách hàng
-            sqlCMD.CommandText = $"SELECT  top 1 SoTK, TenKH, SoDu FROM THONGTINTAIKHOAN, KHACHHANG where KHACHHANG.MaKH = 'KH0001'";
+            sqlCMD.CommandText = $"SELECT THONGTINTAIKHOAN.SoTK, KHACHHANG.TenKH, THONGTINTAIKHOAN.SoDu \r\nFROM THONGTINTAIKHOAN\r\nINNER JOIN KHACHHANG ON THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH\r\nWHERE THONGTINTAIKHOAN.MaKH = 'KH0001'";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             cboTaiKhoanNguon.Items.Clear();
             string s = "";
-            while (reader.Read())
+            if (reader.Read())
             {
                 soTKChuyen = reader.GetString(0).Trim();
-                s = $"Số TK: {reader.GetString(0)}/Họ Tên Khách Hàng: {reader.GetString(1)} / Số Dư: {reader.GetDouble(2)}VNĐ";
+                s = $"Số TK: {reader.GetString(0)}/Họ Tên Khách Hàng: {reader.GetString(1)} / Số Dư: {reader.GetDouble(2)} VNĐ";
                 cboTaiKhoanNguon.Items.Add(s);
                 cboTaiKhoanNguon.SelectedIndex = 0;
             }

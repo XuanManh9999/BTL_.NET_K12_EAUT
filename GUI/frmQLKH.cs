@@ -170,6 +170,7 @@ namespace GUI
         // Sự kiện sửa khách hàng
         private void btnSua_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("OK");
             KHACH_HANG KH = Create_kH();
             DialogResult result = MessageBox.Show("Bạn có muốn sửa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
@@ -248,6 +249,171 @@ namespace GUI
         private void btnClose_MouseLeave(object sender, EventArgs e)
         {
             btnClose.BackColor = Color.Transparent;
+        }
+
+        private void dtGridQLKH_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel_TimKiem_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbKetQua_TK_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTK_TenKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdTenKH_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTK_MaKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdMaKH_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdGT_Nu_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdGT_Nam_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtTenKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCMND_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDiaChi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateNS_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtMaKH_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2GroupBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
