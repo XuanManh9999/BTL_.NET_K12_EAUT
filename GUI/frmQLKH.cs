@@ -170,7 +170,6 @@ namespace GUI
         // Sự kiện sửa khách hàng
         private void btnSua_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("OK");
             KHACH_HANG KH = Create_kH();
             DialogResult result = MessageBox.Show("Bạn có muốn sửa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)

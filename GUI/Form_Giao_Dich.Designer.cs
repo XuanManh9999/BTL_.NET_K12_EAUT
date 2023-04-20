@@ -84,6 +84,7 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(967, 488);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Thông Tin Chuyển Tiền";
+            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // txtTenTaiKhoanNhan
             // 

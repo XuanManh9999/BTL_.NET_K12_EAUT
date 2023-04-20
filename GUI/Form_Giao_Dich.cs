@@ -149,5 +149,10 @@ namespace GUI
         {
             this.Close();
         }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
