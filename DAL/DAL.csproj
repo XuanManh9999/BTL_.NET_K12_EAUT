@@ -55,7 +55,6 @@
     </Compile>
     <Compile Include="GIAO_DICH.cs" />
     <Compile Include="KHACH_HANG.cs" />
-    <Compile Include="Modify.cs" />
     <Compile Include="PERSON.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

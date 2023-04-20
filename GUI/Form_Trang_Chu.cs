@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GUI
 {
@@ -17,40 +18,51 @@ namespace GUI
         {
             InitializeComponent();
         }
-
-        private void Form_Trang_Chu_Load(object sender, EventArgs e)
+        // Chuyển tiền
+        private void btnGiaoDich_Click(object sender, EventArgs e)
         {
-
+            Hide();
+            Form_Giao_Dich formGiaoDich = new Form_Giao_Dich();
+            formGiaoDich.Show();
         }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
+        // Gửi tiền tiết kiệm
+        private void btnTietkiem_Click(object sender, EventArgs e)
         {
-            Form_Giao_Dich formGiaoDich =new Form_Giao_Dich();
-            formGiaoDich.ShowDialog();
+            Hide();
+            FromTietKiem tietKiem = new FromTietKiem();
+            tietKiem.Show();
         }
-
-        private void guna2Button2_Click(object sender, EventArgs e)
+        // Xem lịch sử giao dịch
+        private void btnLSGD_Click(object sender, EventArgs e)
         {
-            FromTietKiem tietKiem =new FromTietKiem();
-            tietKiem.ShowDialog();
-        }
-
-        private void guna2Button3_Click(object sender, EventArgs e)
-        {
+            Hide();
             FormLich_Su_Giao_Dich formLich_Su_Giao_Dich = new FormLich_Su_Giao_Dich("KH0001", "00999902082003");
-            formLich_Su_Giao_Dich.ShowDialog();
+            formLich_Su_Giao_Dich.Show();
         }
-
-        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Đang cập nhật...");
+        }
+        // Chức năng dành cho người quản lý
+        private void btnQuanLy_Click(object sender, EventArgs e)
         {
 
         }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
+        // Đăng xuất tài khoản
+        private void btnDangXuat_Click(object sender, EventArgs e)
         {
-            frmQLKH frmQLKH = new frmQLKH();
-            this.Hide();
-            frmQLKH.ShowDialog();
+            DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if(result == DialogResult.OK)
+            {
+                for (int i = 0; i < Application.OpenForms.Count; ++i)
+                {
+                    if (Application.OpenForms[i] != this)
+                    {
+                        Application.OpenForms[i].Close();
+                    }
+                }
+            }
         }
     }
 }

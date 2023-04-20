@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -35,7 +36,8 @@ namespace DAL
         public QUAN_LY() { }
 
         CONNECT DBConnect = new CONNECT();
-
+    
+        /* Xử lý bảng khách hàng */
         // lấy thông tin khách khàng
         public DataTable hienThiKhachHang()
         {
@@ -122,6 +124,7 @@ namespace DAL
             string query = "Select * from KhachHang where TenKH = @TenKH";
             return timKiemKhachHang(query, txtTenKH, "TenKH");
         }
+        
         // Hàm xử lý bảng qlkh
         public bool XuLyBangQLKH(QUAN_LY_KHACH_HANG QLKH, string query)
         {
@@ -159,6 +162,99 @@ namespace DAL
             {
                 return true;
             }
+            return false;
+        }
+
+        /* Xử lý bảng thông tin tài khoản khách hàng */
+        // Thêm bảng Thông tin tài khoản
+        public bool ThemTTTK(THONG_TIN_TAI_KHOAN TTTK)
+        {
+            string query = "Insert into ThongTinTaiKhoan values (@SoTK, @SoDu, @NgayCap, @TenCN, @LoaiTK, @MaKH)";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("SoTK", TTTK.SoTaiKhoan);
+                cmd.Parameters.AddWithValue("SoDu", TTTK.SoDu);
+                cmd.Parameters.AddWithValue("NgayCap", TTTK.NgayCap);
+                cmd.Parameters.AddWithValue("TenCN", TTTK.TenCN);
+                cmd.Parameters.AddWithValue("LoaiTK", TTTK.LoaiKH);
+                cmd.Parameters.AddWithValue("MaKH", TTTK.MaKH);
+                if(cmd.ExecuteNonQuery() > 0) { return true; }
+            } catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Xóa bảng Thông tin tài khoản
+        public bool XoaTTTK(THONG_TIN_TAI_KHOAN TTTK)
+        {
+            string query = "Delete ThongTinTaiKhoan where SoTK = @SoTK";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("SoTK", TTTK.SoTaiKhoan);
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+
+        /* Xử lý bảng Tài khoản đăng nhập */
+        // Kiểm tra mã tk đã tồn tại chưa
+        public bool Check_MaTK(string txtMaTK)
+        {
+            string query = "Select MaTK from TaiKhoanDangNhap where MaTK = @MaTK";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaTK", txtMaTK);
+                SqlDataReader read = cmd.ExecuteReader();
+                if(read.Read()) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Thêm vào tài khoản đăng nhập
+        public bool ThemTKDN(TaiKhoan TKDN)
+        {
+            string query = "Insert into TaiKhoanDangNhap values (@MaTK, @TenTK, @MK, @Email, @MaKH)";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaTK", TKDN.MaTaiKhoan);
+                cmd.Parameters.AddWithValue("TenTK", TKDN.TenTaiKhoan);
+                cmd.Parameters.AddWithValue("MK", TKDN.MatKhau);
+                cmd.Parameters.AddWithValue("Email", TKDN.Email);
+                cmd.Parameters.AddWithValue("MaKH", TKDN.MaKhachHang);
+                if(cmd.ExecuteNonQuery() > 0) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Xóa tài khoản đăng nhập
+        public bool XoaTKDN(TaiKhoan TKDN)
+        {
+            string query = "Delete TaiKhoanDangNhap where MaTK = @MaTK";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaTK", TKDN.MaTaiKhoan);
+                if(cmd.ExecuteNonQuery() > 0) { return true; }
+            } 
+            catch { }
+            finally { conn.Close(); }
             return false;
         }
     }

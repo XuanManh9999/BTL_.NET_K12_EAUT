@@ -46,10 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS_DangKyTK.cs" />
+    <Compile Include="BUS_DangNhap.cs" />
     <Compile Include="BUS_GiaoDichTienRa.cs" />
     <Compile Include="BUS_GiaoDichTienVao.cs" />
     <Compile Include="BUS_QLKH.cs" />
     <Compile Include="bus_Giao_Dich.cs" />
+    <Compile Include="BUS_QuenMK.cs" />
     <Compile Include="Bus_Tien_Nhan.cs" />
     <Compile Include="Bus_Tiết_Kiệm.cs" />
     <Compile Include="Bus_Xem_Chi_Tiet_Giao_Dich.cs" />
