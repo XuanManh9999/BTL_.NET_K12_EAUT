@@ -82,14 +82,13 @@
             // guna2GradientPanel2
             // 
             this.guna2GradientPanel2.Controls.Add(this.guna2GroupBox1);
-            this.guna2GradientPanel2.FillColor = System.Drawing.Color.OrangeRed;
-            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.Gold;
+            this.guna2GradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
             this.guna2GradientPanel2.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
             this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 42);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
             this.guna2GradientPanel2.Size = new System.Drawing.Size(374, 530);
             this.guna2GradientPanel2.TabIndex = 1;
-            this.guna2GradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel2_Paint);
             // 
             // guna2GroupBox1
             // 
@@ -117,7 +116,6 @@
             this.guna2GroupBox1.Size = new System.Drawing.Size(350, 503);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "Nhập thông tin khách hàng";
-            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // panel_TimKiem
             // 
@@ -130,11 +128,10 @@
             this.panel_TimKiem.Controls.Add(this.rdMaKH);
             this.panel_TimKiem.Controls.Add(this.label8);
             this.panel_TimKiem.Controls.Add(this.btnClose);
-            this.panel_TimKiem.Location = new System.Drawing.Point(0, -1);
+            this.panel_TimKiem.Location = new System.Drawing.Point(1, 0);
             this.panel_TimKiem.Name = "panel_TimKiem";
             this.panel_TimKiem.Size = new System.Drawing.Size(350, 504);
             this.panel_TimKiem.TabIndex = 22;
-            this.panel_TimKiem.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_TimKiem_Paint);
             // 
             // lbKetQua_TK
             // 
@@ -145,7 +142,6 @@
             this.lbKetQua_TK.Size = new System.Drawing.Size(19, 21);
             this.lbKetQua_TK.TabIndex = 8;
             this.lbKetQua_TK.Text = "0";
-            this.lbKetQua_TK.Click += new System.EventHandler(this.lbKetQua_TK_Click);
             // 
             // label9
             // 
@@ -156,7 +152,6 @@
             this.label9.Size = new System.Drawing.Size(147, 21);
             this.label9.TabIndex = 7;
             this.label9.Text = "Số kết quả tìm thấy:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // txtTK_TenKH
             // 
@@ -180,7 +175,6 @@
             this.txtTK_TenKH.SelectedText = "";
             this.txtTK_TenKH.Size = new System.Drawing.Size(283, 43);
             this.txtTK_TenKH.TabIndex = 6;
-            this.txtTK_TenKH.TextChanged += new System.EventHandler(this.txtTK_TenKH_TextChanged);
             // 
             // rdTenKH
             // 
@@ -192,7 +186,6 @@
             this.rdTenKH.TabIndex = 5;
             this.rdTenKH.Text = "Tìm kiếm theo tên";
             this.rdTenKH.UseVisualStyleBackColor = true;
-            this.rdTenKH.CheckedChanged += new System.EventHandler(this.rdTenKH_CheckedChanged);
             // 
             // txtTK_MaKH
             // 
@@ -216,7 +209,6 @@
             this.txtTK_MaKH.SelectedText = "";
             this.txtTK_MaKH.Size = new System.Drawing.Size(283, 43);
             this.txtTK_MaKH.TabIndex = 4;
-            this.txtTK_MaKH.TextChanged += new System.EventHandler(this.txtTK_MaKH_TextChanged);
             // 
             // rdMaKH
             // 
@@ -230,7 +222,6 @@
             this.rdMaKH.TabStop = true;
             this.rdMaKH.Text = "Tìm kiếm theo mã";
             this.rdMaKH.UseVisualStyleBackColor = true;
-            this.rdMaKH.CheckedChanged += new System.EventHandler(this.rdMaKH_CheckedChanged);
             // 
             // label8
             // 
@@ -241,12 +232,11 @@
             this.label8.Size = new System.Drawing.Size(248, 32);
             this.label8.TabIndex = 1;
             this.label8.Text = "Tìm kiếm khách hàng";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.White;
-            this.btnClose.FillColor = System.Drawing.Color.Black;
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
             this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
             this.btnClose.ImageRotate = 0F;
             this.btnClose.Location = new System.Drawing.Point(308, 0);
@@ -270,7 +260,6 @@
             this.rdGT_Nu.TabStop = true;
             this.rdGT_Nu.Text = "Nữ";
             this.rdGT_Nu.UseVisualStyleBackColor = true;
-            this.rdGT_Nu.CheckedChanged += new System.EventHandler(this.rdGT_Nu_CheckedChanged);
             // 
             // rdGT_Nam
             // 
@@ -284,7 +273,6 @@
             this.rdGT_Nam.TabStop = true;
             this.rdGT_Nam.Text = "Nam";
             this.rdGT_Nam.UseVisualStyleBackColor = true;
-            this.rdGT_Nam.CheckedChanged += new System.EventHandler(this.rdGT_Nam_CheckedChanged);
             // 
             // txtSDT
             // 
@@ -307,7 +295,6 @@
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(214, 29);
             this.txtSDT.TabIndex = 19;
-            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // txtTenKH
             // 
@@ -330,7 +317,6 @@
             this.txtTenKH.SelectedText = "";
             this.txtTenKH.Size = new System.Drawing.Size(214, 29);
             this.txtTenKH.TabIndex = 18;
-            this.txtTenKH.TextChanged += new System.EventHandler(this.txtTenKH_TextChanged);
             // 
             // txtCMND
             // 
@@ -353,7 +339,6 @@
             this.txtCMND.SelectedText = "";
             this.txtCMND.Size = new System.Drawing.Size(214, 29);
             this.txtCMND.TabIndex = 17;
-            this.txtCMND.TextChanged += new System.EventHandler(this.txtCMND_TextChanged);
             // 
             // txtDiaChi
             // 
@@ -376,13 +361,12 @@
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(214, 29);
             this.txtDiaChi.TabIndex = 15;
-            this.txtDiaChi.TextChanged += new System.EventHandler(this.txtDiaChi_TextChanged);
             // 
             // dateNS
             // 
             this.dateNS.BorderColor = System.Drawing.Color.Transparent;
             this.dateNS.Checked = true;
-            this.dateNS.FillColor = System.Drawing.Color.OrangeRed;
+            this.dateNS.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             this.dateNS.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.dateNS.ForeColor = System.Drawing.Color.White;
             this.dateNS.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -393,7 +377,6 @@
             this.dateNS.Size = new System.Drawing.Size(214, 30);
             this.dateNS.TabIndex = 14;
             this.dateNS.Value = new System.DateTime(2023, 4, 7, 23, 17, 55, 0);
-            this.dateNS.ValueChanged += new System.EventHandler(this.dateNS_ValueChanged);
             // 
             // txtMaKH
             // 
@@ -416,7 +399,6 @@
             this.txtMaKH.SelectedText = "";
             this.txtMaKH.Size = new System.Drawing.Size(214, 29);
             this.txtMaKH.TabIndex = 7;
-            this.txtMaKH.TextChanged += new System.EventHandler(this.txtMaKH_TextChanged);
             // 
             // label7
             // 
@@ -427,7 +409,6 @@
             this.label7.Size = new System.Drawing.Size(52, 28);
             this.label7.TabIndex = 6;
             this.label7.Text = "SDT:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label6
             // 
@@ -438,7 +419,6 @@
             this.label6.Size = new System.Drawing.Size(95, 28);
             this.label6.TabIndex = 5;
             this.label6.Text = "Giới tính:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label5
             // 
@@ -449,7 +429,6 @@
             this.label5.Size = new System.Drawing.Size(78, 28);
             this.label5.TabIndex = 4;
             this.label5.Text = "Địa chỉ:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -460,7 +439,6 @@
             this.label4.Size = new System.Drawing.Size(82, 28);
             this.label4.TabIndex = 3;
             this.label4.Text = "Tên KH:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
@@ -471,7 +449,6 @@
             this.label3.Size = new System.Drawing.Size(105, 28);
             this.label3.TabIndex = 2;
             this.label3.Text = "Số CMND:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -482,7 +459,6 @@
             this.label2.Size = new System.Drawing.Size(108, 28);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ngày sinh:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -493,7 +469,6 @@
             this.label1.Size = new System.Drawing.Size(84, 28);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã KH: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // guna2GradientPanel1
             // 
@@ -513,7 +488,6 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1141, 573);
             this.guna2GradientPanel1.TabIndex = 1;
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // guna2GroupBox2
             // 
@@ -525,7 +499,6 @@
             this.guna2GroupBox2.Size = new System.Drawing.Size(751, 434);
             this.guna2GroupBox2.TabIndex = 4;
             this.guna2GroupBox2.Text = "Danh sách khách hàng";
-            this.guna2GroupBox2.Click += new System.EventHandler(this.guna2GroupBox2_Click);
             // 
             // dtGridQLKH
             // 
@@ -535,7 +508,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Coral;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtGridQLKH.DefaultCellStyle = dataGridViewCellStyle3;
@@ -548,7 +521,6 @@
             this.dtGridQLKH.Size = new System.Drawing.Size(751, 394);
             this.dtGridQLKH.TabIndex = 0;
             this.dtGridQLKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridQLKH_CellClick);
-            this.dtGridQLKH.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridQLKH_CellContentClick);
             // 
             // groupBox1
             // 
@@ -562,7 +534,6 @@
             this.groupBox1.Size = new System.Drawing.Size(751, 63);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnTimKiem
             // 
@@ -578,9 +549,10 @@
             this.btnTimKiem.FillColor2 = System.Drawing.Color.White;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Black;
+            this.btnTimKiem.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnTimKiem.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnTimKiem.HoverState.FillColor = System.Drawing.Color.Gold;
-            this.btnTimKiem.HoverState.FillColor2 = System.Drawing.Color.OrangeRed;
+            this.btnTimKiem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.btnTimKiem.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
             this.btnTimKiem.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Image = ((System.Drawing.Image)(resources.GetObject("btnTimKiem.Image")));
             this.btnTimKiem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -606,9 +578,10 @@
             this.btnXoa.FillColor2 = System.Drawing.Color.White;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Black;
+            this.btnXoa.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnXoa.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnXoa.HoverState.FillColor = System.Drawing.Color.Gold;
-            this.btnXoa.HoverState.FillColor2 = System.Drawing.Color.OrangeRed;
+            this.btnXoa.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.btnXoa.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
             this.btnXoa.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
             this.btnXoa.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -634,9 +607,10 @@
             this.btnSua.FillColor2 = System.Drawing.Color.White;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Black;
+            this.btnSua.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnSua.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSua.HoverState.FillColor = System.Drawing.Color.Gold;
-            this.btnSua.HoverState.FillColor2 = System.Drawing.Color.OrangeRed;
+            this.btnSua.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.btnSua.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
             this.btnSua.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
             this.btnSua.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -662,9 +636,10 @@
             this.btnThem.FillColor2 = System.Drawing.Color.White;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Black;
+            this.btnThem.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnThem.HoverState.BorderColor = System.Drawing.Color.Transparent;
-            this.btnThem.HoverState.FillColor = System.Drawing.Color.Gold;
-            this.btnThem.HoverState.FillColor2 = System.Drawing.Color.OrangeRed;
+            this.btnThem.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.btnThem.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
             this.btnThem.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
             this.btnThem.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -683,13 +658,12 @@
             this.guna2GradientPanel3.Controls.Add(this.guna2ControlBox2);
             this.guna2GradientPanel3.Controls.Add(this.guna2ControlBox1);
             this.guna2GradientPanel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2GradientPanel3.FillColor = System.Drawing.Color.OrangeRed;
-            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.Gold;
+            this.guna2GradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.guna2GradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
             this.guna2GradientPanel3.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel3.Name = "guna2GradientPanel3";
             this.guna2GradientPanel3.Size = new System.Drawing.Size(1141, 44);
             this.guna2GradientPanel3.TabIndex = 2;
-            this.guna2GradientPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel3_Paint);
             // 
             // guna2ControlBox3
             // 
@@ -709,7 +683,6 @@
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(52, 43);
             this.guna2ControlBox3.TabIndex = 9;
-            this.guna2ControlBox3.Click += new System.EventHandler(this.guna2ControlBox3_Click);
             // 
             // guna2ControlBox2
             // 
@@ -728,7 +701,6 @@
             this.guna2ControlBox2.Name = "guna2ControlBox2";
             this.guna2ControlBox2.Size = new System.Drawing.Size(57, 43);
             this.guna2ControlBox2.TabIndex = 8;
-            this.guna2ControlBox2.Click += new System.EventHandler(this.guna2ControlBox2_Click);
             // 
             // guna2ControlBox1
             // 
@@ -747,7 +719,6 @@
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(57, 43);
             this.guna2ControlBox1.TabIndex = 7;
-            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // frmQLKH
             // 
