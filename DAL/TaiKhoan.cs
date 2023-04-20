@@ -11,17 +11,19 @@ namespace DAL
         private string maTaiKhoan;
         private string tenTaiKhoan;
         private string matKhau;
+        private string email;
         private string maKhachHang;
 
         public TaiKhoan()
         {
 
         }
-       public TaiKhoan(string maTaiKhoan, string tenTaiKhoan, string matKhau, string maKhachHang)
+       public TaiKhoan(string maTaiKhoan, string tenTaiKhoan, string matKhau, string email, string maKhachHang)
         {
-            this.MaTaiKhoan = maTaiKhoan;
+            this.maTaiKhoan = maTaiKhoan;
             this.tenTaiKhoan= tenTaiKhoan;
             this.matKhau= matKhau;
+            this.email= email;
             this.maKhachHang = maKhachHang;         
         }
 
@@ -29,5 +31,6 @@ namespace DAL
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public string MaTaiKhoan { get => maTaiKhoan; set => maTaiKhoan = value; }
         public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
+        public string Email { get => email; set => email = value; }
     }
 }

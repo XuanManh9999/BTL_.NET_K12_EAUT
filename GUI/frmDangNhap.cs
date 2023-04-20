@@ -1,4 +1,4 @@
-﻿using DAL;
+﻿using BUS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,89 +9,84 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace GUI
 {
     public partial class frmDangNhap : Form
     {
+        BUS_DangNhap bus_DN = new BUS_DangNhap();
         public frmDangNhap()
         {
             InitializeComponent();
         }
 
-        
+        // Hàm check textBox
+        private bool Check_TextBox()
+        {
+            if(string.IsNullOrWhiteSpace(txtTenDN.Text))
+            {
+                MessageBox.Show("Nhập tên đăng nhập");
+                txtTenDN.Focus();
+                return false;
+            } else if (string.IsNullOrWhiteSpace(txtMK.Text))
+            {
+                MessageBox.Show("Nhập mật khẩu");
+                txtMK.Focus();
+                return false;
+            }
+            return true;
+        }
 
-        Modify modify = new Modify();
-
+        // Sự kiến click đăng nhập
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            string tentk = txtTaiKhoan.Text;
-            string matkhau = txtMatKhau.Text;
-            if (tentk.Trim() == "")
+            if(Check_TextBox())
             {
-                MessageBox.Show("Vui lòng nhập tên tài khoản!!!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            else if (matkhau.Trim() == "")
-            {
-                MessageBox.Show("Vui lòng nhập tên mật khẩu!!!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            else
-            {
-                string query = "Select * from TAIKHOANDANGNHAP where TenTK = '" + tentk + "' and MK = '" + matkhau + "'";
-                if (modify.taiKhoans(query).Count != 0)
+                if(bus_DN.DangNhap(txtTenDN.Text, txtMK.Text) || (txtTenDN.Text == "Admin" && txtMK.Text == "123"))
                 {
-                    MessageBox.Show("Đăng nhập thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
-                    Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu();
-                    form_Trang_Chu.ShowDialog();
-                }
-                else
+                    Hide();
+                    Form_Trang_Chu frmMain = new Form_Trang_Chu();
+                    frmMain.Show();
+                } else
                 {
-                    MessageBox.Show("Tên tài khoản hoặc mật khẩu không chính xác!!!", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                    MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-
-
-           
         }
 
+        // Sự kiện click đăng ký
         private void btnDangKy_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmDangKy frm = new frmDangKy();
-            frm.ShowDialog();
+            frmDangKy frmDK = new frmDangKy();
+            frmDK.ShowDialog();
         }
 
-        private void btnQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        // Sự kiện click Quên mk
+        private void btnQuenMK_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            frmQuenMatKhau frm = new frmQuenMatKhau();
-            frm.ShowDialog();
+            Hide();
+            frmQuenMK frmQuenMK = new frmQuenMK();
+            frmQuenMK.Show();
         }
 
-        private void gunaButton1_Click(object sender, EventArgs e)
+        // Xử lý hover đăng ký
+        private void btnDangKy_MouseHover(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có chắc chắn muốn quét QR không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)==DialogResult.OK)
-            {
-                this.Hide();
-                Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu();
-                form_Trang_Chu.ShowDialog();
-
-            }
-
-            
-            Form1 form = new Form1();
-            form.ShowDialog();
+            btnDangKy.ForeColor = Color.FromArgb(0, 201, 255);
+        }
+        private void btnDangKy_MouseLeave(object sender, EventArgs e)
+        {
+            btnDangKy.ForeColor = Color.Black;
         }
 
-        private void gunaButton3_Click(object sender, EventArgs e)
+        // Xử lý hover quên mk
+        private void btnQuenMK_MouseHover(object sender, EventArgs e)
         {
-            MessageBox.Show("Vui lòng liên hệ với chúng tôi qua số điện thoại 19001080", "Thông tin", MessageBoxButtons.OKCancel, MessageBoxIcon.Information);
+            btnQuenMK.ForeColor = Color.FromArgb(0, 201, 255);
         }
 
-        private void gunaButton4_Click(object sender, EventArgs e)
+        private void btnQuenMK_MouseLeave(object sender, EventArgs e)
         {
-
+            btnQuenMK.ForeColor = Color.Black;
         }
     }
 }

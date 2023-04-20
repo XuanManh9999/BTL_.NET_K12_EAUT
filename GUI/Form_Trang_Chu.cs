@@ -18,39 +18,38 @@ namespace GUI
         {
             InitializeComponent();
         }
-
+        // Chuyển tiền
         private void btnGiaoDich_Click(object sender, EventArgs e)
         {
             Hide();
             Form_Giao_Dich formGiaoDich = new Form_Giao_Dich();
             formGiaoDich.Show();
         }
-
+        // Gửi tiền tiết kiệm
         private void btnTietkiem_Click(object sender, EventArgs e)
         {
             Hide();
             FromTietKiem tietKiem = new FromTietKiem();
             tietKiem.Show();
         }
-
+        // Xem lịch sử giao dịch
         private void btnLSGD_Click(object sender, EventArgs e)
         {
             Hide();
             FormLich_Su_Giao_Dich formLich_Su_Giao_Dich = new FormLich_Su_Giao_Dich("KH0001", "00999902082003");
             formLich_Su_Giao_Dich.Show();
         }
-
+        
         private void btnThongTin_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Đang cập nhật...");
         }
-
+        // Chức năng dành cho người quản lý
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
-            FormLich_Su_Giao_Dich formLich_Su_Giao_Dich = new FormLich_Su_Giao_Dich("KH0001", "00999902082003");
-            formLich_Su_Giao_Dich.ShowDialog();
-        }
 
+        }
+        // Đăng xuất tài khoản
         private void btnDangXuat_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -64,13 +63,6 @@ namespace GUI
                     }
                 }
             }
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            frmQLKH frmQLKH = new frmQLKH();
-            this.Hide();
-            frmQLKH.ShowDialog();
         }
     }
 }

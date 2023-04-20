@@ -10,8 +10,9 @@ namespace DAL
 {
     interface IKHACH_HANG
     {
-        void dangNhapTK();
+        bool dangNhapTK(string txtTenDN, string txtMK);
         void dangKyTK();
+        string quenMK(string txtEmail);
         List<rpGiaoDichTienRa> XemGiaoDichTienRa(string MaKH);
         List<rpGiaoDichTienVao> XemGiaoDichTienVao(string MaKH);
         bool chuyenTien(GIAO_DICH giaoDich);
@@ -21,6 +22,8 @@ namespace DAL
     }
     public class KHACH_HANG : PERSON, IKHACH_HANG
     {
+        public QUAN_LY quanLy;
+
         private string _maKH;
 
         public string MaKH { get => _maKH; set => _maKH = value; }
@@ -32,14 +35,70 @@ namespace DAL
         }
 
         CONNECT DBConnect = new CONNECT();
-        public void dangNhapTK()
-        {
 
+        // Hàm kiểm tra xem mã kh đã tồn tại hay chưa
+        public bool Check_MaKH(string txtMaKH)
+        {
+            string query = "Select MaKH from KhachHang where MaKH = @MaKH";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaKH", txtMaKH);
+                SqlDataReader read = cmd.ExecuteReader();
+                if(read.Read())
+                {
+                    return true;
+                }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Đăng nhập
+        public bool dangNhapTK(string txtTenDN, string txtMK)
+        {
+            string query = "Select * from TaiKhoanDangNhap where TenTK = @TenTK and MK = @MK";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("TenTK", txtTenDN);
+                cmd.Parameters.AddWithValue("MK", txtMK);
+                SqlDataReader read = cmd.ExecuteReader();
+                if(read.HasRows) { return true; }
+            } 
+            catch { }
+            finally { conn.Close(); }
+            return false;
         }
         public void dangKyTK()
         {
 
         }
+        // Lấy lại mk cho khách hàng
+        public string quenMK(string txtEmail)
+        {
+            string Password = "Không tìm thấy mật khẩu của bạn";
+            string query = "Select MK from TaiKhoanDangNhap where Email = @Email";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("Email", txtEmail);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if(reader.Read())
+                {
+                    Password = reader.GetString(0);
+                }
+            } catch { }
+            finally { conn.Close(); }
+            return Password;
+        }
+
         public  bool  chuyenTien(GIAO_DICH giaoDich)
         {
             SqlCommand sqlcheck = new SqlCommand();
@@ -74,7 +133,7 @@ namespace DAL
                 return true;
             }else { return false; }
         }
-        public bool CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
+        public void CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
