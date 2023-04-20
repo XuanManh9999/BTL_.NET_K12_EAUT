@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DAL
 {
@@ -313,7 +314,7 @@ namespace DAL
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
             // Đoạn Này cần thêm mã tài khoản.
-            sqlCMD.CommandText = $"insert into TIETKIEM values ('MTK00{x}', {tietKiem.soTienGD}, N'{tietKiem.noiDungGD}', '{DateTime.Now.ToString()}', 'TK001')";
+            sqlCMD.CommandText = $"insert into TIETKIEM values ('MTK00{x}', {tietKiem.soTienGD}, N'{tietKiem.noiDungGD}', '{DateTime.Now.ToString()}', '{tietKiem.MaTK}')";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             if (sqlCMD.ExecuteNonQuery() > 0) {
                 TruTienTKGUI(tietKiem.soTienGD, stkChuyen);
@@ -338,6 +339,55 @@ namespace DAL
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
+        }
+        // Lấy mã TK
+        public string getMaTK(string tenTK, string mk)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"select matk from TAIKHOANDANGNHAP where TenTK = N'{tenTK}' and MK = N'{mk}'";
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            if (reader.Read())
+            {
+                return reader.GetString(0);
+            }
+            else
+            {
+                return "err";
+            }
+        }
+        // Lấy mã khách hàng
+        public string getMaKH(string tenTK, string mk)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"select makh from TAIKHOANDANGNHAP where TenTK = N'{tenTK}' and MK = N'{mk}'";
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            if(reader.Read())
+            {
+                return reader.GetString(0);
+            }else
+            {
+                return "err";
+            }
+        }
+        public string getSTK(string maKH)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandText = $"select sotk from THONGTINTAIKHOAN where MaKH = '{maKH}'";
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            if (reader.Read())
+            {
+                return reader.GetString(0);
+            }
+            else
+            {
+                return "err";
+            }
         }
     }
 }

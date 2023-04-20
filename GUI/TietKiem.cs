@@ -15,9 +15,17 @@ namespace GUI
 {
     public partial class FromTietKiem : Form
     {
+        private string maKH = "";
+        private string maTK = "";
         public FromTietKiem()
         {
             InitializeComponent();
+        }
+        public FromTietKiem(string maKH, string maTK)
+        {
+            InitializeComponent();
+            this.maKH = maKH;
+            this.maTK = maTK;
         }
         public string soTKChuyen = "";
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -25,10 +33,7 @@ namespace GUI
 
         }
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+       
 
         private void guna2HtmlLabel6_Click(object sender, EventArgs e)
         {
@@ -44,7 +49,7 @@ namespace GUI
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = CommandType.Text;
             // Đoạn này cần thêm mã khách hàng
-            sqlCMD.CommandText = $"SELECT THONGTINTAIKHOAN.SoTK, KHACHHANG.TenKH, THONGTINTAIKHOAN.SoDu \r\nFROM THONGTINTAIKHOAN\r\nINNER JOIN KHACHHANG ON THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH\r\nWHERE THONGTINTAIKHOAN.MaKH = 'KH0001'";
+            sqlCMD.CommandText = $"SELECT THONGTINTAIKHOAN.SoTK, KHACHHANG.TenKH, THONGTINTAIKHOAN.SoDu \r\nFROM THONGTINTAIKHOAN\r\nINNER JOIN KHACHHANG ON THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH\r\nWHERE THONGTINTAIKHOAN.MaKH = '{maKH}'";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             cboTaiKhoanNguon.Items.Clear();
@@ -64,30 +69,24 @@ namespace GUI
             HienThi();
         }
 
-        private void comboKyHan_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string value = comboKyHan.SelectedItem.ToString();
-            if (value == "6 Tháng" || value == "1 Năm")
-            {
-                txtMucLaiXuat.Text = "0.8";
-            }else
-            {
-                txtMucLaiXuat.Text = "0.6";
-            }
-        }
+       
 
         private void cboTaiKhoanNguon_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void btnTietKiem_Click(object sender, EventArgs e)
+
+        private void checkedDieuKhoan_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnTietKiem_Click_1(object sender, EventArgs e)
         {
             try
             {
-                if (checkedDieuKhoan.Checked)
-                {
-                    TIET_KIEM tietKiem = new TIET_KIEM("", txtSoTien.Text, txtNoiDungTietKiem.Text, "", "");
+                    TIET_KIEM tietKiem = new TIET_KIEM("", txtSoTien.Text, txtNoiDungTietKiem.Text, "", maTK);
                     Bus_Tiết_Kiệm bus_tietKiem = new Bus_Tiết_Kiệm();
                     if (bus_tietKiem.tiet_kiem_bus(tietKiem, soTKChuyen))
                     {
@@ -99,18 +98,38 @@ namespace GUI
                         MessageBox.Show("Tiết Kiệm Không Thành Công");
                     }
                 }
-               
-            }
             catch
             {
                 MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin!");
             }
+        }
+
+        private void comboKyHan_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            string value = comboKyHan.SelectedItem.ToString();
+            if (value == "6 Tháng" || value == "1 Năm")
+            {
+                txtMucLaiXuat.Text = "0.8";
+            }
+            else
+            {
+                txtMucLaiXuat.Text = "0.6";
+            }
+        }
+
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 
-        private void checkedDieuKhoan_Click(object sender, EventArgs e)
+        private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }

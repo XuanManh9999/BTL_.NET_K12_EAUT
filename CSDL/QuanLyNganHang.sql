@@ -1,5 +1,4 @@
-﻿
-CREATE DATABASE QuanLyNganHang
+﻿CREATE DATABASE QuanLyNganHang
 USE QuanLyNganHang 
 
 -- KHACHHANG

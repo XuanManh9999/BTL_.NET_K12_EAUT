@@ -77,6 +77,12 @@
     <Compile Include="FormLich_Su_Giao_Dich.Designer.cs">
       <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Bao_Cao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Bao_Cao.Designer.cs">
+      <DependentUpon>Form_Bao_Cao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Giao_Dich.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,11 +95,29 @@
     <Compile Include="Form_Trang_Chu.Designer.cs">
       <DependentUpon>Form_Trang_Chu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDangKy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangKy.Designer.cs">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmQLKH.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmQLKH.Designer.cs">
       <DependentUpon>frmQLKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuenMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuenMK.Designer.cs">
+      <DependentUpon>frmQuenMK.cs</DependentUpon>
     </Compile>
     <Compile Include="frmThongKeTienRa.cs">
       <SubType>Form</SubType>
@@ -136,14 +160,26 @@
     <EmbeddedResource Include="FormLich_Su_Giao_Dich.resx">
       <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Bao_Cao.resx">
+      <DependentUpon>Form_Bao_Cao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Giao_Dich.resx">
       <DependentUpon>Form_Giao_Dich.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Trang_Chu.resx">
       <DependentUpon>Form_Trang_Chu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDangKy.resx">
+      <DependentUpon>frmDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmQLKH.resx">
       <DependentUpon>frmQLKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuenMK.resx">
+      <DependentUpon>frmQuenMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmThongKeTienRa.resx">
       <DependentUpon>frmThongKeTienRa.cs</DependentUpon>
@@ -322,6 +358,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\photo1640593039583-16405930396597044394681.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

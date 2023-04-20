@@ -38,9 +38,7 @@ namespace GUI
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            Hide();
-            frmDangNhap frmDN = new frmDangNhap();
-            frmDN.Show();
+            this.Close();
         }
     }
 }

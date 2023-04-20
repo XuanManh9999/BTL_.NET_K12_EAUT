@@ -22,12 +22,13 @@ namespace GUI
         // Hàm check textBox
         private bool Check_TextBox()
         {
-            if(string.IsNullOrWhiteSpace(txtTenDN.Text))
+            if (string.IsNullOrWhiteSpace(txtTenDN.Text))
             {
                 MessageBox.Show("Nhập tên đăng nhập");
                 txtTenDN.Focus();
                 return false;
-            } else if (string.IsNullOrWhiteSpace(txtMK.Text))
+            }
+            else if (string.IsNullOrWhiteSpace(txtMK.Text))
             {
                 MessageBox.Show("Nhập mật khẩu");
                 txtMK.Focus();
@@ -39,14 +40,19 @@ namespace GUI
         // Sự kiến click đăng nhập
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if(Check_TextBox())
+            if (Check_TextBox())
             {
-                if(bus_DN.DangNhap(txtTenDN.Text, txtMK.Text) || (txtTenDN.Text == "Admin" && txtMK.Text == "123"))
+                if (bus_DN.DangNhap(txtTenDN.Text, txtMK.Text) || (txtTenDN.Text == "Admin" && txtMK.Text == "123"))
                 {
-                    Hide();
-                    Form_Trang_Chu frmMain = new Form_Trang_Chu();
-                    frmMain.Show();
-                } else
+                        BUS_DangNhap dangNhap = new BUS_DangNhap();
+                    if (dangNhap.getMKH(txtTenDN.Text, txtMK.Text) != "err")
+                    {
+                        Hide();
+                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text));
+                        frmMain.Show();
+                    }
+                }
+                else
                 {
                     MessageBox.Show("Tên đăng nhập hoặc mật khẩu không đúng", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
@@ -63,7 +69,6 @@ namespace GUI
         // Sự kiện click Quên mk
         private void btnQuenMK_Click(object sender, EventArgs e)
         {
-            Hide();
             frmQuenMK frmQuenMK = new frmQuenMK();
             frmQuenMK.Show();
         }
