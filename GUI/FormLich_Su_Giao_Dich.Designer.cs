@@ -70,6 +70,7 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1067, 562);
             this.guna2GradientPanel1.TabIndex = 0;
+            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // columnHeader12
             // 
@@ -208,6 +209,7 @@
             this.lsvTienGia.TabIndex = 0;
             this.lsvTienGia.UseCompatibleStateImageBehavior = false;
             this.lsvTienGia.View = System.Windows.Forms.View.Details;
+            this.lsvTienGia.SelectedIndexChanged += new System.EventHandler(this.lsvTienGia_SelectedIndexChanged);
             // 
             // guna2ControlBox1
             // 

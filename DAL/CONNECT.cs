@@ -12,7 +12,7 @@ namespace DAL
         // ====Chuỗi kết nối của mạnh
         public static SqlConnection chuoi_ket_noi_cua_manh()
         {
-            string strCon = @"Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNganHang;Integrated Security=True";
+            string strCon = @"Data Source=DESKTOP-LNJ99RH\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True";
             SqlConnection SqlCON = new SqlConnection(strCon);
             SqlCON.Open();
             return SqlCON;
@@ -20,14 +20,14 @@ namespace DAL
         // ====Chuỗi kết nối của hải
         public SqlConnection Chuoi_conn_Hai()
         {
-            SqlConnection conn = new SqlConnection(@"Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNganHang;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-LNJ99RH\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True");
             return conn;
         }
     }
     // ====Chuỗi kết nối của duy
     public class Connection
     {
-        private static string strConnection = @"Data Source=DELL-VIP-PRO;Initial Catalog=QuanLyNganHang;Integrated Security=True";
+        private static string strConnection = @"Data Source=DESKTOP-LNJ99RH\SQLEXPRESS;Initial Catalog=QuanLyNganHang;Integrated Security=True";
         public static SqlConnection GetSqlConnection()
         {
             return new SqlConnection(strConnection);

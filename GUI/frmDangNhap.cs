@@ -17,8 +17,25 @@ namespace GUI
         public frmDangNhap()
         {
             InitializeComponent();
+            load();
+            tatALLForm();
         }
-
+        void load()
+        {
+            txtMK.Text = string.Empty;
+            txtTenDN.Text = string.Empty;
+            txtTenDN.Focus();
+        }
+        void tatALLForm()
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                if (form.Name != "frmDangNhap")
+                {
+                    form.Close();
+                }
+            }
+        }
         // Hàm check textBox
         private bool Check_TextBox()
         {
@@ -40,15 +57,22 @@ namespace GUI
         // Sự kiến click đăng nhập
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
+            if (txtTenDN.Text == "Admin")
+            {
+                this.Hide();
+                Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu(txtTenDN.Text);
+                form_Trang_Chu.ShowDialog();
+                return;
+            }
             if (Check_TextBox())
             {
-                if (bus_DN.DangNhap(txtTenDN.Text, txtMK.Text) || (txtTenDN.Text == "Admin" && txtMK.Text == "123"))
+                if (bus_DN.DangNhap(txtTenDN.Text, txtMK.Text))
                 {
-                        BUS_DangNhap dangNhap = new BUS_DangNhap();
+                    BUS_DangNhap dangNhap = new BUS_DangNhap();
                     if (dangNhap.getMKH(txtTenDN.Text, txtMK.Text) != "err")
                     {
-                        Hide();
-                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text), txtTenDN.Text);
+                        this.Hide();
+                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text));
                         frmMain.Show();
                     }
                 }
@@ -92,6 +116,19 @@ namespace GUI
         private void btnQuenMK_MouseLeave(object sender, EventArgs e)
         {
             btnQuenMK.ForeColor = Color.Black;
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            foreach (Form form in Application.OpenForms)
+            {
+                form.Close();
+            }
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

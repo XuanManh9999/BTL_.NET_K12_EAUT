@@ -184,7 +184,7 @@ namespace GUI
         {
             QUAN_LY_KHACH_HANG QLKH = Create_QLKH();
             KHACH_HANG KH = Create_kH();
-            DialogResult result = MessageBox.Show("Xóa một khách hàng sẽ xóa rất nhiều dữ liệu, Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Bạn có muốn xóa?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if(result == DialogResult.OK)
             {
                 if (Check_TextBox())

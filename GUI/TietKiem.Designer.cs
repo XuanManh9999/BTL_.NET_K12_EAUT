@@ -218,7 +218,7 @@
             this.btnTietKiem.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnTietKiem.Location = new System.Drawing.Point(97, 412);
             this.btnTietKiem.Name = "btnTietKiem";
-            this.btnTietKiem.Size = new System.Drawing.Size(714, 45);
+            this.btnTietKiem.Size = new System.Drawing.Size(747, 45);
             this.btnTietKiem.TabIndex = 14;
             this.btnTietKiem.Text = "Tiết Kiệm";
             this.btnTietKiem.Click += new System.EventHandler(this.btnTietKiem_Click_1);
