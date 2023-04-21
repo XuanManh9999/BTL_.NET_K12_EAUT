@@ -77,11 +77,25 @@ namespace GUI
         {
             load_TT();
         }
+        public void hienThiTen(List<string> soTaiKhoan)
+        {
+
+        }
         private void guna2PictureBox1_Click(object sender, EventArgs e)
         {
             Hide();
             Form_Trang_Chu frmMain = new Form_Trang_Chu();
             frmMain.Show();
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void btnChuyenKhoan_Click_1(object sender, EventArgs e)
@@ -107,7 +121,7 @@ namespace GUI
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin");
             }
         }
 

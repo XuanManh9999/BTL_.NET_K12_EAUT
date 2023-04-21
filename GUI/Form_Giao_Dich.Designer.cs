@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtTenTaiKhoanNhan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -51,6 +50,7 @@
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -71,30 +71,7 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1067, 562);
             this.guna2GradientPanel1.TabIndex = 0;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.BorderThickness = 1;
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(833, 522);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(197, 37);
-            this.guna2Button1.TabIndex = 16;
-            this.guna2Button1.Text = "Về Trang Chủ";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // guna2GroupBox1
             // 
@@ -142,14 +119,14 @@
             this.txtTenTaiKhoanNhan.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTaiKhoanNhan.ForeColor = System.Drawing.Color.Black;
             this.txtTenTaiKhoanNhan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenTaiKhoanNhan.Location = new System.Drawing.Point(361, 283);
+            this.txtTenTaiKhoanNhan.Location = new System.Drawing.Point(338, 283);
             this.txtTenTaiKhoanNhan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTenTaiKhoanNhan.Name = "txtTenTaiKhoanNhan";
             this.txtTenTaiKhoanNhan.PasswordChar = '\0';
             this.txtTenTaiKhoanNhan.PlaceholderText = "";
             this.txtTenTaiKhoanNhan.ReadOnly = true;
             this.txtTenTaiKhoanNhan.SelectedText = "";
-            this.txtTenTaiKhoanNhan.Size = new System.Drawing.Size(563, 35);
+            this.txtTenTaiKhoanNhan.Size = new System.Drawing.Size(506, 35);
             this.txtTenTaiKhoanNhan.TabIndex = 18;
             // 
             // guna2HtmlLabel10
@@ -157,7 +134,7 @@
             this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(67, 287);
+            this.guna2HtmlLabel10.Location = new System.Drawing.Point(44, 287);
             this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             this.guna2HtmlLabel10.Size = new System.Drawing.Size(244, 31);
             this.guna2HtmlLabel10.TabIndex = 17;
@@ -168,7 +145,7 @@
             this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(68, 147);
+            this.guna2HtmlLabel9.Location = new System.Drawing.Point(45, 147);
             this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             this.guna2HtmlLabel9.Size = new System.Drawing.Size(150, 31);
             this.guna2HtmlLabel9.TabIndex = 16;
@@ -186,14 +163,14 @@
             this.txtTenTK.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenTK.ForeColor = System.Drawing.Color.Black;
             this.txtTenTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenTK.Location = new System.Drawing.Point(359, 147);
+            this.txtTenTK.Location = new System.Drawing.Point(336, 147);
             this.txtTenTK.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTenTK.Name = "txtTenTK";
             this.txtTenTK.PasswordChar = '\0';
             this.txtTenTK.PlaceholderText = "";
             this.txtTenTK.ReadOnly = true;
             this.txtTenTK.SelectedText = "";
-            this.txtTenTK.Size = new System.Drawing.Size(565, 35);
+            this.txtTenTK.Size = new System.Drawing.Size(506, 35);
             this.txtTenTK.TabIndex = 15;
             this.txtTenTK.TabStop = false;
             // 
@@ -212,12 +189,12 @@
             this.btnChuyenKhoan.FocusedColor = System.Drawing.Color.White;
             this.btnChuyenKhoan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChuyenKhoan.ForeColor = System.Drawing.Color.Black;
-            this.btnChuyenKhoan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.btnChuyenKhoan.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
+            this.btnChuyenKhoan.HoverState.FillColor = System.Drawing.Color.OrangeRed;
+            this.btnChuyenKhoan.HoverState.FillColor2 = System.Drawing.Color.Gold;
             this.btnChuyenKhoan.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnChuyenKhoan.Location = new System.Drawing.Point(142, 424);
+            this.btnChuyenKhoan.Location = new System.Drawing.Point(115, 422);
             this.btnChuyenKhoan.Name = "btnChuyenKhoan";
-            this.btnChuyenKhoan.Size = new System.Drawing.Size(729, 43);
+            this.btnChuyenKhoan.Size = new System.Drawing.Size(747, 43);
             this.btnChuyenKhoan.TabIndex = 13;
             this.btnChuyenKhoan.Text = "Chuyển Tiền";
             this.btnChuyenKhoan.Click += new System.EventHandler(this.btnChuyenKhoan_Click_1);
@@ -234,13 +211,13 @@
             this.txtNoiDungChuyen.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNoiDungChuyen.ForeColor = System.Drawing.Color.Black;
             this.txtNoiDungChuyen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNoiDungChuyen.Location = new System.Drawing.Point(361, 381);
+            this.txtNoiDungChuyen.Location = new System.Drawing.Point(338, 381);
             this.txtNoiDungChuyen.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtNoiDungChuyen.Name = "txtNoiDungChuyen";
             this.txtNoiDungChuyen.PasswordChar = '\0';
             this.txtNoiDungChuyen.PlaceholderText = "";
             this.txtNoiDungChuyen.SelectedText = "";
-            this.txtNoiDungChuyen.Size = new System.Drawing.Size(563, 35);
+            this.txtNoiDungChuyen.Size = new System.Drawing.Size(505, 35);
             this.txtNoiDungChuyen.TabIndex = 11;
             // 
             // guna2HtmlLabel8
@@ -248,7 +225,7 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(68, 385);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(45, 385);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(285, 31);
             this.guna2HtmlLabel8.TabIndex = 10;
@@ -266,13 +243,13 @@
             this.txtSoTienChuyen.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTienChuyen.ForeColor = System.Drawing.Color.Black;
             this.txtSoTienChuyen.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoTienChuyen.Location = new System.Drawing.Point(360, 336);
+            this.txtSoTienChuyen.Location = new System.Drawing.Point(337, 336);
             this.txtSoTienChuyen.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSoTienChuyen.Name = "txtSoTienChuyen";
             this.txtSoTienChuyen.PasswordChar = '\0';
             this.txtSoTienChuyen.PlaceholderText = "";
             this.txtSoTienChuyen.SelectedText = "";
-            this.txtSoTienChuyen.Size = new System.Drawing.Size(564, 35);
+            this.txtSoTienChuyen.Size = new System.Drawing.Size(506, 35);
             this.txtSoTienChuyen.TabIndex = 9;
             // 
             // guna2HtmlLabel7
@@ -280,7 +257,7 @@
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(68, 340);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(45, 340);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(193, 31);
             this.guna2HtmlLabel7.TabIndex = 8;
@@ -298,13 +275,13 @@
             this.txtTaiKhoanNhan.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTaiKhoanNhan.ForeColor = System.Drawing.Color.Black;
             this.txtTaiKhoanNhan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTaiKhoanNhan.Location = new System.Drawing.Point(359, 238);
+            this.txtTaiKhoanNhan.Location = new System.Drawing.Point(336, 238);
             this.txtTaiKhoanNhan.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtTaiKhoanNhan.Name = "txtTaiKhoanNhan";
             this.txtTaiKhoanNhan.PasswordChar = '\0';
             this.txtTaiKhoanNhan.PlaceholderText = "";
             this.txtTaiKhoanNhan.SelectedText = "";
-            this.txtTaiKhoanNhan.Size = new System.Drawing.Size(565, 35);
+            this.txtTaiKhoanNhan.Size = new System.Drawing.Size(506, 35);
             this.txtTaiKhoanNhan.TabIndex = 7;
             this.txtTaiKhoanNhan.TextChanged += new System.EventHandler(this.txtTaiKhoanNhan_TextChanged_1);
             // 
@@ -313,7 +290,7 @@
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(67, 245);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(44, 245);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(232, 31);
             this.guna2HtmlLabel6.TabIndex = 6;
@@ -331,14 +308,14 @@
             this.txtSoTaiKhoanGui.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTaiKhoanGui.ForeColor = System.Drawing.Color.Black;
             this.txtSoTaiKhoanGui.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoTaiKhoanGui.Location = new System.Drawing.Point(359, 102);
+            this.txtSoTaiKhoanGui.Location = new System.Drawing.Point(336, 102);
             this.txtSoTaiKhoanGui.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSoTaiKhoanGui.Name = "txtSoTaiKhoanGui";
             this.txtSoTaiKhoanGui.PasswordChar = '\0';
             this.txtSoTaiKhoanGui.PlaceholderText = "";
             this.txtSoTaiKhoanGui.ReadOnly = true;
             this.txtSoTaiKhoanGui.SelectedText = "";
-            this.txtSoTaiKhoanGui.Size = new System.Drawing.Size(565, 35);
+            this.txtSoTaiKhoanGui.Size = new System.Drawing.Size(506, 35);
             this.txtSoTaiKhoanGui.TabIndex = 5;
             this.txtSoTaiKhoanGui.TabStop = false;
             // 
@@ -347,7 +324,7 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(68, 193);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(45, 193);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(98, 31);
             this.guna2HtmlLabel5.TabIndex = 4;
@@ -365,14 +342,14 @@
             this.txtSoTien.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoTien.ForeColor = System.Drawing.Color.Black;
             this.txtSoTien.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSoTien.Location = new System.Drawing.Point(361, 193);
+            this.txtSoTien.Location = new System.Drawing.Point(338, 193);
             this.txtSoTien.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.txtSoTien.Name = "txtSoTien";
             this.txtSoTien.PasswordChar = '\0';
             this.txtSoTien.PlaceholderText = "";
             this.txtSoTien.ReadOnly = true;
             this.txtSoTien.SelectedText = "";
-            this.txtSoTien.Size = new System.Drawing.Size(563, 35);
+            this.txtSoTien.Size = new System.Drawing.Size(506, 35);
             this.txtSoTien.TabIndex = 3;
             this.txtSoTien.TabStop = false;
             // 
@@ -381,7 +358,7 @@
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(67, 102);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(44, 102);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(260, 31);
             this.guna2HtmlLabel4.TabIndex = 2;
@@ -397,9 +374,9 @@
             this.cboHinhThucChuyenKhoan.Font = new System.Drawing.Font("Arial", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHinhThucChuyenKhoan.ForeColor = System.Drawing.Color.Black;
             this.cboHinhThucChuyenKhoan.ItemHeight = 30;
-            this.cboHinhThucChuyenKhoan.Location = new System.Drawing.Point(359, 56);
+            this.cboHinhThucChuyenKhoan.Location = new System.Drawing.Point(336, 56);
             this.cboHinhThucChuyenKhoan.Name = "cboHinhThucChuyenKhoan";
-            this.cboHinhThucChuyenKhoan.Size = new System.Drawing.Size(565, 36);
+            this.cboHinhThucChuyenKhoan.Size = new System.Drawing.Size(506, 36);
             this.cboHinhThucChuyenKhoan.TabIndex = 1;
             // 
             // guna2HtmlLabel2
@@ -407,7 +384,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(68, 56);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(45, 56);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(226, 31);
             this.guna2HtmlLabel2.TabIndex = 0;
@@ -454,6 +431,30 @@
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(63, 36);
             this.guna2ControlBox3.TabIndex = 8;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.BorderThickness = 1;
+            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.Black;
+            this.guna2Button1.HoverState.BorderColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(833, 522);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(197, 37);
+            this.guna2Button1.TabIndex = 16;
+            this.guna2Button1.Text = "Về Trang Chủ";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // Form_Giao_Dich
             // 

@@ -27,6 +27,11 @@ namespace GUI
             this.MaKH = MaKH;
             MaTK = maTK;
         }
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnGiaoDich_Click_1(object sender, EventArgs e)
         {
             Form_Giao_Dich formGiaoDich = new Form_Giao_Dich(MaKH);
@@ -37,6 +42,11 @@ namespace GUI
         {
             FromTietKiem tietKiem = new FromTietKiem(MaKH, MaTK);
             tietKiem.Show();
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnLSGD_Click_1(object sender, EventArgs e)
@@ -74,6 +84,11 @@ namespace GUI
                     }
                 }
             }
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
