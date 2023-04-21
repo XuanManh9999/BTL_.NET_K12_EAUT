@@ -143,9 +143,7 @@ namespace GUI
                     DialogResult result = MessageBox.Show("Bạn có muốn đăng nhập không?", Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if(result == DialogResult.OK)
                     {
-                        Hide();
-                        frmDangNhap frmDN = new frmDangNhap();
-                        frmDN.Show();
+                        this.Close();
                     }
                     Clear_TextBox();
                 } else

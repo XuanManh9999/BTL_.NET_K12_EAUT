@@ -85,15 +85,29 @@ namespace GUI
             HienThiThongTin();
             HienThiThongTinTienNhan();
         }
+        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        }
+
+        private void lsvTienGia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

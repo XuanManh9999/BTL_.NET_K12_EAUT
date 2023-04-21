@@ -176,7 +176,7 @@
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
             this.guna2GroupBox1.Location = new System.Drawing.Point(71, 25);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
-            this.guna2GroupBox1.Size = new System.Drawing.Size(783, 539);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(783, 535);
             this.guna2GroupBox1.TabIndex = 0;
             this.guna2GroupBox1.Text = "ĐĂNG KÝ KHÁCH HÀNG MỚI";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;

@@ -14,5 +14,17 @@ namespace BUS
         {
             return KH.dangNhapTK(txtTenDN, txtMK);
         }
+        public string getMKH(string tenTK, string mk)
+        {
+            return KH.getMaKH(tenTK, mk);
+        }
+        public string getSTK(string maKH)
+        {
+            return KH.getSTK(maKH);
+        }
+        public string getMTK(string tentk, string mk)
+        {
+            return KH.getMaTK(tentk, mk);
+        }
     }
 }

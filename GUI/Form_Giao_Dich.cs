@@ -15,9 +15,15 @@ namespace GUI
 {
     public partial class Form_Giao_Dich : Form
     {
+        private string maKh = "";
         public Form_Giao_Dich()
         {
             InitializeComponent();
+        }
+        public Form_Giao_Dich(string maKH)
+        {
+            InitializeComponent();
+            this.maKh = maKH;
         }
         public List<string> load_STK()
         {
@@ -53,7 +59,7 @@ namespace GUI
             cboHinhThucChuyenKhoan.SelectedIndex = 0;
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = $"select SoTK, SoDu, TenKH from THONGTINTAIKHOAN, KHACHHANG where khachhang.MaKH = THONGTINTAIKHOAN.MaKH and KHACHHANG.MaKH = 'KH0001'";
+            sqlCommand.CommandText = $"select SoTK, SoDu, TenKH from THONGTINTAIKHOAN, KHACHHANG where khachhang.MaKH = THONGTINTAIKHOAN.MaKH and KHACHHANG.MaKH = '{maKh}'";
             sqlCommand.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCommand.ExecuteReader();
             txtSoTaiKhoanGui.Text = "";
@@ -75,7 +81,24 @@ namespace GUI
         {
 
         }
-        private void btnChuyenKhoan_Click(object sender, EventArgs e)
+        private void guna2PictureBox1_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form_Trang_Chu frmMain = new Form_Trang_Chu();
+            frmMain.Show();
+        }
+
+        private void guna2GroupBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnChuyenKhoan_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -102,7 +125,7 @@ namespace GUI
             }
         }
 
-        private void txtTaiKhoanNhan_TextChanged(object sender, EventArgs e)
+        private void txtTaiKhoanNhan_TextChanged_1(object sender, EventArgs e)
         {
             if (chechkSTK() != "err")
             {
@@ -118,11 +141,17 @@ namespace GUI
                 reader1.Close();
             }
         }
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
+
+        private void guna2PictureBox1_Click_1(object sender, EventArgs e)
         {
             Hide();
             Form_Trang_Chu frmMain = new Form_Trang_Chu();
             frmMain.Show();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

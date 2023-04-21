@@ -61,7 +61,7 @@
             this.guna2GradientPanel3.TabIndex = 3;
             // 
             // guna2ControlBox3
-            // 
+            //
             this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
@@ -98,7 +98,7 @@
             this.guna2ControlBox2.TabIndex = 8;
             // 
             // guna2ControlBox1
-            // 
+            //
             this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.ControlBoxStyle = Guna.UI2.WinForms.Enums.ControlBoxStyle.Custom;
@@ -182,7 +182,7 @@
             this.btnQuenMK.Click += new System.EventHandler(this.btnQuenMK_Click);
             this.btnQuenMK.MouseLeave += new System.EventHandler(this.btnQuenMK_MouseLeave);
             this.btnQuenMK.MouseHover += new System.EventHandler(this.btnQuenMK_MouseHover);
-            // 
+            //
             // btnDangNhap
             // 
             this.btnDangNhap.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
