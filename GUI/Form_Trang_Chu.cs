@@ -8,6 +8,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -17,15 +18,17 @@ namespace GUI
     {
         private string MaKH = "";
         private string MaTK = "";
+        private string TenTK = "";
         public Form_Trang_Chu()
         {
             InitializeComponent();
         }
-        public Form_Trang_Chu(string MaKH, string maTK)
+        public Form_Trang_Chu(string MaKH, string maTK, string tenTK)
         {
             InitializeComponent();
             this.MaKH = MaKH;
-            MaTK = maTK;
+            this.MaTK = maTK;
+            this.TenTK = tenTK;
         }
         private void btnGiaoDich_Click_1(object sender, EventArgs e)
         {
@@ -57,8 +60,14 @@ namespace GUI
 
         private void btnQuanLy_Click_1(object sender, EventArgs e)
         {
-            frmQLKH quanLy = new frmQLKH();
-            quanLy.ShowDialog();
+            if(TenTK == "Admin")
+            {
+                frmQLKH quanLy = new frmQLKH();
+                quanLy.ShowDialog();
+            } else
+            {
+                MessageBox.Show("Chức năng này không dành cho khách hàng");
+            }
         }
 
         private void btnDangXuat_Click_1(object sender, EventArgs e)

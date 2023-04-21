@@ -48,7 +48,7 @@ namespace GUI
                     if (dangNhap.getMKH(txtTenDN.Text, txtMK.Text) != "err")
                     {
                         Hide();
-                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text));
+                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text), txtTenDN.Text);
                         frmMain.Show();
                     }
                 }
