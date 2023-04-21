@@ -98,7 +98,7 @@ namespace GUI
             }
             catch(Exception ex)
             {
-                MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin");
+                MessageBox.Show(ex.ToString());
             }
         }
 
