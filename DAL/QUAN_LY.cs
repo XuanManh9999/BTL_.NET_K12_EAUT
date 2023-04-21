@@ -36,7 +36,7 @@ namespace DAL
         public QUAN_LY() { }
 
         CONNECT DBConnect = new CONNECT();
-    
+
         /* Xử lý bảng khách hàng */
         // lấy thông tin khách khàng
         public DataTable hienThiKhachHang()
@@ -86,14 +86,15 @@ namespace DAL
         public bool suaKhachHang(KHACH_HANG KH)
         {
             string query = "Update KhachHang set TenKH = @TenKH, CMND = @CMND, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, DiaChi = @DiaChi, SDT = @SDT where MaKH = @MaKH";
-            if(quanLyKhachHang(query, KH)) { return true; }
+            if (quanLyKhachHang(query, KH)) { return true; }
             return false;
         }
         // Xóa khách hàng
         public bool xoaKhachHang(KHACH_HANG KH, QUAN_LY_KHACH_HANG QLKH)
         {
             string query = "Delete KhachHang where MaKH = @MaKH";
-            if(XoaQLKH(QLKH) && quanLyKhachHang(query, KH)) { return true; }
+            if (XoaQLKH(QLKH) && XoaTietKiem(KH.MaKH) && XoaGiaoDich(KH.MaKH) && XoaTTTK_QLKH(KH.MaKH)
+                && XoaTKDN_QLKH(KH.MaKH) && quanLyKhachHang(query, KH)) { return true; }
             return false;
         }
         // Tìm kiếm khách hàng
@@ -109,7 +110,8 @@ namespace DAL
                 DataTable dt = new DataTable();
                 adapter.Fill(dt);
                 return dt;
-            } catch { return null; }
+            }
+            catch { return null; }
             finally { conn.Close(); }
         }
         // Tìm kiếm theo mã khách hàng
@@ -124,7 +126,7 @@ namespace DAL
             string query = "Select * from KhachHang where TenKH = @TenKH";
             return timKiemKhachHang(query, txtTenKH, "TenKH");
         }
-        
+
         // Hàm xử lý bảng qlkh
         public bool XuLyBangQLKH(QUAN_LY_KHACH_HANG QLKH, string query)
         {
@@ -148,7 +150,7 @@ namespace DAL
         public bool ThemQLKH(QUAN_LY_KHACH_HANG QLKH)
         {
             string query = "Insert into QuanLyKhachHang values (@MaKH, @MaQL)";
-            if(XuLyBangQLKH(QLKH, query))
+            if (XuLyBangQLKH(QLKH, query))
             {
                 return true;
             }
@@ -158,7 +160,7 @@ namespace DAL
         public bool XoaQLKH(QUAN_LY_KHACH_HANG QLKH)
         {
             string query = "Delete QuanLyKhachHang where MaKH = @MaKH";
-            if(XuLyBangQLKH(QLKH, query))
+            if (XuLyBangQLKH(QLKH, query))
             {
                 return true;
             }
@@ -181,8 +183,9 @@ namespace DAL
                 cmd.Parameters.AddWithValue("TenCN", TTTK.TenCN);
                 cmd.Parameters.AddWithValue("LoaiTK", TTTK.LoaiKH);
                 cmd.Parameters.AddWithValue("MaKH", TTTK.MaKH);
-                if(cmd.ExecuteNonQuery() > 0) { return true; }
-            } catch { }
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
+            }
+            catch { }
             finally { conn.Close(); }
             return false;
         }
@@ -202,6 +205,22 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+        // Xóa thông tin tài khoản khi dùng chức năng xóa KH ở form QLKH
+        public bool XoaTTTK_QLKH(string MaKH)
+        {
+            string query = "Delete ThongTinTaiKhoan where MaKH = @MaKH";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaKH", MaKH);
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
 
         /* Xử lý bảng Tài khoản đăng nhập */
         // Kiểm tra mã tk đã tồn tại chưa
@@ -215,7 +234,7 @@ namespace DAL
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("MaTK", txtMaTK);
                 SqlDataReader read = cmd.ExecuteReader();
-                if(read.Read()) { return true; }
+                if (read.Read()) { return true; }
             }
             catch { }
             finally { conn.Close(); }
@@ -235,7 +254,7 @@ namespace DAL
                 cmd.Parameters.AddWithValue("MK", TKDN.MatKhau);
                 cmd.Parameters.AddWithValue("Email", TKDN.Email);
                 cmd.Parameters.AddWithValue("MaKH", TKDN.MaKhachHang);
-                if(cmd.ExecuteNonQuery() > 0) { return true; }
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
             }
             catch { }
             finally { conn.Close(); }
@@ -251,8 +270,104 @@ namespace DAL
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("MaTK", TKDN.MaTaiKhoan);
-                if(cmd.ExecuteNonQuery() > 0) { return true; }
-            } 
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Xóa tài khoản đăng nhập khi dùng chức năng xóa KH ở form QLKH
+        public bool XoaTKDN_QLKH(string MaKH)
+        {
+            string query = "Delete TaiKhoanDangNhap where MaKH = @MaKH";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaKH", MaKH);
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Hàm check xem khách hàng có gửi tiết kiệm hay k
+        public bool Check_TietKiem(string MaKH)
+        {
+            string query = "SELECT TK.MaTK FROM TIETKIEM AS T, TAIKHOANDANGNHAP AS TK, KHACHHANG AS K " +
+                "WHERE T.MaTK = TK.MaTK AND TK.MaKH = K.MaKH AND K.MaKH = @MaKH";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaKH", MaKH);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read()) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Xóa tiết kiệm
+        public bool XoaTietKiem(string MaKH)
+        {
+            // Nếu khách hàng chưa gửi tiết kiệm thì ko xóa được nên nếu kh chưa gửi thì trả về true
+            if (!Check_TietKiem(MaKH))
+            {
+                return true;
+            }
+            string query = "DELETE TIETKIEM WHERE MaTK IN (SELECT TK.MaTK FROM TIETKIEM AS T, TAIKHOANDANGNHAP AS TK, KHACHHANG AS K " +
+                "WHERE T.MaTK = TK.MaTK AND TK.MaKH = K.MaKH AND K.MaKH = @MaKH)";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaKH", MaKH);
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Check khách hàng đã giao dịch hay chưa
+        public bool Check_GiaoDich(string MaKH)
+        {
+            string query = "SELECT MaGD FROM THONGTINTAIKHOAN AS TK, KHACHHANG AS K, GIAODICH AS G " +
+                "WHERE G.SoTKNhan = TK.SoTK AND TK.MaKH = K.MaKH AND K.MaKH = @MaKH";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaKH", MaKH);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read()) { return true; }
+            }
+            catch { }
+            finally { conn.Close(); }
+            return false;
+        }
+        // Xóa giao dịch
+        public bool XoaGiaoDich(string MaKH)
+        {
+            // Nếu khách hàng chưa giao dịch thì ko xóa được nên nếu kh chưa gd thì trả về true
+            if (!Check_GiaoDich(MaKH))
+            {
+                return true;
+            }
+            string query = "DELETE GIAODICH WHERE MaGD IN (SELECT MaGD FROM THONGTINTAIKHOAN AS TK, KHACHHANG AS K, GIAODICH AS G " +
+                "WHERE G.SoTKNhan = TK.SoTK AND TK.MaKH = K.MaKH AND K.MaKH = @MaKH)";
+            SqlConnection conn = DBConnect.Chuoi_conn_Hai();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("MaKH", MaKH);
+                if (cmd.ExecuteNonQuery() > 0) { return true; }
+            }
             catch { }
             finally { conn.Close(); }
             return false;
