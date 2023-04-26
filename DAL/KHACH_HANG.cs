@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -40,12 +41,15 @@ namespace DAL
         // Hàm kiểm tra xem mã kh đã tồn tại hay chưa
         public bool Check_MaKH(string txtMaKH)
         {
-            string query = "Select MaKH from KhachHang where MaKH = @MaKH";
+            string query = "dbo.Check_MaKH";
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd = new SqlCommand(query, conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 cmd.Parameters.AddWithValue("MaKH", txtMaKH);
                 SqlDataReader read = cmd.ExecuteReader();
                 if(read.Read())
@@ -60,12 +64,15 @@ namespace DAL
         // Đăng nhập
         public bool dangNhapTK(string txtTenDN, string txtMK)
         {
-            string query = "Select * from TaiKhoanDangNhap where TenTK = @TenTK and MK = @MK";
+            string query = "dbo.dangNhapTK";
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd = new SqlCommand(query, conn)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 cmd.Parameters.AddWithValue("TenTK", txtTenDN);
                 cmd.Parameters.AddWithValue("MK", txtMK);
                 SqlDataReader read = cmd.ExecuteReader();
@@ -83,12 +90,12 @@ namespace DAL
         public string quenMK(string txtEmail)
         {
             string Password = "Không tìm thấy mật khẩu của bạn";
-            string query = "Select MK from TaiKhoanDangNhap where Email = @Email";
+            string query = "dbo.quenMK";
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd = new SqlCommand(query, conn) { CommandType = CommandType.StoredProcedure };
                 cmd.Parameters.AddWithValue("Email", txtEmail);
                 SqlDataReader reader = cmd.ExecuteReader();
                 if(reader.Read())
@@ -103,8 +110,8 @@ namespace DAL
         public  bool  chuyenTien(GIAO_DICH giaoDich)
         {
             SqlCommand sqlcheck = new SqlCommand();
-            sqlcheck.CommandType = System.Data.CommandType.Text;
-            sqlcheck.CommandText = "select MaGD from GIAODICH";
+            sqlcheck.CommandType = CommandType.StoredProcedure;
+            sqlcheck.CommandText = "dbo.LayMaGD";
             sqlcheck.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlcheck.ExecuteReader();
             int i = 0;
@@ -123,10 +130,18 @@ namespace DAL
                     goto back;   
                 }
             }
-            SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"insert into giaodich values('GD00{x}', '{giaoDich.soTienGD}', N'{giaoDich.noiDungGD}', '{DateTime.Now.ToString()}', '{giaoDich.SoTKNhan}', '{giaoDich.SoTKGui}')";
-            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+
+            string query = "dbo.ThemGD";
+            SqlCommand sqlCMD = new SqlCommand(query, CONNECT.chuoi_ket_noi_cua_manh())
+            {
+                CommandType = CommandType.StoredProcedure
+            };
+            sqlCMD.Parameters.AddWithValue("MaGD", $"GD00{x}");
+            sqlCMD.Parameters.AddWithValue("SoTienGD", giaoDich.soTienGD);
+            sqlCMD.Parameters.AddWithValue("NoiDungGD", giaoDich.noiDungGD);
+            sqlCMD.Parameters.AddWithValue("ThoiGianGD", DateTime.Now.ToString());
+            sqlCMD.Parameters.AddWithValue("SoTKNhan", giaoDich.SoTKNhan);
+            sqlCMD.Parameters.AddWithValue("SoTKGui", giaoDich.SoTKGui);
             if (sqlCMD.ExecuteNonQuery() > 0)
             {
                 CongTienTKNHAN(giaoDich.soTienGD, giaoDich.SoTKNhan);
@@ -137,9 +152,11 @@ namespace DAL
         public void CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
         {
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"update THONGTINTAIKHOAN set SoDu += {double.Parse(tienGiaoDich)} where SoTK = '{soTaiKhoanNhan}'";
+            sqlCMD.CommandType = CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.CongTien";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("SoTienGD", tienGiaoDich);
+            sqlCMD.Parameters.AddWithValue("SoTKNhan", soTaiKhoanNhan);
             sqlCMD.ExecuteNonQuery();
         }
 
@@ -147,11 +164,13 @@ namespace DAL
         public List<rpThongTinNguoiNhan> Get_TTNN(string MaKH)
         {
             List<rpThongTinNguoiNhan> listTTNN = new List<rpThongTinNguoiNhan>();
-            string query = "SELECT T.SoTK, K.TenKH FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE G.SoTKNhan = T.SoTK AND K.MaKH = T.MaKH " 
-                + "AND G.MaGD IN (SELECT G.MaGD FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE K.MaKH = T.MaKH AND G.SoTKGui = T.SoTK AND K.MaKH = @MaKH)";
+            string query = "dbo.Get_TTNN";
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlCommand cmd = new SqlCommand(query, conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
             cmd.Parameters.AddWithValue("MaKH", MaKH);
             SqlDataReader reader = cmd.ExecuteReader();
             while (reader.Read())
@@ -175,14 +194,16 @@ namespace DAL
 
             // List lưu thông tin thống kê
             List<rpGiaoDichTienRa> listReport = new List<rpGiaoDichTienRa>();
-            string query = "SELECT K.MaKH, TenKH, MaGD, SoTienGD, NoiDungGD, ThoiGianGD, SoTKNhan FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T " 
-                + "WHERE K.MaKH = T.MaKH AND G.SoTKGui = T.SoTK AND K.MaKH = @MaKH";
+            string query = "dbo.GetGD_TienRa";
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlCommand cmd = new SqlCommand(query, conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
             cmd.Parameters.AddWithValue("MaKH", MaKH);
             SqlDataReader read = cmd.ExecuteReader();
-            while(read.Read())
+            while (read.Read())
             {
                 rpGiaoDichTienRa temp = new rpGiaoDichTienRa();
                 temp.MaKH = read.GetString(0);
@@ -193,9 +214,9 @@ namespace DAL
                 temp.NoiDungGD = read.GetString(4);
                 temp.ThoiGianGD = read.GetString(5);
                 temp.SoTKNhan = read.GetString(6);
-                foreach(rpThongTinNguoiNhan item in listTTNN)
+                foreach (rpThongTinNguoiNhan item in listTTNN)
                 {
-                    if(item.SoTK == temp.SoTKNhan)
+                    if (item.SoTK == temp.SoTKNhan)
                     {
                         temp.TenKHNhan = item.TenNguoiNhan;
                         break;
@@ -213,11 +234,13 @@ namespace DAL
         public List<rpThongTinNguoiGui> Get_TTNG(string MaKH)
         {
             List<rpThongTinNguoiGui> listTTNG = new List<rpThongTinNguoiGui>();
-            string query = "SELECT T.SoTK, K.TenKH FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE G.SoTKGui = T.SoTK AND K.MaKH = T.MaKH " 
-                + "AND G.MaGD IN (SELECT G.MaGD FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T WHERE K.MaKH = T.MaKH AND G.SoTKNhan = T.SoTK AND K.MaKH = @MaKH)";
+            string query = "dbo.Get_TTNG";
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlCommand cmd = new SqlCommand(query, conn)
+            {
+                CommandType = CommandType.StoredProcedure
+            };
             cmd.Parameters.AddWithValue("MaKH", MaKH);
             SqlDataReader read = cmd.ExecuteReader();
             while(read.Read())
@@ -242,11 +265,10 @@ namespace DAL
 
             double TongTienVao = 0;
 
-            string query = "SELECT K.MaKH, TenKH, MaGD, SoTienGD, NoiDungGD, ThoiGianGD, SoTKGui FROM KHACHHANG AS K, GIAODICH AS G, THONGTINTAIKHOAN AS T " 
-                + "WHERE K.MaKH = T.MaKH AND G.SoTKNhan = T.SoTK AND K.MaKH = @MaKH";
+            string query = "dbo.GetGD_TienVao";
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
             conn.Open();
-            SqlCommand cmd = new SqlCommand(query, conn);
+            SqlCommand cmd = new SqlCommand(query, conn) { CommandType = CommandType.StoredProcedure };
             cmd.Parameters.AddWithValue("MaKH", MaKH);
             SqlDataReader read = cmd.ExecuteReader();
             while (read.Read())
@@ -279,9 +301,11 @@ namespace DAL
         public void TruTienTKGUI(string tienGiaoDich, string soTaiKhoanChuyen)
         {
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"update THONGTINTAIKHOAN set SoDu -= {float.Parse(tienGiaoDich)} where SoTK = '{soTaiKhoanChuyen}'";
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.TruTien";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("SoTienGD", tienGiaoDich);
+            sqlCMD.Parameters.AddWithValue("SoTKGui", soTaiKhoanChuyen);
             sqlCMD.ExecuteNonQuery();
         }
         // Lấy mã tiết kiệm từ csdl
@@ -289,8 +313,8 @@ namespace DAL
         {
             List<int> list = new List<int>();
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = "select MaTK from TIETKIEM";
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.Get_MaTietKiem";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCMD.ExecuteReader();
             while(reader.Read())
@@ -312,10 +336,17 @@ namespace DAL
                 }
             }
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
             // Đoạn Này cần thêm mã tài khoản.
-            sqlCMD.CommandText = $"insert into TIETKIEM values ('MTK00{x}', {tietKiem.soTienGD}, N'{tietKiem.noiDungGD}', '{DateTime.Now.ToString()}', '{tietKiem.MaTK}')";
+
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.ThemTietKiem";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("MaTietKiem", $"MTK00{x}");
+            sqlCMD.Parameters.AddWithValue("SoTienGui", tietKiem.soTienGD);
+            sqlCMD.Parameters.AddWithValue("NoiDungTK", tietKiem.noiDungGD);
+            sqlCMD.Parameters.AddWithValue("NgayGuiTK", DateTime.Now);
+            sqlCMD.Parameters.AddWithValue("MaTK", tietKiem.MaTK);
             if (sqlCMD.ExecuteNonQuery() > 0) {
                 TruTienTKGUI(tietKiem.soTienGD, stkChuyen);
                 return true;
@@ -325,18 +356,21 @@ namespace DAL
         public SqlDataReader xemCTGD(string s)
         {
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"select DISTINCT GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD,GIAODICH.NoiDungGD, GIAODICH.SoTKNhan,  GIAODICH.ThoiGianGD from GIAODICH, THONGTINTAIKHOAN, KHACHHANG where GIAODICH.SoTKGui = THONGTINTAIKHOAN.SoTK and THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH and KHACHHANG.MaKH = '{s}'";
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.XemCTGD";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("MaKH", s);
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }
+        
         public SqlDataReader tienNhan(string TKNhan)
         {
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"SELECT GIAODICH.MaGD, KHACHHANG.TenKH, GIAODICH.SoTienGD, GIAODICH.NoiDungGD, GIAODICH.SoTKGui, GIAODICH.ThoiGianGD \r\nFROM GIAODICH \r\nINNER JOIN THONGTINTAIKHOAN ON GIAODICH.SoTKGui = THONGTINTAIKHOAN.SoTK \r\nINNER JOIN KHACHHANG ON THONGTINTAIKHOAN.MaKH = KHACHHANG.MaKH \r\nWHERE GIAODICH.SoTKNhan = '{TKNhan}'";
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.TienNhan";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("SoTKNhan", TKNhan);
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }
@@ -344,9 +378,11 @@ namespace DAL
         public string getMaTK(string tenTK, string mk)
         {
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"select matk from TAIKHOANDANGNHAP where TenTK = N'{tenTK}' and MK = N'{mk}'";
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.GetMaTK";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("TenTK", tenTK);
+            sqlCMD.Parameters.AddWithValue("MK", mk);
             SqlDataReader reader = sqlCMD.ExecuteReader();
             if (reader.Read())
             {
@@ -361,9 +397,11 @@ namespace DAL
         public string getMaKH(string tenTK, string mk)
         {
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"select makh from TAIKHOANDANGNHAP where TenTK = N'{tenTK}' and MK = N'{mk}'";
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.Get_MaKH";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("TenTK", tenTK);
+            sqlCMD.Parameters.AddWithValue("MK", mk);
             SqlDataReader reader = sqlCMD.ExecuteReader();
             if(reader.Read())
             {
@@ -376,9 +414,10 @@ namespace DAL
         public string getSTK(string maKH)
         {
             SqlCommand sqlCMD = new SqlCommand();
-            sqlCMD.CommandType = System.Data.CommandType.Text;
-            sqlCMD.CommandText = $"select sotk from THONGTINTAIKHOAN where MaKH = '{maKH}'";
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "dbo.GetSoTK";
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            sqlCMD.Parameters.AddWithValue("MaKH", maKH);
             SqlDataReader reader = sqlCMD.ExecuteReader();
             if (reader.Read())
             {

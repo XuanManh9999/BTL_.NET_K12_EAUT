@@ -57,22 +57,20 @@ namespace GUI
         // Sự kiến click đăng nhập
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (txtTenDN.Text == "Admin")
-            {
-                this.Hide();
-                Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu(txtTenDN.Text);
-                form_Trang_Chu.ShowDialog();
-                return;
-            }
             if (Check_TextBox())
             {
-                if (bus_DN.DangNhap(txtTenDN.Text, txtMK.Text))
+                if (txtTenDN.Text == "Admin" && txtMK.Text == "123")
+                {
+                    this.Hide();
+                    Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu(txtTenDN.Text);
+                    form_Trang_Chu.ShowDialog();
+                } else if (bus_DN.DangNhap(txtTenDN.Text, txtMK.Text))
                 {
                     BUS_DangNhap dangNhap = new BUS_DangNhap();
                     if (dangNhap.getMKH(txtTenDN.Text, txtMK.Text) != "err")
                     {
                         this.Hide();
-                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text));
+                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text), txtTenDN.Text);
                         frmMain.Show();
                     }
                 }

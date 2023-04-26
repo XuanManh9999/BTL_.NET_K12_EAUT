@@ -29,16 +29,12 @@ namespace GUI
             this.tenTK = tenTK;
         }
        
-        public Form_Trang_Chu(string MaKH, string maTK)
+        public Form_Trang_Chu(string MaKH, string maTK, string tenTK)
         {
             InitializeComponent();
             this.MaKH = MaKH;
             this.MaTK = maTK;
-            this.TenTK = tenTK;
-        }
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
+            this.tenTK = tenTK;
         }
 
         private void btnGiaoDich_Click_1(object sender, EventArgs e)
@@ -63,11 +59,6 @@ namespace GUI
             {
                 MessageBox.Show("Đây là chức năng dành cho khách hàng. Vui lòng thao tác lại.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnLSGD_Click_1(object sender, EventArgs e)
@@ -111,31 +102,13 @@ namespace GUI
                 MessageBox.Show("Chức Năng Này Chỉ Dành Cho Quản Trị.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void CloseAllForms()
-        {
-            // Lặp qua tất cả các Form mở
-            foreach (Form form in Application.OpenForms)
-            {
-                // Nếu Form hiện tại không phải là Form chính của ứng dụng
-                if (form.Name != "frmDangNhap")
-                {
-                    // Đóng Form
-                    form.Close();
-                }
-            }
-        }
         private void btnDangXuat_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                this.Close();
+                Close();
             }
-        }
-
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

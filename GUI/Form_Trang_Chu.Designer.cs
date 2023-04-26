@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
@@ -41,27 +41,26 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2GradientPanel1.SuspendLayout();
+            this.panelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2GradientPanel1
+            // panelMain
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2PictureBox1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2GroupBox1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox3);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox2);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
-            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1067, 562);
-            this.guna2GradientPanel1.TabIndex = 0;
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+            this.panelMain.Controls.Add(this.guna2PictureBox1);
+            this.panelMain.Controls.Add(this.guna2GroupBox1);
+            this.panelMain.Controls.Add(this.guna2ControlBox3);
+            this.panelMain.Controls.Add(this.guna2ControlBox2);
+            this.panelMain.Controls.Add(this.guna2ControlBox1);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.panelMain.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
+            this.panelMain.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1067, 562);
+            this.panelMain.TabIndex = 0;
             // 
             // guna2PictureBox1
             // 
@@ -96,7 +95,6 @@
             this.guna2GroupBox1.TabIndex = 11;
             this.guna2GroupBox1.Text = "Các Chức Năng";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // guna2Button1
             // 
@@ -293,14 +291,14 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
             this.ControlBox = false;
-            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_Trang_Chu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Trang_Chu";
-            this.guna2GradientPanel1.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -309,7 +307,7 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelMain;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
