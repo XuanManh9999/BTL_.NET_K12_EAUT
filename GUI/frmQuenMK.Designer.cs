@@ -32,16 +32,16 @@
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.btnDangNhap = new System.Windows.Forms.Label();
             this.btnLayMK = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtMK = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbMK = new System.Windows.Forms.Label();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnDangNhap = new System.Windows.Forms.Label();
+            this.lbEmail = new System.Windows.Forms.Label();
             this.guna2GradientPanel3.SuspendLayout();
-            this.guna2GradientPanel1.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,17 +114,17 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(57, 43);
             this.guna2ControlBox1.TabIndex = 7;
             // 
-            // guna2GradientPanel1
+            // panelMain
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2GroupBox1);
-            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
-            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 44);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(603, 625);
-            this.guna2GradientPanel1.TabIndex = 5;
+            this.panelMain.Controls.Add(this.guna2GroupBox1);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.panelMain.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
+            this.panelMain.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelMain.Location = new System.Drawing.Point(0, 44);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(603, 625);
+            this.panelMain.TabIndex = 5;
             // 
             // guna2GroupBox1
             // 
@@ -134,9 +134,9 @@
             this.guna2GroupBox1.Controls.Add(this.btnDangNhap);
             this.guna2GroupBox1.Controls.Add(this.btnLayMK);
             this.guna2GroupBox1.Controls.Add(this.txtMK);
-            this.guna2GroupBox1.Controls.Add(this.label2);
+            this.guna2GroupBox1.Controls.Add(this.lbMK);
             this.guna2GroupBox1.Controls.Add(this.txtEmail);
-            this.guna2GroupBox1.Controls.Add(this.label1);
+            this.guna2GroupBox1.Controls.Add(this.lbEmail);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
@@ -147,6 +147,20 @@
             this.guna2GroupBox1.Text = "QUÊN MẬT KHẨU";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(0, 20);
+            // 
+            // btnDangNhap
+            // 
+            this.btnDangNhap.AutoSize = true;
+            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDangNhap.Location = new System.Drawing.Point(364, 469);
+            this.btnDangNhap.Name = "btnDangNhap";
+            this.btnDangNhap.Size = new System.Drawing.Size(126, 30);
+            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.Text = "Đăng nhập";
+            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
+            this.btnDangNhap.MouseLeave += new System.EventHandler(this.btnDangNhap_MouseLeave);
+            this.btnDangNhap.MouseHover += new System.EventHandler(this.btnDangNhap_MouseHover);
             // 
             // btnLayMK
             // 
@@ -199,15 +213,15 @@
             this.txtMK.Size = new System.Drawing.Size(400, 62);
             this.txtMK.TabIndex = 3;
             // 
-            // label2
+            // lbMK
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(39, 231);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(212, 32);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Mật khẩu của bạn";
+            this.lbMK.AutoSize = true;
+            this.lbMK.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMK.Location = new System.Drawing.Point(39, 231);
+            this.lbMK.Name = "lbMK";
+            this.lbMK.Size = new System.Drawing.Size(212, 32);
+            this.lbMK.TabIndex = 2;
+            this.lbMK.Text = "Mật khẩu của bạn";
             // 
             // txtEmail
             // 
@@ -231,36 +245,22 @@
             this.txtEmail.Size = new System.Drawing.Size(400, 62);
             this.txtEmail.TabIndex = 1;
             // 
-            // label1
+            // lbEmail
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(39, 92);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Email đăng ký";
-            // 
-            // btnDangNhap
-            // 
-            this.btnDangNhap.AutoSize = true;
-            this.btnDangNhap.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDangNhap.Location = new System.Drawing.Point(364, 469);
-            this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(126, 30);
-            this.btnDangNhap.TabIndex = 5;
-            this.btnDangNhap.Text = "Đăng nhập";
-            this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
-            this.btnDangNhap.MouseLeave += new System.EventHandler(this.btnDangNhap_MouseLeave);
-            this.btnDangNhap.MouseHover += new System.EventHandler(this.btnDangNhap_MouseHover);
+            this.lbEmail.AutoSize = true;
+            this.lbEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.Location = new System.Drawing.Point(39, 92);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(167, 32);
+            this.lbEmail.TabIndex = 0;
+            this.lbEmail.Text = "Email đăng ký";
             // 
             // frmQuenMK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(603, 669);
-            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.guna2GradientPanel3);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -269,7 +269,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmQuenMK";
             this.guna2GradientPanel3.ResumeLayout(false);
-            this.guna2GradientPanel1.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -282,13 +282,13 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelMain;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btnLayMK;
         private Guna.UI2.WinForms.Guna2TextBox txtMK;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lbMK;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label btnDangNhap;
     }
 }

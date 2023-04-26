@@ -33,27 +33,27 @@
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2GradientPanel4 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.btnDangKy = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbEmail = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSDT = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbSDT = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtDiaChi = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbDC = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cbGT = new System.Windows.Forms.ComboBox();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbGT = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dateNS = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbNS = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtCMND = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbCMND = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTenKH = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbHoTen = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbTitle = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel3.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
-            this.guna2GradientPanel4.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,27 +128,27 @@
             // 
             // guna2GradientPanel1
             // 
-            this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel4);
+            this.guna2GradientPanel1.Controls.Add(this.panelMain);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 52);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(919, 602);
             this.guna2GradientPanel1.TabIndex = 5;
             // 
-            // guna2GradientPanel4
+            // panelMain
             // 
-            this.guna2GradientPanel4.BackColor = System.Drawing.Color.White;
-            this.guna2GradientPanel4.Controls.Add(this.guna2GroupBox1);
-            this.guna2GradientPanel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel4.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
-            this.guna2GradientPanel4.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientPanel4.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.guna2GradientPanel4.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel4.Name = "guna2GradientPanel4";
-            this.guna2GradientPanel4.Size = new System.Drawing.Size(919, 602);
-            this.guna2GradientPanel4.TabIndex = 4;
+            this.panelMain.BackColor = System.Drawing.Color.White;
+            this.panelMain.Controls.Add(this.guna2GroupBox1);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.panelMain.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
+            this.panelMain.ForeColor = System.Drawing.Color.White;
+            this.panelMain.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelMain.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(919, 602);
+            this.panelMain.TabIndex = 4;
             // 
             // guna2GroupBox1
             // 
@@ -157,20 +157,20 @@
             this.guna2GroupBox1.BorderRadius = 12;
             this.guna2GroupBox1.Controls.Add(this.btnDangKy);
             this.guna2GroupBox1.Controls.Add(this.txtEmail);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel8);
+            this.guna2GroupBox1.Controls.Add(this.lbEmail);
             this.guna2GroupBox1.Controls.Add(this.txtSDT);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel7);
+            this.guna2GroupBox1.Controls.Add(this.lbSDT);
             this.guna2GroupBox1.Controls.Add(this.txtDiaChi);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel6);
+            this.guna2GroupBox1.Controls.Add(this.lbDC);
             this.guna2GroupBox1.Controls.Add(this.cbGT);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel5);
+            this.guna2GroupBox1.Controls.Add(this.lbGT);
             this.guna2GroupBox1.Controls.Add(this.dateNS);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
+            this.guna2GroupBox1.Controls.Add(this.lbNS);
             this.guna2GroupBox1.Controls.Add(this.txtCMND);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel3);
+            this.guna2GroupBox1.Controls.Add(this.lbCMND);
             this.guna2GroupBox1.Controls.Add(this.txtTenKH);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2GroupBox1.Controls.Add(this.lbHoTen);
+            this.guna2GroupBox1.Controls.Add(this.lbTitle);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.White;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
@@ -232,16 +232,16 @@
             this.txtEmail.Size = new System.Drawing.Size(270, 35);
             this.txtEmail.TabIndex = 14;
             // 
-            // guna2HtmlLabel8
+            // lbEmail
             // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(53, 424);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(61, 32);
-            this.guna2HtmlLabel8.TabIndex = 13;
-            this.guna2HtmlLabel8.Text = "Email:";
+            this.lbEmail.BackColor = System.Drawing.Color.Transparent;
+            this.lbEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEmail.ForeColor = System.Drawing.Color.DimGray;
+            this.lbEmail.Location = new System.Drawing.Point(53, 424);
+            this.lbEmail.Name = "lbEmail";
+            this.lbEmail.Size = new System.Drawing.Size(61, 32);
+            this.lbEmail.TabIndex = 13;
+            this.lbEmail.Text = "Email:";
             // 
             // txtSDT
             // 
@@ -266,16 +266,16 @@
             this.txtSDT.Size = new System.Drawing.Size(285, 35);
             this.txtSDT.TabIndex = 12;
             // 
-            // guna2HtmlLabel7
+            // lbSDT
             // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(443, 323);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(119, 32);
-            this.guna2HtmlLabel7.TabIndex = 11;
-            this.guna2HtmlLabel7.Text = "ĐT di động:";
+            this.lbSDT.BackColor = System.Drawing.Color.Transparent;
+            this.lbSDT.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSDT.ForeColor = System.Drawing.Color.DimGray;
+            this.lbSDT.Location = new System.Drawing.Point(443, 323);
+            this.lbSDT.Name = "lbSDT";
+            this.lbSDT.Size = new System.Drawing.Size(119, 32);
+            this.lbSDT.TabIndex = 11;
+            this.lbSDT.Text = "ĐT di động:";
             // 
             // txtDiaChi
             // 
@@ -300,16 +300,16 @@
             this.txtDiaChi.Size = new System.Drawing.Size(285, 35);
             this.txtDiaChi.TabIndex = 10;
             // 
-            // guna2HtmlLabel6
+            // lbDC
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(443, 223);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(76, 32);
-            this.guna2HtmlLabel6.TabIndex = 9;
-            this.guna2HtmlLabel6.Text = "Địa chỉ:";
+            this.lbDC.BackColor = System.Drawing.Color.Transparent;
+            this.lbDC.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDC.ForeColor = System.Drawing.Color.DimGray;
+            this.lbDC.Location = new System.Drawing.Point(443, 223);
+            this.lbDC.Name = "lbDC";
+            this.lbDC.Size = new System.Drawing.Size(76, 32);
+            this.lbDC.TabIndex = 9;
+            this.lbDC.Text = "Địa chỉ:";
             // 
             // cbGT
             // 
@@ -325,16 +325,16 @@
             this.cbGT.Size = new System.Drawing.Size(285, 38);
             this.cbGT.TabIndex = 8;
             // 
-            // guna2HtmlLabel5
+            // lbGT
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(443, 120);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(94, 32);
-            this.guna2HtmlLabel5.TabIndex = 7;
-            this.guna2HtmlLabel5.Text = "Giới tính:";
+            this.lbGT.BackColor = System.Drawing.Color.Transparent;
+            this.lbGT.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGT.ForeColor = System.Drawing.Color.DimGray;
+            this.lbGT.Location = new System.Drawing.Point(443, 120);
+            this.lbGT.Name = "lbGT";
+            this.lbGT.Size = new System.Drawing.Size(94, 32);
+            this.lbGT.TabIndex = 7;
+            this.lbGT.Text = "Giới tính:";
             // 
             // dateNS
             // 
@@ -351,16 +351,16 @@
             this.dateNS.TabIndex = 6;
             this.dateNS.Value = new System.DateTime(2023, 4, 19, 20, 54, 5, 430);
             // 
-            // guna2HtmlLabel4
+            // lbNS
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(53, 325);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(107, 32);
-            this.guna2HtmlLabel4.TabIndex = 5;
-            this.guna2HtmlLabel4.Text = "Ngày sinh:";
+            this.lbNS.BackColor = System.Drawing.Color.Transparent;
+            this.lbNS.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNS.ForeColor = System.Drawing.Color.DimGray;
+            this.lbNS.Location = new System.Drawing.Point(53, 325);
+            this.lbNS.Name = "lbNS";
+            this.lbNS.Size = new System.Drawing.Size(107, 32);
+            this.lbNS.TabIndex = 5;
+            this.lbNS.Text = "Ngày sinh:";
             // 
             // txtCMND
             // 
@@ -385,16 +385,16 @@
             this.txtCMND.Size = new System.Drawing.Size(270, 35);
             this.txtCMND.TabIndex = 4;
             // 
-            // guna2HtmlLabel3
+            // lbCMND
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(56, 225);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(106, 32);
-            this.guna2HtmlLabel3.TabIndex = 3;
-            this.guna2HtmlLabel3.Text = "Số CMND:";
+            this.lbCMND.BackColor = System.Drawing.Color.Transparent;
+            this.lbCMND.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCMND.ForeColor = System.Drawing.Color.DimGray;
+            this.lbCMND.Location = new System.Drawing.Point(56, 225);
+            this.lbCMND.Name = "lbCMND";
+            this.lbCMND.Size = new System.Drawing.Size(106, 32);
+            this.lbCMND.TabIndex = 3;
+            this.lbCMND.Text = "Số CMND:";
             // 
             // txtTenKH
             // 
@@ -419,26 +419,26 @@
             this.txtTenKH.Size = new System.Drawing.Size(270, 35);
             this.txtTenKH.TabIndex = 2;
             // 
-            // guna2HtmlLabel2
+            // lbHoTen
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(56, 122);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(104, 32);
-            this.guna2HtmlLabel2.TabIndex = 1;
-            this.guna2HtmlLabel2.Text = "Họ và tên:";
+            this.lbHoTen.BackColor = System.Drawing.Color.Transparent;
+            this.lbHoTen.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHoTen.ForeColor = System.Drawing.Color.DimGray;
+            this.lbHoTen.Location = new System.Drawing.Point(56, 122);
+            this.lbHoTen.Name = "lbHoTen";
+            this.lbHoTen.Size = new System.Drawing.Size(104, 32);
+            this.lbHoTen.TabIndex = 1;
+            this.lbHoTen.Text = "Họ và tên:";
             // 
-            // guna2HtmlLabel1
+            // lbTitle
             // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(56, 67);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(170, 34);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Nhập thông tin";
+            this.lbTitle.BackColor = System.Drawing.Color.Transparent;
+            this.lbTitle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Location = new System.Drawing.Point(56, 67);
+            this.lbTitle.Name = "lbTitle";
+            this.lbTitle.Size = new System.Drawing.Size(170, 34);
+            this.lbTitle.TabIndex = 0;
+            this.lbTitle.Text = "Nhập thông tin";
             // 
             // frmDangKy
             // 
@@ -455,7 +455,7 @@
             this.Load += new System.EventHandler(this.frmDangKy_Load);
             this.guna2GradientPanel3.ResumeLayout(false);
             this.guna2GradientPanel1.ResumeLayout(false);
-            this.guna2GradientPanel4.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -469,23 +469,23 @@
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel4;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelMain;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbTitle;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbHoTen;
         private Guna.UI2.WinForms.Guna2TextBox txtCMND;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbCMND;
         private Guna.UI2.WinForms.Guna2DateTimePicker dateNS;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbNS;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbGT;
         private System.Windows.Forms.ComboBox cbGT;
         private Guna.UI2.WinForms.Guna2TextBox txtTenKH;
         private Guna.UI2.WinForms.Guna2TextBox txtSDT;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbSDT;
         private Guna.UI2.WinForms.Guna2TextBox txtDiaChi;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbDC;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbEmail;
         private Guna.UI2.WinForms.Guna2GradientButton btnDangKy;
     }
 }
