@@ -89,3 +89,17 @@ AND QUANLY.MaQL = QUANLYKHACHHANG.MaQL AND QUANLY.MaQL = 'QL001'
 
 -- Thêm bảng khách hàng, thông tin tài khoản, tài khoản đăng nhập, quản lý khách hàng
 -- Random: MaKH, SoTK: CMND, MaTK, MatKhau
+--------------------------------------------------Các Thủ Tục Stored Procedured----------------
+CREATE PROC HIENTHITHONGTINKHACHHANG
+@MaKH varchar(20)
+AS
+	BEGIN 
+		SELECT * FROM KHACHHANG where KHACHHANG.MaKH = @MaKH
+	END
+EXECUTE HIENTHITHONGTINKHACHHANG 'KH001'
+CREATE PROC CAPNHATTHONGTIN
+@MaKH varchar(20), @TenKH nvarchar(100), @CMND varchar(20), @NgaySinh varchar(20), @GioiTinh nvarchar(20), @DiaChi nvarchar(100), @SDT varchar(20)
+as
+	BEGIN
+		UPDATE KHACHHANG SET TenKH = @TenKH, CMND = @CMND, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, DiaChi = @DiaChi, SDT = @SDT WHERE MaKH = @MaKH
+	END
