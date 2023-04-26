@@ -181,6 +181,7 @@
             this.guna2GroupBox1.Text = "ĐĂNG KÝ KHÁCH HÀNG MỚI";
             this.guna2GroupBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.guna2GroupBox1.TextOffset = new System.Drawing.Point(0, 10);
+            this.guna2GroupBox1.Click += new System.EventHandler(this.guna2GroupBox1_Click);
             // 
             // btnDangKy
             // 

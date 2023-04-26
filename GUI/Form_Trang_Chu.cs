@@ -28,22 +28,19 @@ namespace GUI
             this.tenTK = tenTK;
         }
        
-        public Form_Trang_Chu(string MaKH, string maTK)
+        public Form_Trang_Chu(string MaKH, string maTK, string tenTK)
         {
             InitializeComponent();
             this.MaKH = MaKH;
-            MaTK = maTK;
-        }
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
+            this.MaTK = maTK;
+            this.tenTK = tenTK;
         }
 
         private void btnGiaoDich_Click_1(object sender, EventArgs e)
         {
             if(tenTK != "Admin") {
                 Form_Giao_Dich formGiaoDich = new Form_Giao_Dich(MaKH);
-                formGiaoDich.Show();
+                formGiaoDich.ShowDialog();
             }else
             {
                 MessageBox.Show("Đây là chức năng dành cho khách hàng. Vui lòng thao tác lại.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -55,17 +52,12 @@ namespace GUI
             if (tenTK != "Admin")
             {
                 FromTietKiem tietKiem = new FromTietKiem(MaKH, MaTK);
-                tietKiem.Show();
+                tietKiem.ShowDialog();
             }
             else
             {
                 MessageBox.Show("Đây là chức năng dành cho khách hàng. Vui lòng thao tác lại.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-        }
-
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void btnLSGD_Click_1(object sender, EventArgs e)
@@ -76,7 +68,7 @@ namespace GUI
                 if (bUS_DangNhap.getSTK(MaKH) != "err")
                 {
                     FormLich_Su_Giao_Dich formLich_Su_Giao_Dich = new FormLich_Su_Giao_Dich(MaKH, bUS_DangNhap.getSTK(MaKH));
-                    formLich_Su_Giao_Dich.Show();
+                    formLich_Su_Giao_Dich.ShowDialog();
                 }
             }
             else
@@ -109,37 +101,27 @@ namespace GUI
                 MessageBox.Show("Chức Năng Này Chỉ Dành Cho Quản Trị.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void CloseAllForms()
-        {
-            // Lặp qua tất cả các Form mở
-            foreach (Form form in Application.OpenForms)
-            {
-                // Nếu Form hiện tại không phải là Form chính của ứng dụng
-                if (form.Name != "frmDangNhap")
-                {
-                    // Đóng Form
-                    form.Close();
-                }
-            }
-        }
         private void btnDangXuat_Click_1(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (result == DialogResult.OK)
             {
-                this.Close();
+                foreach (Form form in Application.OpenForms)
+                {
+                    form.Close();
+                }
             }
-        }
-
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
-            FormThongTinKhachHang frm = new FormThongTinKhachHang(MaKH);
-            frm.ShowDialog();
+            FormThongTinKhachHang frmTTKH = new FormThongTinKhachHang(MaKH);
+            frmTTKH.ShowDialog();
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

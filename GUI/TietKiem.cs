@@ -84,13 +84,19 @@ namespace GUI
 
         private void btnTietKiem_Click_1(object sender, EventArgs e)
         {
-            try
+                if (checkedDieuKhoan.Checked == true && txtSoTien.Text != "" && txtNoiDungTietKiem.Text != "" && txtMucLaiXuat.Text != "")
             {
+                try
+                {
                     TIET_KIEM tietKiem = new TIET_KIEM("", txtSoTien.Text, txtNoiDungTietKiem.Text, "", maTK);
                     Bus_Tiết_Kiệm bus_tietKiem = new Bus_Tiết_Kiệm();
                     if (bus_tietKiem.tiet_kiem_bus(tietKiem, soTKChuyen))
                     {
                         HienThi();
+                        txtSoTien.Text = "";
+                        txtNoiDungTietKiem.Text = "";
+                        checkedDieuKhoan.Checked = false;
+                        txtSoTien.Focus();
                         MessageBox.Show("Tiết Kiệm Thành Công!");
                     }
                     else
@@ -98,9 +104,13 @@ namespace GUI
                         MessageBox.Show("Tiết Kiệm Không Thành Công");
                     }
                 }
-            catch
+                catch
+                {
+                    MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin!");
+                }
+            }else
             {
-                MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin!");
+                MessageBox.Show("Vui lòng nhập đầy đủ thông tin để tiếp tục");
             }
         }
 

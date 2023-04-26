@@ -59,7 +59,6 @@ namespace GUI
         {
             if (txtTenDN.Text == "Admin")
             {
-                this.Hide();
                 Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu(txtTenDN.Text);
                 form_Trang_Chu.ShowDialog();
                 return;
@@ -72,7 +71,7 @@ namespace GUI
                     if (dangNhap.getMKH(txtTenDN.Text, txtMK.Text) != "err")
                     {
                         this.Hide();
-                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text));
+                        Form_Trang_Chu frmMain = new Form_Trang_Chu(dangNhap.getMKH(txtTenDN.Text, txtMK.Text), dangNhap.getMTK(txtTenDN.Text, txtMK.Text), txtTenDN.Text);
                         frmMain.Show();
                     }
                 }
