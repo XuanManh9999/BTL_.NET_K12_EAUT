@@ -132,4 +132,12 @@ D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Deb
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmDangNhap.resources
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.frmQuenMK.resources
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.Form_Bao_Cao.resources
+<<<<<<< HEAD
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.Form_Bao_Cao.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmDangKy.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmDangNhap.resources
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.frmQuenMK.resources
+=======
 D:\DCCNTT12.10.3_EAUT\Kỳ_4\Lập trình .NET\BTL\BTL.NET_QLNH_EAUT\GUI\obj\Debug\GUI.FormThongTinKhachHang.resources
+>>>>>>> 871e639b6934af706836bc66c4ecface4c132760
+D:\Workspace\C#\BTL_.NET\GUI\obj\Debug\GUI.FormThongTinKhachHang.resources

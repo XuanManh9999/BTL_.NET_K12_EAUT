@@ -28,50 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.panelMain = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2GroupBox1 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.txtTenTaiKhoanNhan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbTenNN = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbTKH = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTenTK = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnChuyenKhoan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtNoiDungChuyen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbNDChuyen = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoTienChuyen = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbSTChuyen = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtTaiKhoanNhan = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbTKNhan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoTaiKhoanGui = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbSD = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtSoTien = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbSTK = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cboHinhThucChuyenKhoan = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lbHTC = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox2 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.guna2GradientPanel1.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.guna2GroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // guna2GradientPanel1
+            // panelMain
             // 
-            this.guna2GradientPanel1.BackColor = System.Drawing.Color.Chocolate;
-            this.guna2GradientPanel1.Controls.Add(this.guna2Button1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2GroupBox1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox1);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox2);
-            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox3);
-            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.guna2GradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
-            this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
-            this.guna2GradientPanel1.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(1067, 562);
-            this.guna2GradientPanel1.TabIndex = 0;
-            this.guna2GradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
+            this.panelMain.BackColor = System.Drawing.Color.Chocolate;
+            this.panelMain.Controls.Add(this.guna2Button1);
+            this.panelMain.Controls.Add(this.guna2GroupBox1);
+            this.panelMain.Controls.Add(this.guna2ControlBox1);
+            this.panelMain.Controls.Add(this.guna2ControlBox2);
+            this.panelMain.Controls.Add(this.guna2ControlBox3);
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(201)))), ((int)(((byte)(255)))));
+            this.panelMain.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(146)))), ((int)(((byte)(254)))), ((int)(((byte)(157)))));
+            this.panelMain.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.panelMain.Location = new System.Drawing.Point(0, 0);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1067, 562);
+            this.panelMain.TabIndex = 0;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2GradientPanel1_Paint);
             // 
             // guna2Button1
             // 
@@ -104,22 +104,22 @@
             this.guna2GroupBox1.BorderRadius = 20;
             this.guna2GroupBox1.BorderThickness = 2;
             this.guna2GroupBox1.Controls.Add(this.txtTenTaiKhoanNhan);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel10);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel9);
+            this.guna2GroupBox1.Controls.Add(this.lbTenNN);
+            this.guna2GroupBox1.Controls.Add(this.lbTKH);
             this.guna2GroupBox1.Controls.Add(this.txtTenTK);
             this.guna2GroupBox1.Controls.Add(this.btnChuyenKhoan);
             this.guna2GroupBox1.Controls.Add(this.txtNoiDungChuyen);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel8);
+            this.guna2GroupBox1.Controls.Add(this.lbNDChuyen);
             this.guna2GroupBox1.Controls.Add(this.txtSoTienChuyen);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel7);
+            this.guna2GroupBox1.Controls.Add(this.lbSTChuyen);
             this.guna2GroupBox1.Controls.Add(this.txtTaiKhoanNhan);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel6);
+            this.guna2GroupBox1.Controls.Add(this.lbTKNhan);
             this.guna2GroupBox1.Controls.Add(this.txtSoTaiKhoanGui);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel5);
+            this.guna2GroupBox1.Controls.Add(this.lbSD);
             this.guna2GroupBox1.Controls.Add(this.txtSoTien);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel4);
+            this.guna2GroupBox1.Controls.Add(this.lbSTK);
             this.guna2GroupBox1.Controls.Add(this.cboHinhThucChuyenKhoan);
-            this.guna2GroupBox1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2GroupBox1.Controls.Add(this.lbHTC);
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.Transparent;
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
@@ -153,27 +153,27 @@
             this.txtTenTaiKhoanNhan.Size = new System.Drawing.Size(506, 35);
             this.txtTenTaiKhoanNhan.TabIndex = 18;
             // 
-            // guna2HtmlLabel10
+            // lbTenNN
             // 
-            this.guna2HtmlLabel10.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel10.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel10.Location = new System.Drawing.Point(44, 287);
-            this.guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            this.guna2HtmlLabel10.Size = new System.Drawing.Size(244, 31);
-            this.guna2HtmlLabel10.TabIndex = 17;
-            this.guna2HtmlLabel10.Text = "Tên Tài Khoản Nhận:";
+            this.lbTenNN.BackColor = System.Drawing.Color.Transparent;
+            this.lbTenNN.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTenNN.ForeColor = System.Drawing.Color.Black;
+            this.lbTenNN.Location = new System.Drawing.Point(44, 287);
+            this.lbTenNN.Name = "lbTenNN";
+            this.lbTenNN.Size = new System.Drawing.Size(244, 31);
+            this.lbTenNN.TabIndex = 17;
+            this.lbTenNN.Text = "Tên Tài Khoản Nhận:";
             // 
-            // guna2HtmlLabel9
+            // lbTKH
             // 
-            this.guna2HtmlLabel9.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel9.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel9.Location = new System.Drawing.Point(45, 147);
-            this.guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            this.guna2HtmlLabel9.Size = new System.Drawing.Size(150, 31);
-            this.guna2HtmlLabel9.TabIndex = 16;
-            this.guna2HtmlLabel9.Text = "Khách Hàng:";
+            this.lbTKH.BackColor = System.Drawing.Color.Transparent;
+            this.lbTKH.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTKH.ForeColor = System.Drawing.Color.Black;
+            this.lbTKH.Location = new System.Drawing.Point(45, 147);
+            this.lbTKH.Name = "lbTKH";
+            this.lbTKH.Size = new System.Drawing.Size(150, 31);
+            this.lbTKH.TabIndex = 16;
+            this.lbTKH.Text = "Khách Hàng:";
             // 
             // txtTenTK
             // 
@@ -244,16 +244,16 @@
             this.txtNoiDungChuyen.Size = new System.Drawing.Size(505, 35);
             this.txtNoiDungChuyen.TabIndex = 11;
             // 
-            // guna2HtmlLabel8
+            // lbNDChuyen
             // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(45, 385);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(285, 31);
-            this.guna2HtmlLabel8.TabIndex = 10;
-            this.guna2HtmlLabel8.Text = "Nội dung chuyển khoản:";
+            this.lbNDChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.lbNDChuyen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNDChuyen.ForeColor = System.Drawing.Color.Black;
+            this.lbNDChuyen.Location = new System.Drawing.Point(45, 385);
+            this.lbNDChuyen.Name = "lbNDChuyen";
+            this.lbNDChuyen.Size = new System.Drawing.Size(285, 31);
+            this.lbNDChuyen.TabIndex = 10;
+            this.lbNDChuyen.Text = "Nội dung chuyển khoản:";
             // 
             // txtSoTienChuyen
             // 
@@ -276,16 +276,16 @@
             this.txtSoTienChuyen.Size = new System.Drawing.Size(506, 35);
             this.txtSoTienChuyen.TabIndex = 9;
             // 
-            // guna2HtmlLabel7
+            // lbSTChuyen
             // 
-            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(45, 340);
-            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            this.guna2HtmlLabel7.Size = new System.Drawing.Size(193, 31);
-            this.guna2HtmlLabel7.TabIndex = 8;
-            this.guna2HtmlLabel7.Text = "Số Tiền Chuyển:";
+            this.lbSTChuyen.BackColor = System.Drawing.Color.Transparent;
+            this.lbSTChuyen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSTChuyen.ForeColor = System.Drawing.Color.Black;
+            this.lbSTChuyen.Location = new System.Drawing.Point(45, 340);
+            this.lbSTChuyen.Name = "lbSTChuyen";
+            this.lbSTChuyen.Size = new System.Drawing.Size(193, 31);
+            this.lbSTChuyen.TabIndex = 8;
+            this.lbSTChuyen.Text = "Số Tiền Chuyển:";
             // 
             // txtTaiKhoanNhan
             // 
@@ -309,16 +309,16 @@
             this.txtTaiKhoanNhan.TabIndex = 7;
             this.txtTaiKhoanNhan.TextChanged += new System.EventHandler(this.txtTaiKhoanNhan_TextChanged_1);
             // 
-            // guna2HtmlLabel6
+            // lbTKNhan
             // 
-            this.guna2HtmlLabel6.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(44, 245);
-            this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            this.guna2HtmlLabel6.Size = new System.Drawing.Size(232, 31);
-            this.guna2HtmlLabel6.TabIndex = 6;
-            this.guna2HtmlLabel6.Text = "Số Tài Khoản Nhận:";
+            this.lbTKNhan.BackColor = System.Drawing.Color.Transparent;
+            this.lbTKNhan.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTKNhan.ForeColor = System.Drawing.Color.Black;
+            this.lbTKNhan.Location = new System.Drawing.Point(44, 245);
+            this.lbTKNhan.Name = "lbTKNhan";
+            this.lbTKNhan.Size = new System.Drawing.Size(232, 31);
+            this.lbTKNhan.TabIndex = 6;
+            this.lbTKNhan.Text = "Số Tài Khoản Nhận:";
             // 
             // txtSoTaiKhoanGui
             // 
@@ -343,16 +343,16 @@
             this.txtSoTaiKhoanGui.TabIndex = 5;
             this.txtSoTaiKhoanGui.TabStop = false;
             // 
-            // guna2HtmlLabel5
+            // lbSD
             // 
-            this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(45, 193);
-            this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(98, 31);
-            this.guna2HtmlLabel5.TabIndex = 4;
-            this.guna2HtmlLabel5.Text = "Số Tiền:";
+            this.lbSD.BackColor = System.Drawing.Color.Transparent;
+            this.lbSD.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSD.ForeColor = System.Drawing.Color.Black;
+            this.lbSD.Location = new System.Drawing.Point(45, 193);
+            this.lbSD.Name = "lbSD";
+            this.lbSD.Size = new System.Drawing.Size(98, 31);
+            this.lbSD.TabIndex = 4;
+            this.lbSD.Text = "Số Tiền:";
             // 
             // txtSoTien
             // 
@@ -377,16 +377,16 @@
             this.txtSoTien.TabIndex = 3;
             this.txtSoTien.TabStop = false;
             // 
-            // guna2HtmlLabel4
+            // lbSTK
             // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(44, 102);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(260, 31);
-            this.guna2HtmlLabel4.TabIndex = 2;
-            this.guna2HtmlLabel4.Text = "Số Tài Khoản Chuyển:";
+            this.lbSTK.BackColor = System.Drawing.Color.Transparent;
+            this.lbSTK.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSTK.ForeColor = System.Drawing.Color.Black;
+            this.lbSTK.Location = new System.Drawing.Point(44, 102);
+            this.lbSTK.Name = "lbSTK";
+            this.lbSTK.Size = new System.Drawing.Size(260, 31);
+            this.lbSTK.TabIndex = 2;
+            this.lbSTK.Text = "Số Tài Khoản Chuyển:";
             // 
             // cboHinhThucChuyenKhoan
             // 
@@ -403,16 +403,16 @@
             this.cboHinhThucChuyenKhoan.Size = new System.Drawing.Size(506, 36);
             this.cboHinhThucChuyenKhoan.TabIndex = 1;
             // 
-            // guna2HtmlLabel2
+            // lbHTC
             // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(45, 56);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(226, 31);
-            this.guna2HtmlLabel2.TabIndex = 0;
-            this.guna2HtmlLabel2.Text = "Hình Thức Chuyển:";
+            this.lbHTC.BackColor = System.Drawing.Color.Transparent;
+            this.lbHTC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHTC.ForeColor = System.Drawing.Color.Black;
+            this.lbHTC.Location = new System.Drawing.Point(45, 56);
+            this.lbHTC.Name = "lbHTC";
+            this.lbHTC.Size = new System.Drawing.Size(226, 31);
+            this.lbHTC.TabIndex = 0;
+            this.lbHTC.Text = "Hình Thức Chuyển:";
             // 
             // guna2ControlBox1
             // 
@@ -461,7 +461,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 562);
-            this.Controls.Add(this.guna2GradientPanel1);
+            this.Controls.Add(this.panelMain);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -469,7 +469,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Giao_Dich";
             this.Load += new System.EventHandler(this.Form_Giao_Dich_Load);
-            this.guna2GradientPanel1.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
             this.guna2GroupBox1.ResumeLayout(false);
             this.guna2GroupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -478,25 +478,25 @@
 
         #endregion
 
-        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel panelMain;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtTenTaiKhoanNhan;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbTenNN;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbTKH;
         private Guna.UI2.WinForms.Guna2TextBox txtTenTK;
         private Guna.UI2.WinForms.Guna2GradientButton btnChuyenKhoan;
         private Guna.UI2.WinForms.Guna2TextBox txtNoiDungChuyen;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbNDChuyen;
         private Guna.UI2.WinForms.Guna2TextBox txtSoTienChuyen;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbSTChuyen;
         private Guna.UI2.WinForms.Guna2TextBox txtTaiKhoanNhan;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbTKNhan;
         private Guna.UI2.WinForms.Guna2TextBox txtSoTaiKhoanGui;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbSD;
         private Guna.UI2.WinForms.Guna2TextBox txtSoTien;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbSTK;
         private Guna.UI2.WinForms.Guna2ComboBox cboHinhThucChuyenKhoan;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lbHTC;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;

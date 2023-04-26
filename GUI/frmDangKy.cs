@@ -138,7 +138,7 @@ namespace GUI
                 TaiKhoan TKDN = Create_TK();
                 if(bus_QLKH.ThemKhachHang(KH, QLKH) && bus_DK.ThemTTTK(TTTK) && bus_DK.ThemTKDN(TKDN))
                 {
-                    MessageBox.Show("Thêm thành công");
+                    MessageBox.Show("Đăng ký thành công");
                     MessageBox.Show($"Tên đăng nhập của bạn: {TKDN.TenTaiKhoan} mật khẩu: {TKDN.MatKhau}", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
                     DialogResult result = MessageBox.Show("Bạn có muốn đăng nhập không?", Application.ProductName, MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                     if(result == DialogResult.OK)
@@ -148,7 +148,7 @@ namespace GUI
                     Clear_TextBox();
                 } else
                 {
-                    MessageBox.Show("Thêm không thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Đăng ký không thành công", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     bus_QLKH.XoaKhachHang(KH, QLKH);
                     bus_DK.XoaTTTK(TTTK);
                     bus_DK.XoaTKDN(TKDN);
