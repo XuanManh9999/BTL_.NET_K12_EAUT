@@ -8,7 +8,6 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
-using System.Web;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
@@ -109,6 +108,12 @@ namespace GUI
             {
                 Close();
             }
+        }
+
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            FormThongTinKhachHang frmTTKH = new FormThongTinKhachHang(MaKH);
+            frmTTKH.ShowDialog();
         }
     }
 }

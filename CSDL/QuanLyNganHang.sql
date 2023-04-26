@@ -4,7 +4,7 @@ USE QuanLyNganHang
 -- KHACHHANG
 CREATE TABLE KHACHHANG (
 	MaKH NVARCHAR(20) NOT NULL PRIMARY KEY,
-	TenKH NVARCHAR(25),
+	TenKH NVARCHAR(50),
 	CMND NVARCHAR(20) NOT NULL UNIQUE,
 	NgaySinh CHAR(25),
 	GioiTinh NVARCHAR(5),
@@ -22,7 +22,7 @@ END
 -- Thêm khách hàng
 CREATE PROCEDURE dbo.ThemKH
 	@MaKH NVARCHAR(20),
-	@TenKH NVARCHAR(25),
+	@TenKH NVARCHAR(50),
 	@CMND NVARCHAR(20),
 	@NgaySinh CHAR(25),
 	@GioiTinh NVARCHAR(5),
@@ -36,7 +36,7 @@ END
 -- Sửa khách hàng
 CREATE PROCEDURE dbo.SuaKH
 	@MaKH NVARCHAR(20),
-	@TenKH NVARCHAR(25),
+	@TenKH NVARCHAR(50),
 	@CMND NVARCHAR(20),
 	@NgaySinh CHAR(25),
 	@GioiTinh NVARCHAR(5),
@@ -50,7 +50,7 @@ END
 -- Xoá khách hàng
 CREATE PROCEDURE dbo.XoaKH
 	@MaKH NVARCHAR(20),
-	@TenKH NVARCHAR(25),
+	@TenKH NVARCHAR(50),
 	@CMND NVARCHAR(20),
 	@NgaySinh CHAR(25),
 	@GioiTinh NVARCHAR(5),
@@ -71,7 +71,7 @@ END
 
 -- Tìm kiếm KHACHHANG theo TenKH
 CREATE PROCEDURE dbo.TimKiemKH_TenKH
-	@TenKH NVARCHAR(25)
+	@TenKH NVARCHAR(50)
 AS
 BEGIN
 	SELECT * FROM KHACHHANG WHERE TenKH = @TenKH
@@ -454,3 +454,18 @@ WHERE T.MaTK = TK.MaTK AND TK.MaKH = K.MaKH AND K.MaKH = 'KH6883')
 
 DELETE GIAODICH WHERE MaGD IN (SELECT MaGD FROM THONGTINTAIKHOAN AS TK, KHACHHANG AS K, GIAODICH AS G 
 WHERE G.SoTKNhan = TK.SoTK AND TK.MaKH = K.MaKH AND K.MaKH = 'KH6883')WHERE G.SoTKNhan = TK.SoTK AND TK.MaKH = K.MaKH AND K.MaKH = 'KH2867')
+-- Random: MaKH, SoTK: CMND, MaTK, MatKhau
+--------------------------------------------------Các Thủ Tục Stored Procedured----------------
+CREATE PROC HIENTHITHONGTINKHACHHANG
+@MaKH varchar(20)
+AS
+	BEGIN 
+		SELECT * FROM KHACHHANG where KHACHHANG.MaKH = @MaKH
+	END
+EXECUTE HIENTHITHONGTINKHACHHANG 'KH001'
+CREATE PROC CAPNHATTHONGTIN
+@MaKH varchar(20), @TenKH nvarchar(100), @CMND varchar(20), @NgaySinh varchar(20), @GioiTinh nvarchar(20), @DiaChi nvarchar(100), @SDT varchar(20)
+as
+	BEGIN
+		UPDATE KHACHHANG SET TenKH = @TenKH, CMND = @CMND, NgaySinh = @NgaySinh, GioiTinh = @GioiTinh, DiaChi = @DiaChi, SDT = @SDT WHERE MaKH = @MaKH
+	END

@@ -136,6 +136,7 @@
             this.btnThongTin.Size = new System.Drawing.Size(294, 55);
             this.btnThongTin.TabIndex = 5;
             this.btnThongTin.Text = "Thông Tin";
+            this.btnThongTin.Click += new System.EventHandler(this.btnThongTin_Click);
             // 
             // btnDangXuat
             // 

@@ -13,7 +13,6 @@ namespace DAL
         private string matKhau;
         private string email;
         private string maKhachHang;
-
         public TaiKhoan()
         {
 
@@ -26,11 +25,11 @@ namespace DAL
             this.email= email;
             this.maKhachHang = maKhachHang;         
         }
-
         public string TenTaiKhoan { get => tenTaiKhoan; set => tenTaiKhoan = value; }
         public string MatKhau { get => matKhau; set => matKhau = value; }
         public string MaTaiKhoan { get => maTaiKhoan; set => maTaiKhoan = value; }
         public string MaKhachHang { get => maKhachHang; set => maKhachHang = value; }
         public string Email { get => email; set => email = value; }
+        
     }
 }
