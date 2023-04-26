@@ -20,6 +20,8 @@ namespace DAL
         bool tietKiem(TIET_KIEM tietKiem, string stkChuyen);
         SqlDataReader xemCTGD(string s);
         SqlDataReader tienNhan(string TKNhan);
+        SqlDataReader hienThiThongTinKhachHang(string maKH);
+        bool capNhatThongTin(KHACH_HANG kHACHHang);
     }
     public class KHACH_HANG : PERSON, IKHACH_HANG
     {
@@ -100,7 +102,7 @@ namespace DAL
             return Password;
         }
 
-        public  bool  chuyenTien(GIAO_DICH giaoDich)
+        public bool chuyenTien(GIAO_DICH giaoDich)
         {
             SqlCommand sqlcheck = new SqlCommand();
             sqlcheck.CommandType = System.Data.CommandType.Text;
@@ -108,7 +110,7 @@ namespace DAL
             sqlcheck.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlcheck.ExecuteReader();
             int i = 0;
-            List<int> maGD = new List<int> {};
+            List<int> maGD = new List<int> {};  
             while (reader.Read())
             {
                 maGD.Add(reader.GetString(i)[reader.GetString(i).Length - 1]);
@@ -129,12 +131,13 @@ namespace DAL
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             if (sqlCMD.ExecuteNonQuery() > 0)
             {
-                CongTienTKNHAN(giaoDich.soTienGD, giaoDich.SoTKNhan);
-                TruTienTKGUI(giaoDich.soTienGD, giaoDich.SoTKGui);
+                KHACH_HANG.CongTienTKNHAN(giaoDich.soTienGD, giaoDich.SoTKNhan);
+                KHACH_HANG.TruTienTKGUI(giaoDich.soTienGD, giaoDich.SoTKGui);
                 return true;
             }else { return false; }
         }
-        public void CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
+
+        public static void CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
@@ -276,7 +279,8 @@ namespace DAL
             conn.Close();
             return listReport;
         }
-        public void TruTienTKGUI(string tienGiaoDich, string soTaiKhoanChuyen)
+
+        public static void TruTienTKGUI(string tienGiaoDich, string soTaiKhoanChuyen)
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
@@ -284,6 +288,7 @@ namespace DAL
             sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             sqlCMD.ExecuteNonQuery();
         }
+
         // Lấy mã tiết kiệm từ csdl
         public List<int> MaTietKiem()
         {
@@ -299,7 +304,7 @@ namespace DAL
             }
             return list;
         }
-        public bool tietKiem(TIET_KIEM tietKiem, string stkChuyen)
+        public  bool tietKiem(TIET_KIEM tietKiem, string stkChuyen)
         {
             back:
             Random ranDom = new Random();
@@ -322,7 +327,8 @@ namespace DAL
             }
             return false;
         }
-        public SqlDataReader xemCTGD(string s)
+
+        public  SqlDataReader xemCTGD(string s)
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
@@ -331,7 +337,8 @@ namespace DAL
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }
-        public SqlDataReader tienNhan(string TKNhan)
+
+        public  SqlDataReader tienNhan(string TKNhan)
         {
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = System.Data.CommandType.Text;
@@ -340,6 +347,7 @@ namespace DAL
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }
+
         // Lấy mã TK
         public string getMaTK(string tenTK, string mk)
         {
@@ -389,5 +397,42 @@ namespace DAL
                 return "err";
             }
         }
+        public SqlDataReader hienThiThongTinKhachHang(string maKH)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType= System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "HIENTHITHONGTINKHACHHANG";
+            sqlCMD.Parameters.AddWithValue("MaKH", maKH);
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            SqlDataReader reader = sqlCMD.ExecuteReader();
+            if (reader.HasRows)
+            {
+                return reader;
+            }else
+            {
+                return null;
+            }
+        }
+        public bool capNhatThongTin(KHACH_HANG kHACHHang)
+        {
+            SqlCommand sqlCMD = new SqlCommand();
+            sqlCMD.CommandType = System.Data.CommandType.StoredProcedure;
+            sqlCMD.CommandText = "CAPNHATTHONGTIN";
+            sqlCMD.Parameters.AddWithValue("MaKH", kHACHHang.MaKH);
+            sqlCMD.Parameters.AddWithValue("TenKH", kHACHHang.ten);
+            sqlCMD.Parameters.AddWithValue("CMND", kHACHHang.cmnd);
+            sqlCMD.Parameters.AddWithValue("NgaySinh", kHACHHang.ngaySinh);
+            sqlCMD.Parameters.AddWithValue("GioiTinh", kHACHHang.gioiTinh);
+            sqlCMD.Parameters.AddWithValue("DiaChi", kHACHHang.diaChi);
+            sqlCMD.Parameters.AddWithValue("SDT", kHACHHang.sdt);
+            sqlCMD.Connection = CONNECT.chuoi_ket_noi_cua_manh();
+            if(sqlCMD.ExecuteNonQuery() > 0)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
+        } 
     }
 }

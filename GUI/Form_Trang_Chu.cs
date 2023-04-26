@@ -135,5 +135,11 @@ namespace GUI
         {
 
         }
+
+        private void btnThongTin_Click(object sender, EventArgs e)
+        {
+            FormThongTinKhachHang frm = new FormThongTinKhachHang(MaKH);
+            frm.ShowDialog();
+        }
     }
 }

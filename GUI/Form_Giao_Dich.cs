@@ -45,7 +45,7 @@ namespace GUI
             List<string> dsTK = load_STK();
             foreach(string s in dsTK)
             {
-                if(txtTaiKhoanNhan.Text == s)
+                if(txtTaiKhoanNhan.Text == s && txtTaiKhoanNhan.Text != txtSoTaiKhoanGui.Text)
                 {
                     return s;
                 }
@@ -100,28 +100,34 @@ namespace GUI
 
         private void btnChuyenKhoan_Click_1(object sender, EventArgs e)
         {
-            try
+            if (txtSoTaiKhoanGui.Text != txtTaiKhoanNhan.Text)
             {
-                GIAO_DICH giaoDich = new GIAO_DICH("", txtSoTienChuyen.Text, txtNoiDungChuyen.Text, "", txtTaiKhoanNhan.Text, txtSoTaiKhoanGui.Text);
-                bus_Giao_Dich giaoDich_bus = new bus_Giao_Dich();
-                if (giaoDich_bus.khachHang_GD_BUS(giaoDich))
+                try
                 {
-                    MessageBox.Show("Giao Dịch Thành Công.");
-                    txtNoiDungChuyen.Text = "";
-                    txtSoTienChuyen.Text = "";
-                    txtTaiKhoanNhan.Text = "";
-                    txtTenTaiKhoanNhan.Text = "";
-                    txtTaiKhoanNhan.Focus();
-                    load_TT();
+                    GIAO_DICH giaoDich = new GIAO_DICH("", txtSoTienChuyen.Text, txtNoiDungChuyen.Text, "", txtTaiKhoanNhan.Text, txtSoTaiKhoanGui.Text);
+                    bus_Giao_Dich giaoDich_bus = new bus_Giao_Dich();
+                    if (giaoDich_bus.khachHang_GD_BUS(giaoDich))
+                    {
+                        MessageBox.Show("Giao Dịch Thành Công.");
+                        txtNoiDungChuyen.Text = "";
+                        txtSoTienChuyen.Text = "";
+                        txtTaiKhoanNhan.Text = "";
+                        txtTenTaiKhoanNhan.Text = "";
+                        txtTaiKhoanNhan.Focus();
+                        load_TT();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Giao Dịch Không Thành Công.");
+                    }
                 }
-                else
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Giao Dịch Không Thành Công.");
+                    MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin");
                 }
-            }
-            catch(Exception ex)
+            }else
             {
-                MessageBox.Show("Vui Lòng Nhập Đầy Đủ Thông Tin");
+                MessageBox.Show("Số tài khoản nhận phải khác số tài khoản gửi. Vui lòng thao tác lại");
             }
         }
 

@@ -77,6 +77,12 @@
     <Compile Include="FormLich_Su_Giao_Dich.Designer.cs">
       <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThongTinKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongTinKhachHang.Designer.cs">
+      <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Bao_Cao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     </Compile>
     <EmbeddedResource Include="FormLich_Su_Giao_Dich.resx">
       <DependentUpon>FormLich_Su_Giao_Dich.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongTinKhachHang.resx">
+      <DependentUpon>FormThongTinKhachHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Bao_Cao.resx">
       <DependentUpon>Form_Bao_Cao.cs</DependentUpon>
@@ -361,6 +370,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Places-user-identity-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
