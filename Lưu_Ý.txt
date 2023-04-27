@@ -1,0 +1,4 @@
+==> Hướng Dẫn Sử Dụng:
++, Dùng chương trình. Khi đăng nhập vào bắt buộc phải đăng xuất.
+Đừng vì sự lười biếng của bạn dẫn tới chạy nền. Thân!
++, Nếu chương trình có lỗi chắc chắn do chạy nền. 

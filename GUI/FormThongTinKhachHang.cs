@@ -66,19 +66,33 @@ namespace GUI
         {
 
         }
-
+        public bool check()
+        {
+            if ((txtSDT.Text != "" && txtNgay.Text != "" && txtHoTen.Text != "" && txtGioiTinh.Text != "" && txtDiaChi.Text != "" && txtCMND.Text != "") )
+            {
+                return true;
+            }
+            return false;
+        }
         private void btnCapNhatThongTin_Click_2(object sender, EventArgs e)
         {
+          
             CapNhatThongTinKhachHang busCapNhatTT = new CapNhatThongTinKhachHang();
             KHACH_HANG kHACH_HANG = new KHACH_HANG(maKH, txtHoTen.Text, txtCMND.Text, txtNgay.Text, txtGioiTinh.Text, txtDiaChi.Text, txtSDT.Text);
-            if (busCapNhatTT.capNhatTT(kHACH_HANG))
+            if(check())
             {
-                hienThiTT();
-                MessageBox.Show("Cập Nhật Thành Công");
-            }
-            else
+                if (busCapNhatTT.capNhatTT(kHACH_HANG))
+                {
+                    hienThiTT();
+                    MessageBox.Show("Cập Nhật Thành Công");
+                }
+                else
+                {
+                    MessageBox.Show("Cập Nhật Không Thành Công Thành Công");
+                }
+            }else
             {
-                MessageBox.Show("Cập Nhật Không Thành Công Thành Công");
+                MessageBox.Show("Các thông tin phải hợp lệ. Vui lòng kiểm tra và thử lại!");
             }
         }
 

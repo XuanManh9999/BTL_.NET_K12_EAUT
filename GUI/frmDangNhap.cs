@@ -57,7 +57,7 @@ namespace GUI
         // Sự kiến click đăng nhập
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-            if (Check_TextBox())
+            if (txtTenDN.Text == "Admin" && txtMK.Text == "123")
             {
                 Form_Trang_Chu form_Trang_Chu = new Form_Trang_Chu(txtTenDN.Text);
                 form_Trang_Chu.ShowDialog();

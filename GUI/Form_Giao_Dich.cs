@@ -53,13 +53,15 @@ namespace GUI
             txtTenTaiKhoanNhan.Text = "";
             return "err";
         }
+        // Procedured giúp hiển thị thông tin giao dịch. Trên GUI
         public void load_TT()
         {
             cboHinhThucChuyenKhoan.Items.Add("Chuyển Khoản Qua Số Tài Khoản");
             cboHinhThucChuyenKhoan.SelectedIndex = 0;
             SqlCommand sqlCommand = new SqlCommand();
             sqlCommand.CommandType = CommandType.Text;
-            sqlCommand.CommandText = $"select SoTK, SoDu, TenKH from THONGTINTAIKHOAN, KHACHHANG where khachhang.MaKH = THONGTINTAIKHOAN.MaKH and KHACHHANG.MaKH = '{maKh}'";
+            sqlCommand.CommandText = $"select SoTK, SoDu, TenKH from THONGTINTAIKHOAN, KHACHHANG where " +
+            $"khachhang.MaKH = THONGTINTAIKHOAN.MaKH and KHACHHANG.MaKH = '{maKh}'";
             sqlCommand.Connection = CONNECT.chuoi_ket_noi_cua_manh();
             SqlDataReader reader = sqlCommand.ExecuteReader();
             txtSoTaiKhoanGui.Text = "";

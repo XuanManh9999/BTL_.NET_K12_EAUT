@@ -38,5 +38,10 @@ namespace GUI
         {
 
         }
+
+        private void Form_Bao_Cao_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

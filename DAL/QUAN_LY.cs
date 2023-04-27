@@ -38,6 +38,7 @@ namespace DAL
         CONNECT DBConnect = new CONNECT();
 
         /* Xử lý bảng khách hàng */
+
         // lấy thông tin khách khàng
         public DataTable hienThiKhachHang()
         {
@@ -48,7 +49,8 @@ namespace DAL
             adapter.Fill(dt);
             return dt;
         }
-        // Hàm xử lý chung thêm, sửa xóa
+
+        // Phương thức xử lý chung thêm, sửa xóa
         public bool quanLyKhachHang(string query, KHACH_HANG KH)
         {
             SqlConnection conn = DBConnect.Chuoi_conn_Hai();
@@ -75,6 +77,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Thêm khách hàng
         public bool themKhachHang(KHACH_HANG KH, QUAN_LY_KHACH_HANG QLKH)
         {
@@ -85,6 +88,7 @@ namespace DAL
             }
             return false;
         }
+
         // Sửa khách hàng
         public bool suaKhachHang(KHACH_HANG KH)
         {
@@ -101,6 +105,7 @@ namespace DAL
                 && XoaTKDN_QLKH(KH.MaKH) && quanLyKhachHang(query, KH)) { return true; }
             return false;
         }
+
         // Tìm kiếm khách hàng
         public DataTable timKiemKhachHang(string query, string txtTimKiem, string variable)
         {
@@ -121,12 +126,14 @@ namespace DAL
             catch { return null; }
             finally { conn.Close(); }
         }
+
         // Tìm kiếm theo mã khách hàng
         public DataTable TimKiem_MaKH(string txtMaKH)
         {
             string query = "dbo.TimKiemKH_MaKH";
             return timKiemKhachHang(query, txtMaKH, "MaKH");
         }
+
         // Tìm kiếm theo tên khách hàng
         public DataTable TimKiem_TenKH(string txtTenKH)
         {
@@ -156,6 +163,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Thêm vào bảng quản lý khách hàng
         public bool ThemQLKH(QUAN_LY_KHACH_HANG QLKH)
         {
@@ -166,6 +174,7 @@ namespace DAL
             }
             return false;
         }
+
         // Xóa dữ liệu bảng quản lý khách hàng
         public bool XoaQLKH(QUAN_LY_KHACH_HANG QLKH)
         {
@@ -282,6 +291,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Thêm vào tài khoản đăng nhập
         public bool ThemTKDN(TaiKhoan TKDN)
         {
@@ -304,6 +314,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Xóa tài khoản đăng nhập
         public bool XoaTKDN(TaiKhoan TKDN)
         {
@@ -322,6 +333,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Xóa tài khoản đăng nhập khi dùng chức năng xóa KH ở form QLKH
         public bool XoaTKDN_QLKH(string MaKH)
         {
@@ -381,6 +393,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Xóa tiết kiệm
         public bool XoaTietKiem(string MaKH)
         {
@@ -402,6 +415,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Check khách hàng đã giao dịch hay chưa
         public bool Check_GiaoDich(string MaKH)
         {
@@ -419,6 +433,7 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
         // Xóa giao dịch
         public bool XoaGiaoDich(string MaKH)
         {

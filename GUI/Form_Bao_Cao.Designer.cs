@@ -111,6 +111,7 @@
             this.Name = "Form_Bao_Cao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_Bao_Cao";
+            this.Load += new System.EventHandler(this.Form_Bao_Cao_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

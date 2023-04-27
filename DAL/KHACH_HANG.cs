@@ -27,11 +27,8 @@ namespace DAL
     public class KHACH_HANG : PERSON, IKHACH_HANG
     {
         public QUAN_LY quanLy;
-
         private string _maKH;
-
         public string MaKH { get => _maKH; set => _maKH = value; }
-
         public KHACH_HANG() {  }
         public KHACH_HANG(string maKH, string ten, string cmnd, string ngaySinh, string gioiTinh, string diaChi, string sdt) : base(ten, cmnd, ngaySinh, gioiTinh, diaChi, sdt)
         {
@@ -40,7 +37,7 @@ namespace DAL
 
         CONNECT DBConnect = new CONNECT();
 
-        // Hàm kiểm tra xem mã kh đã tồn tại hay chưa
+        // Phương thức kiểm tra xem mã kh đã tồn tại hay chưa
         public bool Check_MaKH(string txtMaKH)
         {
             string query = "dbo.Check_MaKH";
@@ -63,6 +60,8 @@ namespace DAL
             finally { conn.Close(); }
             return false;
         }
+
+
         // Đăng nhập
         public bool dangNhapTK(string txtTenDN, string txtMK)
         {
@@ -152,8 +151,9 @@ namespace DAL
             }else { return false; }
         }
 
+        // Procedured giúp cộng tiền giao dịch
         public static void CongTienTKNHAN(string tienGiaoDich, string soTaiKhoanNhan)
-        {
+        {   
             SqlCommand sqlCMD = new SqlCommand();
             sqlCMD.CommandType = CommandType.StoredProcedure;
             sqlCMD.CommandText = "dbo.CongTien";
@@ -257,6 +257,7 @@ namespace DAL
             conn.Close();
             return listTTNG;
         }
+
         // Thống kê giao dịch tiền vào
         public List<rpGiaoDichTienVao> XemGiaoDichTienVao(string MaKH)
         {
@@ -301,7 +302,8 @@ namespace DAL
             conn.Close();
             return listReport;
         }
-
+        
+        // Procedured giúp trừ tiền khi khách hàng giao dịch
         public static void TruTienTKGUI(string tienGiaoDich, string soTaiKhoanChuyen)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -328,6 +330,8 @@ namespace DAL
             }
             return list;
         }
+
+        // Phương thức tiết kiệm
         public  bool tietKiem(TIET_KIEM tietKiem, string stkChuyen)
         {
             back:
@@ -359,6 +363,7 @@ namespace DAL
             return false;
         }
 
+        // Phương thức trả về chi tiến giao dịch
         public  SqlDataReader xemCTGD(string s)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -369,7 +374,8 @@ namespace DAL
             SqlDataReader reader = sqlCMD.ExecuteReader();
             return reader;
         }
-        
+
+        // Phương thức tiền nhận
         public SqlDataReader tienNhan(string TKNhan)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -381,7 +387,7 @@ namespace DAL
             return reader;
         }
 
-        // Lấy mã TK
+        // Phương thức lấy mã TK
         public string getMaTK(string tenTK, string mk)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -400,7 +406,8 @@ namespace DAL
                 return "err";
             }
         }
-        // Lấy mã khách hàng
+
+        // Phương thức Lấy mã khách hàng
         public string getMaKH(string tenTK, string mk)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -418,6 +425,8 @@ namespace DAL
                 return "err";
             }
         }
+
+        // Phương thức lấy số tài khoản
         public string getSTK(string maKH)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -434,7 +443,10 @@ namespace DAL
             {
                 return "err";
             }
+
         }
+
+        // Phương thức hiển thị thông tin khách hàng
         public SqlDataReader hienThiThongTinKhachHang(string maKH)
         {
             SqlCommand sqlCMD = new SqlCommand();
@@ -451,6 +463,7 @@ namespace DAL
                 return null;
             }
         }
+
         public bool capNhatThongTin(KHACH_HANG kHACHHang)
         {
             SqlCommand sqlCMD = new SqlCommand();

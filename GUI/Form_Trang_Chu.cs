@@ -115,8 +115,15 @@ namespace GUI
 
         private void btnThongTin_Click(object sender, EventArgs e)
         {
-            FormThongTinKhachHang frmTTKH = new FormThongTinKhachHang(MaKH);
-            frmTTKH.ShowDialog();
+           if (tenTK != "Admin")
+            {
+                FormThongTinKhachHang frmTTKH = new FormThongTinKhachHang(MaKH);
+                frmTTKH.ShowDialog();
+            }else
+            {
+                MessageBox.Show("Chức Năng Này Chỉ Dành Cho Quản Trị.", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+            }
         }
 
         private void panelMain_Paint(object sender, PaintEventArgs e)
